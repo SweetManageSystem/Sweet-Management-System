@@ -4,7 +4,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/signup.feature", // specify the path to your feature files
+        features = "src/test/signup.feature",// specify the path to your feature files
         glue = "com.test.stepdefinitions", // specify the package containing your step definitions
         plugin = {"pretty", "html:target/cucumber-reports"}
 )
