@@ -1,5 +1,6 @@
 package org.example.Account;
 
+
 public class Admin implements Person {
     private String email , password , userName , fullName;
     private int role = 2;

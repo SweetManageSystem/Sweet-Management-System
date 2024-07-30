@@ -1,5 +1,6 @@
 package org.example.GUI;
 
+
 import org.example.Account.*;
 
 import javax.swing.*;
@@ -103,6 +104,7 @@ public class SignUpForm extends JFrame {
             }
         });
         panel.add(signUpButton);
+
         JLabel iconLabel = new JLabel();
         iconLabel.setIcon(new ImageIcon("D:\\Projects\\Sweet-Management-System\\SweetMangementSystem\\src\\main\\java\\org\\example\\GUI\\LogIn\\sweet-food.png"));
         iconLabel.setBounds(125, 50, 300, 100);
@@ -133,7 +135,6 @@ public class SignUpForm extends JFrame {
                 dispose();
             }
         });
-
         panel1.add(signupButton);
         panel1.add(iconLabel);
         panel1.add(label1);
@@ -141,7 +142,13 @@ public class SignUpForm extends JFrame {
         panel1.add(label3);
         panel1.add(label4);
         panel1.add(label5);
+
         panel.add(panel1);
+
+
+
+        panel.add(panel1);
+
         add(panel);
     }
 }

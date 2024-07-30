@@ -58,4 +58,5 @@ public class User implements Person {
     public void setRole(int role) {
         this.role = role;
     }
+
 }

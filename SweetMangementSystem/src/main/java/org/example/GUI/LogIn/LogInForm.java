@@ -1,5 +1,6 @@
 package org.example.GUI.LogIn;
 
+
 import org.example.Account.DataBase;
 import org.example.Account.Person;
 import org.example.GUI.SignUpForm;
@@ -14,7 +15,14 @@ import java.awt.event.MouseEvent;
 public class LogInForm extends JFrame {
     private JButton loginButton;
 
+
     public LogInForm() {
+
+    private JButton signUpButton;
+
+    public LogInForm() {
+        // Set the frame properties
+
         setTitle("Login Form");
         setSize(700, 500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -72,6 +80,7 @@ public class LogInForm extends JFrame {
         loginButton.setForeground(Color.WHITE);
         Icon buttonIcon = new ImageIcon("D:\\Projects\\Sweet-Management-System\\SweetMangementSystem\\src\\main\\java\\org\\example\\GUI\\LogIn\\LogIn.png");
         loginButton.setIcon(buttonIcon);
+
         loginButton.setFocusable(false);
         loginButton.addActionListener(new ActionListener() {
             @Override
@@ -87,8 +96,8 @@ public class LogInForm extends JFrame {
                 }
                 if(meow)
                 JOptionPane.showMessageDialog(null, "Login Failed");
-            }
-        });
+
+  
         panel.add(loginButton);
         JLabel iconLabel = new JLabel();
         iconLabel.setIcon(new ImageIcon("D:\\Projects\\Sweet-Management-System\\SweetMangementSystem\\src\\main\\java\\org\\example\\GUI\\LogIn\\sweet-food.png"));
