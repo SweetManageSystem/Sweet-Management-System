@@ -1,5 +1,8 @@
 package org.example.GUI;
 
+
+import org.example.Account.*;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -86,6 +89,20 @@ public class SignUpForm extends JFrame {
         signUpButton.setBounds(85, 400, 225, 30);
         signUpButton.setBackground(new Color(163, 24, 75));
         signUpButton.setForeground(Color.WHITE);
+        signUpButton.setFocusable(false);
+        signUpButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //todo check all scenarios
+                Person person = new User();
+                person.setPassword(passwordField.getText());
+                person.setUsername(usernameField.getText());
+                person.setEmail(emailField.getText());
+                person.setFullname(fullNameField.getText());
+                DataBase.addPerson(person);
+                JOptionPane.showMessageDialog(null,"Account added successfully");
+            }
+        });
         panel.add(signUpButton);
 
         JLabel iconLabel = new JLabel();
@@ -125,6 +142,9 @@ public class SignUpForm extends JFrame {
         panel1.add(label3);
         panel1.add(label4);
         panel1.add(label5);
+
+        panel.add(panel1);
+
 
 
         panel.add(panel1);
