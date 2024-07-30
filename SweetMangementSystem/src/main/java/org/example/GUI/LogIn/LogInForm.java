@@ -1,5 +1,7 @@
 package org.example.GUI.LogIn;
 
+import org.example.Account.DataBase;
+import org.example.Account.Person;
 import org.example.GUI.SignUpForm;
 
 import javax.swing.*;
@@ -11,16 +13,13 @@ import java.awt.event.MouseEvent;
 
 public class LogInForm extends JFrame {
     private JButton loginButton;
-    private JButton signUpButton;
 
     public LogInForm() {
-        // Set the frame properties
         setTitle("Login Form");
         setSize(700, 500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
-        // Create a panel for the form
         JPanel panel = new JPanel();
         panel.setLayout(null);
         panel.setBackground(Color.WHITE);
@@ -73,10 +72,21 @@ public class LogInForm extends JFrame {
         loginButton.setForeground(Color.WHITE);
         Icon buttonIcon = new ImageIcon("D:\\Projects\\Sweet-Management-System\\SweetMangementSystem\\src\\main\\java\\org\\example\\GUI\\LogIn\\LogIn.png");
         loginButton.setIcon(buttonIcon);
+        loginButton.setFocusable(false);
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Handle login action
+                //todo check all scenaios
+                Boolean meow = true;
+                for(Person p : DataBase.getDb()){
+                    if(p.getEmail().equals(emailField.getText()))
+                        if(p.getPassword().equals(passwordField.getText())) {
+                            meow = false;
+                            JOptionPane.showMessageDialog(null, "Login Successful");
+                        }
+                }
+                if(meow)
+                JOptionPane.showMessageDialog(null, "Login Failed");
             }
         });
         panel.add(loginButton);
