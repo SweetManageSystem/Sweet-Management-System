@@ -104,7 +104,7 @@ public class SignUpForm extends JFrame {
         });
         panel.add(signUpButton);
         JLabel iconLabel = new JLabel();
-        iconLabel.setIcon(new ImageIcon("D:\\Projects\\Sweet-Management-System\\SweetMangementSystem\\src\\main\\java\\org\\example\\GUI\\LogIn\\sweet-food.png"));
+        iconLabel.setIcon(new ImageIcon("D:\\Projects\\Sweet-Management-System\\SweetMangementSystem\\src\\main\\resources\\sweet-food.png"));
         iconLabel.setBounds(125, 50, 300, 100);
         JLabel label1 = new JLabel("Hello ,Friend!");
         label1.setBounds(105,100,200,100);

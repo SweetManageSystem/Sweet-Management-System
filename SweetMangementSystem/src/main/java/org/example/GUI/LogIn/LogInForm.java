@@ -1,7 +1,10 @@
 package org.example.GUI.LogIn;
 
+import org.example.Account.Admin;
 import org.example.Account.DataBase;
 import org.example.Account.Person;
+import org.example.Account.User;
+import org.example.GUI.AdminForm.AdminForm;
 import org.example.GUI.SignUpForm;
 
 import javax.swing.*;
@@ -12,8 +15,10 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 public class LogInForm extends JFrame {
-    private JButton loginButton;
-
+    public JButton loginButton;
+    private JTextField emailField;
+    private JPasswordField passwordField;
+    private String message;
     public LogInForm() {
         setTitle("Login Form");
         setSize(700, 500);
@@ -30,10 +35,6 @@ public class LogInForm extends JFrame {
         panel1.setBackground(new Color(140, 13, 63));
         panel.add(panel1);
 
-        JLabel background = new JLabel(new ImageIcon("img.jpg"));
-        background.setBounds(0, 0, 300, 500);
-        panel.add(background);
-
         JLabel loginLabel = new JLabel("Log In");
         loginLabel.setBounds(470, 90, 200, 30);
         loginLabel.setForeground(new Color(163, 24, 75));
@@ -42,12 +43,11 @@ public class LogInForm extends JFrame {
 
         JLabel emailLabel = new JLabel("Email");
         emailLabel.setBounds(385, 140, 100, 25);
-        Icon emailIcon = new ImageIcon("email.png");
-        emailLabel.setIcon(emailIcon);
         emailLabel.setForeground(new Color(163, 24, 75));
         panel.add(emailLabel);
 
-        JTextField emailField = new JTextField();
+         emailField = new JTextField();
+        emailField.setName("emailField"); // Set name for the email field
         emailField.setBounds(385, 170, 225, 25);
         emailField.setForeground(new Color(66, 4, 28));
         emailField.setBackground(new Color(163, 24, 75));
@@ -56,42 +56,32 @@ public class LogInForm extends JFrame {
         JLabel passwordLabel = new JLabel("Password");
         passwordLabel.setBounds(385, 210, 100, 25);
         passwordLabel.setForeground(new Color(163, 24, 75));
-        Icon passwordIcon = new ImageIcon("password.png");
-        passwordLabel.setIcon(passwordIcon);
         panel.add(passwordLabel);
 
-        JPasswordField passwordField = new JPasswordField();
+         passwordField = new JPasswordField();
+        passwordField.setName("passwordField"); // Set name for the password field
         passwordField.setBounds(385, 240, 225, 25);
         passwordField.setForeground(new Color(66, 4, 28));
         passwordField.setBackground(new Color(163, 24, 75));
         panel.add(passwordField);
 
         loginButton = new JButton();
+        loginButton.setName("loginButton"); // Set name for the login button
         loginButton.setBounds(385, 300, 225, 30);
         loginButton.setBackground(new Color(163, 24, 75));
         loginButton.setForeground(Color.WHITE);
-        Icon buttonIcon = new ImageIcon("D:\\Projects\\Sweet-Management-System\\SweetMangementSystem\\src\\main\\java\\org\\example\\GUI\\LogIn\\LogIn.png");
+        Icon buttonIcon = new ImageIcon("D:\\Projects\\Sweet-Management-System\\SweetMangementSystem\\src\\main\\resources\\LogIn.png");
         loginButton.setIcon(buttonIcon);
         loginButton.setFocusable(false);
         loginButton.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) {
-                //todo check all scenaios
-                Boolean meow = true;
-                for(Person p : DataBase.getDb()){
-                    if(p.getEmail().equals(emailField.getText()))
-                        if(p.getPassword().equals(passwordField.getText())) {
-                            meow = false;
-                            JOptionPane.showMessageDialog(null, "Login Successful");
-                        }
-                }
-                if(meow)
-                JOptionPane.showMessageDialog(null, "Login Failed");
+            public void actionPerformed(ActionEvent evt) {
+                loginButtonActionPerformed(evt);
             }
         });
         panel.add(loginButton);
         JLabel iconLabel = new JLabel();
-        iconLabel.setIcon(new ImageIcon("D:\\Projects\\Sweet-Management-System\\SweetMangementSystem\\src\\main\\java\\org\\example\\GUI\\LogIn\\sweet-food.png"));
+        iconLabel.setIcon(new ImageIcon("D:\\Projects\\Sweet-Management-System\\SweetMangementSystem\\src\\main\\resources\\sweet-food.png"));
         iconLabel.setBounds(125, 50, 300, 100);
         JLabel label1 = new JLabel("Welcome Back!");
         label1.setBounds(95,100,200,100);
@@ -128,6 +118,58 @@ public class LogInForm extends JFrame {
         panel1.add(label4);
         panel1.add(label5);
         add(panel);
+    }
 
+    private void checkRole(Person person){
+        switch(person.getRole()){
+            case 0:
+                break;
+            case 1:
+
+                break;
+            case 2:
+                AdminForm adminForm = new AdminForm(new Admin(person));
+                adminForm.setVisible(true);
+                break;
+        }
+    }
+
+
+   public JTextField getEmailField() {
+        return emailField;
+    }
+
+    public JPasswordField getPasswordField() {
+        return passwordField;
+    }
+
+    public void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {
+        String email = emailField.getText();
+        String password = new String(passwordField.getPassword());
+            for (Person user : DataBase.getDb()) {
+                if (user.getEmail().equals(email) && user.getPassword().equals(password)) {
+                    message = "Login successful";
+                    checkRole(user);
+                    this.dispose();
+                    JOptionPane.showMessageDialog(null,  message);
+                    return;
+                }
+            }
+            message = "Invalid username or password";
+            JOptionPane.showMessageDialog(null, message);
+        }
+
+
+    public String getDisplayedMessage() {
+
+        return message;
+    }
+
+    public JButton getLoginButton() {
+        return loginButton;
     }
 }
+
+
+
+

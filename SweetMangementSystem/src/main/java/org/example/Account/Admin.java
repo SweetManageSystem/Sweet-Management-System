@@ -12,6 +12,7 @@ public class Admin implements Person {
         this.userName = a.getUsername();
         this.fullName = a.getFullname();
         DataBase.removePerson(a);
+        DataBase.addPerson(this);
     }
     @Override
     public void setUsername(String username) {
@@ -56,5 +57,10 @@ public class Admin implements Person {
     @Override
     public void setRole(int role) {
         this.role = role;
+    }
+
+    @Override
+    public int getRole() {
+        return role;
     }
 }

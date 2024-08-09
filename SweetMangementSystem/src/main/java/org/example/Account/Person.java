@@ -10,4 +10,5 @@ public interface Person {
      public String getFullname();
      public String getEmail();
      public void setRole(int role);
+     public int getRole();
 }

@@ -57,4 +57,9 @@ public class StoreOwner implements Person {
     public void setRole(int role) {
         this.role = role;
     }
+
+    @Override
+    public int getRole() {
+        return role;
+    }
 }

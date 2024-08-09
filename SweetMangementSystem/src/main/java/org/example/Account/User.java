@@ -6,6 +6,12 @@ public class User implements Person {
 
     public User(){}
 
+    public User(String email, String password){
+        this.email = email;
+        this.password = password;
+        userName = null;
+        fullName = null;
+    }
     public User(Person a){
         this.email = a.getEmail();
         this.password = a.getPassword();
@@ -57,5 +63,10 @@ public class User implements Person {
     @Override
     public void setRole(int role) {
         this.role = role;
+    }
+
+    @Override
+    public int getRole() {
+        return role;
     }
 }
