@@ -1,5 +1,4 @@
-package org.example.GUI;
-
+package org.example.GUI.LogIn;
 
 import org.example.Account.*;
 
@@ -9,6 +8,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class SignUpForm extends JFrame {
+    private JTextField fullNameField;
+    private JTextField emailField;
+    private JTextField usernameField;
+    private JPasswordField passwordField;
+    private JPasswordField confirmPasswordField;
+    private JButton signUpButton;
+    private String message;
+
     public SignUpForm() {
         setTitle("Sign Up Form");
         setSize(700, 500);
@@ -35,7 +42,7 @@ public class SignUpForm extends JFrame {
         fullNameLabel.setForeground(new Color(163, 24, 75));
         panel.add(fullNameLabel);
 
-        JTextField fullNameField = new JTextField();
+        fullNameField = new JTextField();
         fullNameField.setBounds(85, 90, 225, 25);
         fullNameField.setForeground(new Color(66, 4, 28));
         fullNameField.setBackground(new Color(163, 24, 75));
@@ -46,7 +53,7 @@ public class SignUpForm extends JFrame {
         emailLabel.setForeground(new Color(163, 24, 75));
         panel.add(emailLabel);
 
-        JTextField emailField = new JTextField();
+        emailField = new JTextField();
         emailField.setBounds(85, 155, 225, 25);
         emailField.setForeground(new Color(66, 4, 28));
         emailField.setBackground(new Color(163, 24, 75));
@@ -57,7 +64,7 @@ public class SignUpForm extends JFrame {
         usernameLabel.setForeground(new Color(163, 24, 75));
         panel.add(usernameLabel);
 
-        JTextField usernameField = new JTextField();
+        usernameField = new JTextField();
         usernameField.setBounds(85, 220, 225, 25);
         usernameField.setForeground(new Color(66, 4, 28));
         usernameField.setBackground(new Color(163, 24, 75));
@@ -68,7 +75,7 @@ public class SignUpForm extends JFrame {
         passwordLabel.setForeground(new Color(163, 24, 75));
         panel.add(passwordLabel);
 
-        JPasswordField passwordField = new JPasswordField();
+        passwordField = new JPasswordField();
         passwordField.setBounds(85, 285, 225, 25);
         passwordField.setForeground(new Color(66, 4, 28));
         passwordField.setBackground(new Color(163, 24, 75));
@@ -79,13 +86,13 @@ public class SignUpForm extends JFrame {
         confirmPasswordLabel.setForeground(new Color(163, 24, 75));
         panel.add(confirmPasswordLabel);
 
-        JPasswordField confirmPasswordField = new JPasswordField();
+        confirmPasswordField = new JPasswordField();
         confirmPasswordField.setBounds(85, 350, 225, 25);
         confirmPasswordField.setForeground(new Color(66, 4, 28));
         confirmPasswordField.setBackground(new Color(163, 24, 75));
         panel.add(confirmPasswordField);
 
-        JButton signUpButton = new JButton("Sign Up");
+        signUpButton = new JButton("Sign Up");
         signUpButton.setBounds(85, 400, 225, 30);
         signUpButton.setBackground(new Color(163, 24, 75));
         signUpButton.setForeground(Color.WHITE);
@@ -93,14 +100,30 @@ public class SignUpForm extends JFrame {
         signUpButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //todo check all scenarios
-                Person person = new User();
-                person.setPassword(passwordField.getText());
-                person.setUsername(usernameField.getText());
-                person.setEmail(emailField.getText());
-                person.setFullname(fullNameField.getText());
-                DataBase.addPerson(person);
-                JOptionPane.showMessageDialog(null,"Account added successfully");
+                if (fullNameField.getText().isEmpty() || emailField.getText().isEmpty() ||
+                        usernameField.getText().isEmpty() || passwordField.getText().isEmpty() ||
+                        confirmPasswordField.getText().isEmpty()) {
+                    message = "Please fill in all fields";
+                    JOptionPane.showMessageDialog(null, message);
+                } else if (!passwordField.getText().equals(confirmPasswordField.getText())) {
+                    message = "Passwords do not match";
+                    JOptionPane.showMessageDialog(null, message);
+                } else if (DataBase.getPerson(emailField.getText()) != null) {
+                    message = "Email already exists";
+                    JOptionPane.showMessageDialog(null, message);
+                } else if (DataBase.getDb().stream().anyMatch(p -> p.getUsername().equals(usernameField.getText()))) {
+                    message = "Username already exists";
+                    JOptionPane.showMessageDialog(null, message);
+                } else {
+                    Person person = new User();
+                    person.setPassword(passwordField.getText());
+                    person.setUsername(usernameField.getText());
+                    person.setEmail(emailField.getText());
+                    person.setFullname(fullNameField.getText());
+                    DataBase.addPerson(person);
+                    message = "Account added successfully";
+                    JOptionPane.showMessageDialog(null, message);
+                }
             }
         });
         panel.add(signUpButton);
@@ -145,10 +168,34 @@ public class SignUpForm extends JFrame {
 
         panel.add(panel1);
 
-
-
-        panel.add(panel1);
-
         add(panel);
+    }
+
+    public JTextField getFullNameField() {
+        return fullNameField;
+    }
+
+    public JTextField getEmailField() {
+        return emailField;
+    }
+
+    public JTextField getUsernameField() {
+        return usernameField;
+    }
+
+    public JPasswordField getPasswordField() {
+        return passwordField;
+    }
+
+    public JPasswordField getConfirmPasswordField() {
+        return confirmPasswordField;
+    }
+
+    public JButton getSignUpButton() {
+        return signUpButton;
+    }
+
+    public String getDisplayedMessage() {
+        return message;
     }
 }

@@ -1,8 +1,21 @@
 package org.example.Account;
 
+import java.util.List;
+
 public class User implements Person {
-    private String email , password , userName , fullName;
+    private String email , password , userName , fullName, address;
     private int role = 0;
+    private List<String> posts;
+
+
+    public List<String> getPosts() {
+        return posts;
+    }
+
+    public void addPost(String post) {
+        posts.add(post);
+    }
+
 
     public User(){}
 
@@ -68,5 +81,13 @@ public class User implements Person {
     @Override
     public int getRole() {
         return role;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 }

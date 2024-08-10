@@ -275,6 +275,31 @@ public class AdminForm extends JFrame {
         menuePanel.add(manageTappedpane);
         panel2.add(menuePanel);
 
+        JPanel postPanel = new JPanel();
+        postPanel.setLayout(null);
+        postPanel.setBackground(new Color(255, 255, 255));
+        postPanel.setBounds(50,200,250,400);
+
+        JLabel p = new JLabel("Account Posts");
+        p.setBounds(30,125,200,40);
+        p.setFont(new Font("Arial", Font.BOLD, 14));
+
+        JTextArea postsArea = new JTextArea();
+        postsArea.setEditable(true);
+        postsArea.setLineWrap(true);
+        postsArea.setBounds(50,180,650,300);
+       // for(String ps : DataBase.getPerson(index).getPosts())
+        //postsArea.append("-" + ps);
+
+        postPanel.add(postsArea);
+        postPanel.add(p);
+
+        JPanel informationPanel = new JPanel();
+        informationPanel.setLayout(null);
+        informationPanel.setBackground(new Color(0, 0, 0));
+        informationPanel.setBounds(50,200,250,400);
+
+
         // Add fields to panel2 for editing user data
         JPanel userDetails = new JPanel();
         userDetails.setLayout(null);
@@ -327,7 +352,10 @@ public class AdminForm extends JFrame {
         userDetails.add(emailField);
         userDetails.add(fullNameField);
         userDetails.add(roleComboBox);
+
         manageTappedpane.addTab("UserDetalis",userDetails);
+        manageTappedpane.addTab("Posts",postPanel);
+        manageTappedpane.addTab("Informations", informationPanel);
         panel2.add(manageTappedpane);
 
         panel2.add(label3);
@@ -391,6 +419,29 @@ public class AdminForm extends JFrame {
             public void mouseClicked(MouseEvent e) {
                 userTappedpane.setSelectedIndex(0);
                 refreshTable();
+            }
+        });
+
+        accountDetails.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                manageTappedpane.setSelectedIndex(0);
+            }
+        });
+
+
+        posts.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                manageTappedpane.setSelectedIndex(1);
+            }
+        });
+
+        informations.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                manageTappedpane.setSelectedIndex(2);
+
             }
         });
 

@@ -1,8 +1,20 @@
 package org.example.Account;
 
+import java.util.List;
+
 public class Admin implements Person {
     private String email , password , userName , fullName;
     private int role = 2;
+    private List<String> posts;
+
+
+    public List<String> getPosts() {
+        return posts;
+    }
+
+    public void addPost(String post) {
+        posts.add(post);
+    }
 
     public Admin(){}
 

@@ -1,9 +1,20 @@
 package org.example.Account;
 
+import java.util.List;
+
 public class StoreOwner implements Person {
     private String email , password , userName , fullName;
     private int role = 1;
+    private List<String> posts;
 
+
+    public List<String> getPosts() {
+        return posts;
+    }
+
+    public void addPost(String post) {
+        posts.add(post);
+    }
     public StoreOwner(){}
 
     public StoreOwner(Person a){
@@ -62,4 +73,5 @@ public class StoreOwner implements Person {
     public int getRole() {
         return role;
     }
+
 }
