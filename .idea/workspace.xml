@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="15ef7f86-4278-412d-b698-ac719e455659" name="Changes" comment="admin gui &amp; improvment">
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/test/resources/features/login.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Account/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Account/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Account/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Account/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Account/StoreOwner.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Account/StoreOwner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Account/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Account/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/GUI/AdminForm/AdminForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/GUI/AdminForm/AdminForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/GUI/LogIn/LogInForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/GUI/LogIn/LogInForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/GUI/SignUpForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/GUI/LogIn/SignUpForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/test/java/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/test/java/org/example/Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/test/java/SignupSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/test/java/org/example/steps/SignupSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/test/java/steps/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/test/java/org/example/steps/LoginSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/test/login.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/test/signup.feature" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/test/resources/features/signup.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/Account/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/Account/Admin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/Account/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/Account/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/Account/StoreOwner.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/Account/StoreOwner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/Account/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/Account/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/LogIn/LogInForm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/LogIn/LogInForm$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/LogIn/LogInForm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/LogIn/LogInForm$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/LogIn/LogInForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/LogIn/LogInForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/SignUpForm$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/SignUpForm$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/SignUpForm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/test-classes/Runner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/test-classes/SignupSteps.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/test-classes/TestUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/test-classes/steps/LoginSteps.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="RC1" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;JADDOU3&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/JADDOU3/Sweet-Management-System.git&quot;,
+    &quot;accountId&quot;: &quot;8c120ce2-6ccd-4f61-80f1-7767460c7d06&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2jQ94zW2QHy7V3o2Q8J5keEOIzQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: login.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: signup.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Runner.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;508&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;RC2&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-22&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Projects/Sweet-Management-System/SweetMangementSystem/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;D:/Projects/Sweet-Management-System/SweetMangementSystem/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\Sweet-Management-System\SweetMangementSystem\src\main\resources" />
+      <recent name="D:\Projects\Sweet-Management-System\SweetMangementSystem\src\main\java\org\example\GUI\LogIn" />
+      <recent name="D:\Projects\Sweet-Management-System\SweetMangementSystem\src\main\java\org\example\GUI" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\Sweet-Management-System\SweetMangementSystem\src\test\resources\features" />
+      <recent name="D:\Projects\Sweet-Management-System\SweetMangementSystem\src\test\resources\Features" />
+      <recent name="D:\Projects\Sweet-Management-System\SweetMangementSystem\src\main\resources" />
+      <recent name="D:\Projects\Sweet-Management-System\SweetMangementSystem\src\main\java\org\example\GUI\LogIn" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+      <module name="SweetMangementSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.Account.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Feature: login" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/SweetMangementSystem/src/test/login.feature" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="SweetMangementSystem" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: login" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Feature: signup" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/SweetMangementSystem/src/test/resources/features/signup.feature" />
+      <option name="GLUE" value="org.example.steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="SweetMangementSystem" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: signup" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Runner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SweetMangementSystem" />
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.Runner" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Sweet-Management-System" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Sweet-Management-System" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.Runner" />
+        <item itemvalue="Cucumber Java.Feature: signup" />
+        <item itemvalue="Cucumber Java.Feature: login" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="15ef7f86-4278-412d-b698-ac719e455659" name="Changes" comment="" />
+      <created>1721308246953</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1721308246953</updated>
+      <workItem from="1721581290437" duration="193000" />
+      <workItem from="1721581647079" duration="115000" />
+      <workItem from="1721583215638" duration="249000" />
+      <workItem from="1721743589466" duration="1111000" />
+      <workItem from="1721744732140" duration="209000" />
+      <workItem from="1721756737965" duration="6790000" />
+      <workItem from="1721842814042" duration="338000" />
+      <workItem from="1721843171597" duration="125000" />
+      <workItem from="1721848811641" duration="203000" />
+      <workItem from="1722085234948" duration="6225000" />
+      <workItem from="1722099349442" duration="7529000" />
+      <workItem from="1722107492053" duration="224000" />
+      <workItem from="1722170923783" duration="4604000" />
+      <workItem from="1722188751331" duration="5633000" />
+      <workItem from="1722279184438" duration="751000" />
+      <workItem from="1722349807492" duration="11105000" />
+      <workItem from="1722895527032" duration="890000" />
+      <workItem from="1722944625274" duration="33000" />
+      <workItem from="1723063297455" duration="59000" />
+      <workItem from="1723136214898" duration="9215000" />
+      <workItem from="1723146981248" duration="13928000" />
+      <workItem from="1723199469384" duration="12966000" />
+      <workItem from="1723216313192" duration="3858000" />
+      <workItem from="1723234440791" duration="6102000" />
+      <workItem from="1723240684467" duration="385000" />
+      <workItem from="1723278058463" duration="5517000" />
+      <workItem from="1723284550981" duration="4111000" />
+    </task>
+    <task id="LOCAL-00001" summary="login , signup gui">
+      <option name="closed" value="true" />
+      <created>1722198924371</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1722198924371</updated>
+    </task>
+    <task id="LOCAL-00002" summary="implement some Account classes">
+      <option name="closed" value="true" />
+      <created>1722360373372</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1722360373372</updated>
+    </task>
+    <task id="LOCAL-00003" summary="admin gui &amp; improvment">
+      <option name="closed" value="true" />
+      <created>1723240594417</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1723240594417</updated>
+    </task>
+    <task id="LOCAL-00004" summary="admin gui &amp; improvment">
+      <option name="closed" value="true" />
+      <created>1723240763469</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1723240763469</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="RC2" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="login , signup gui" />
+    <MESSAGE value="implement some Account classes" />
+    <MESSAGE value="admin gui &amp; improvment" />
+    <option name="LAST_COMMIT_MESSAGE" value="admin gui &amp; improvment" />
+  </component>
+</project>

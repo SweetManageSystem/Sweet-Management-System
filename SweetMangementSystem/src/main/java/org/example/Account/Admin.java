@@ -1,9 +1,20 @@
 package org.example.Account;
 
+import java.util.List;
 
 public class Admin implements Person {
     private String email , password , userName , fullName;
     private int role = 2;
+    private List<String> posts;
+
+
+    public List<String> getPosts() {
+        return posts;
+    }
+
+    public void addPost(String post) {
+        posts.add(post);
+    }
 
     public Admin(){}
 
@@ -13,6 +24,7 @@ public class Admin implements Person {
         this.userName = a.getUsername();
         this.fullName = a.getFullname();
         DataBase.removePerson(a);
+        DataBase.addPerson(this);
     }
     @Override
     public void setUsername(String username) {
@@ -57,5 +69,10 @@ public class Admin implements Person {
     @Override
     public void setRole(int role) {
         this.role = role;
+    }
+
+    @Override
+    public int getRole() {
+        return role;
     }
 }
