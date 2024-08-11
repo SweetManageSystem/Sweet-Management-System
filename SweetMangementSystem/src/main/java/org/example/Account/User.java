@@ -1,5 +1,7 @@
 package org.example.Account;
 
+import org.example.Database.UserDataBase;
+
 import java.util.List;
 
 public class User implements Person {
@@ -30,7 +32,7 @@ public class User implements Person {
         this.password = a.getPassword();
         this.userName = a.getUsername();
         this.fullName = a.getFullname();
-        DataBase.removePerson(a);
+        UserDataBase.removePerson(a);
     }
 
     @Override

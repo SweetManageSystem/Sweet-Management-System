@@ -1,10 +1,12 @@
 package org.example.Account;
 
+import org.example.Database.UserDataBase;
+
 import java.util.List;
 
 public class Admin implements Person {
     private String email , password , userName , fullName;
-    private int role = 2;
+    private int role = 3;
     private List<String> posts;
 
 
@@ -23,8 +25,8 @@ public class Admin implements Person {
         this.password = a.getPassword();
         this.userName = a.getUsername();
         this.fullName = a.getFullname();
-        DataBase.removePerson(a);
-        DataBase.addPerson(this);
+        UserDataBase.removePerson(a);
+        UserDataBase.addPerson(this);
     }
     @Override
     public void setUsername(String username) {

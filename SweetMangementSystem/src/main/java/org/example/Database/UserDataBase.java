@@ -1,10 +1,15 @@
-package org.example.Account;
+package org.example.Database;
+
+import org.example.Account.Admin;
+import org.example.Account.Person;
+import org.example.Account.StoreOwner;
+import org.example.Account.User;
 
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DataBase {
+public class UserDataBase {
     private static List<Person> db = new ArrayList<>();
 
     public static List<Person> getDb() {

@@ -1,7 +1,7 @@
 package org.example.GUI.LogIn;
 
 import org.example.Account.Admin;
-import org.example.Account.DataBase;
+import org.example.Database.UserDataBase;
 import org.example.Account.Person;
 import org.example.GUI.AdminForm.AdminForm;
 
@@ -142,7 +142,7 @@ public class LogInForm extends JFrame {
     public void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {
         String email = emailField.getText();
         String password = new String(passwordField.getPassword());
-            for (Person user : DataBase.getDb()) {
+            for (Person user : UserDataBase.getDb()) {
                 if (user.getEmail().equals(email) && user.getPassword().equals(password)) {
                     message = "Login successful";
                     checkRole(user);
@@ -165,6 +165,7 @@ public class LogInForm extends JFrame {
         return loginButton;
     }
 }
+
 
 
 

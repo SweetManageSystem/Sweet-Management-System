@@ -5,42 +5,72 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15ef7f86-4278-412d-b698-ac719e455659" name="Changes" comment="admin gui &amp; improvment">
-      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/test/resources/features/login.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Account/MaterialSuplier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Database/PostDataBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Database/ProductDataBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Reciepes/Post.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Reciepes/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/Admin/AManageUsersState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/Admin/AdminState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/Admin/BestSellingState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/Admin/DiplayStatisticsState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/Admin/ManageContentState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/Admin/ManageFeedbackState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/Admin/MonitorProfitsState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/Context.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/ExitState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/Login/LogInState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/Login/SignUpState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/MaterialSuplierState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/State.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/StoreOwnerState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/User/FilterRecipsState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/User/ManageMyAccount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/User/MessageStoresState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/User/PostState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/User/ProvideFeedbackState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/User/PurchaseState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/User/SearchState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/User/UserState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/WelcomeState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Account/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Account/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Account/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Account/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Account/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Database/UserDataBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Account/StoreOwner.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Account/StoreOwner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Account/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Account/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/GUI/AdminForm/AdminForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/GUI/AdminForm/AdminForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/GUI/LogIn/LogInForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/GUI/LogIn/LogInForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/GUI/SignUpForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/GUI/LogIn/SignUpForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/test/java/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/test/java/org/example/Runner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/test/java/SignupSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/test/java/org/example/steps/SignupSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/test/java/steps/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/test/java/org/example/steps/LoginSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/test/login.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/test/signup.feature" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/test/resources/features/signup.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/GUI/LogIn/SignUpForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/GUI/LogIn/SignUpForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/test/java/org/example/steps/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/test/java/org/example/steps/LoginSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/test/java/org/example/steps/SignupSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/test/java/org/example/steps/SignupSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/Account/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/Account/Admin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/Account/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/Account/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/Account/DataBase.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/Account/StoreOwner.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/Account/StoreOwner.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/Account/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/Account/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$10.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$12.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$13.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$14.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$5.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$6.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$7.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$8.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$9.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/LogIn/LogInForm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/LogIn/LogInForm$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/LogIn/LogInForm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/LogIn/LogInForm$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/LogIn/LogInForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/LogIn/LogInForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/SignUpForm$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/SignUpForm$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/SignUpForm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/test-classes/Runner.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/test-classes/SignupSteps.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/test-classes/TestUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/test-classes/steps/LoginSteps.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/LogIn/SignUpForm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/LogIn/SignUpForm$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/LogIn/SignUpForm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/LogIn/SignUpForm$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/LogIn/SignUpForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/LogIn/SignUpForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/cucumber-reports.html" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/cucumber-reports.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/test-classes/org/example/steps/LoginSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/test-classes/org/example/steps/LoginSteps.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/test-classes/org/example/steps/SignupSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/test-classes/org/example/steps/SignupSteps.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,6 +143,10 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.example.StateController.Admin" />
+      <recent name="org.example.StateController" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Projects\Sweet-Management-System\SweetMangementSystem\src\main\resources" />
       <recent name="D:\Projects\Sweet-Management-System\SweetMangementSystem\src\main\java\org\example\GUI\LogIn" />
@@ -128,13 +162,13 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.Runner">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="SweetMangementSystem" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.Account.*" />
+          <option name="PATTERN" value="org.example.Database.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -203,8 +237,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.Runner" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Cucumber Java.Feature: signup" />
         <item itemvalue="Cucumber Java.Feature: login" />
         <item itemvalue="Application.Main" />
@@ -253,7 +287,13 @@
       <workItem from="1723234440791" duration="6102000" />
       <workItem from="1723240684467" duration="385000" />
       <workItem from="1723278058463" duration="5517000" />
-      <workItem from="1723284550981" duration="4111000" />
+      <workItem from="1723284550981" duration="4979000" />
+      <workItem from="1723291013448" duration="2417000" />
+      <workItem from="1723297264846" duration="894000" />
+      <workItem from="1723298663736" duration="4502000" />
+      <workItem from="1723309897046" duration="94000" />
+      <workItem from="1723313477479" duration="159000" />
+      <workItem from="1723402856957" duration="8137000" />
     </task>
     <task id="LOCAL-00001" summary="login , signup gui">
       <option name="closed" value="true" />
@@ -287,7 +327,23 @@
       <option name="project" value="LOCAL" />
       <updated>1723240763469</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="admin gui &amp; improvment">
+      <option name="closed" value="true" />
+      <created>1723289667510</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1723289667510</updated>
+    </task>
+    <task id="LOCAL-00006" summary="admin gui &amp; improvment">
+      <option name="closed" value="true" />
+      <created>1723292325975</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1723292325975</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

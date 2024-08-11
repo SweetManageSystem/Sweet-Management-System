@@ -2,7 +2,7 @@ package org.example.steps;
 
 import io.cucumber.java.en.*;
 import org.example.GUI.LogIn.SignUpForm;
-import org.example.Account.DataBase;
+import org.example.Database.UserDataBase;
 import org.junit.Assert;
 
 public class SignupSteps {
@@ -11,7 +11,7 @@ public class SignupSteps {
 
     @Given("the user is on the signup page")
     public void theUserIsOnTheSignupPage() {
-        DataBase.initialUsers(); // Initialize users
+        UserDataBase.initialUsers(); // Initialize users
         signUpForm = new SignUpForm();
         signUpForm.setVisible(true);
     }

@@ -1,6 +1,7 @@
 package org.example.GUI.LogIn;
 
 import org.example.Account.*;
+import org.example.Database.UserDataBase;
 
 import javax.swing.*;
 import java.awt.*;
@@ -108,10 +109,10 @@ public class SignUpForm extends JFrame {
                 } else if (!passwordField.getText().equals(confirmPasswordField.getText())) {
                     message = "Passwords do not match";
                     JOptionPane.showMessageDialog(null, message);
-                } else if (DataBase.getPerson(emailField.getText()) != null) {
+                } else if (UserDataBase.getPerson(emailField.getText()) != null) {
                     message = "Email already exists";
                     JOptionPane.showMessageDialog(null, message);
-                } else if (DataBase.getDb().stream().anyMatch(p -> p.getUsername().equals(usernameField.getText()))) {
+                } else if (UserDataBase.getDb().stream().anyMatch(p -> p.getUsername().equals(usernameField.getText()))) {
                     message = "Username already exists";
                     JOptionPane.showMessageDialog(null, message);
                 } else {
@@ -120,7 +121,7 @@ public class SignUpForm extends JFrame {
                     person.setUsername(usernameField.getText());
                     person.setEmail(emailField.getText());
                     person.setFullname(fullNameField.getText());
-                    DataBase.addPerson(person);
+                    UserDataBase.addPerson(person);
                     message = "Account added successfully";
                     JOptionPane.showMessageDialog(null, message);
                 }

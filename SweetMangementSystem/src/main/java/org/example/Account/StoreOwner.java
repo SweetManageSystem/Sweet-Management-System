@@ -1,10 +1,12 @@
 package org.example.Account;
 
+import org.example.Database.UserDataBase;
+
 import java.util.List;
 
 public class StoreOwner implements Person {
     private String email , password , userName , fullName;
-    private int role = 1;
+    private int role = 2;
     private List<String> posts;
 
 
@@ -22,7 +24,7 @@ public class StoreOwner implements Person {
         this.password = a.getPassword();
         this.userName = a.getUsername();
         this.fullName = a.getFullname();
-        DataBase.removePerson(a);
+        UserDataBase.removePerson(a);
     }
 
     @Override

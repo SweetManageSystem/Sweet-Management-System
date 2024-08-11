@@ -1,20 +1,15 @@
 package org.example;
 
 
-import org.example.Account.Admin;
-import org.example.Account.DataBase;
-import org.example.Account.Person;
-import org.example.Account.User;
+import org.example.Database.UserDataBase;
 import org.example.GUI.LogIn.LogInForm;
-
-
-import javax.xml.crypto.Data;
-import java.util.ArrayList;
-import java.util.List;
+import org.example.StateController.Context;
+import org.example.StateController.WelcomeState;
 
 public class Main {
     public static void main(String[] args) {
-        DataBase.initialUsers();
-        new LogInForm().setVisible(true);
+        UserDataBase.initialUsers();
+        new WelcomeState(new Context()).handleInput();
+        //new LogInForm().setVisible(true);
     }
 }

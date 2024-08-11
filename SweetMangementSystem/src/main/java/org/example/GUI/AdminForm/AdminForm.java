@@ -1,7 +1,7 @@
 package org.example.GUI.AdminForm;
 
 import org.example.Account.Admin;
-import org.example.Account.DataBase;
+import org.example.Database.UserDataBase;
 import org.example.Account.Person;
 import org.example.GUI.LogIn.LogInForm;
 
@@ -10,7 +10,6 @@ import javax.swing.border.LineBorder;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.*;
-import java.util.List;
 
 public class AdminForm extends JFrame {
 
@@ -141,7 +140,7 @@ public class AdminForm extends JFrame {
         panel1.setBounds(0, 180, 1200, 550);
         String[] columnNames = {"UserName", "Email", "Full Name", "Role", "Actions"};
         tableModel = new DefaultTableModel(columnNames, 0);
-        for (Person p : DataBase.getDb()) {
+        for (Person p : UserDataBase.getDb()) {
             switch (p.getRole()) {
                 case 0:
                     tableModel.addRow(new Object[]{p.getUsername(), p.getEmail(), p.getFullname(), "User",});
@@ -201,7 +200,7 @@ public class AdminForm extends JFrame {
                 if (emailSearch.getText().equals("") && usernameSearch.getText().equals("")) {
                     JOptionPane.showMessageDialog(null, "Please enter a valid email or username");
                 } else {
-                    for (Person p : DataBase.getDb()) {
+                    for (Person p : UserDataBase.getDb()) {
                         if (emailSearch.getText().equals(p.getEmail()) || usernameSearch.getText().equals(p.getUsername())) {
                             tableModel.setRowCount(0);
                             String r = null;
@@ -324,10 +323,10 @@ public class AdminForm extends JFrame {
         saveButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                DataBase.getPerson(index).setUsername(usernameField.getText());
-                DataBase.getPerson(index).setEmail(emailField.getText());
-                DataBase.getPerson(index).setFullname(fullNameField.getText());
-                DataBase.getPerson(index).setRole(roleComboBox.getSelectedIndex());
+                UserDataBase.getPerson(index).setUsername(usernameField.getText());
+                UserDataBase.getPerson(index).setEmail(emailField.getText());
+                UserDataBase.getPerson(index).setFullname(fullNameField.getText());
+                UserDataBase.getPerson(index).setRole(roleComboBox.getSelectedIndex());
                 JOptionPane.showMessageDialog(null, "Account details updated successfully");
             }
         });
@@ -474,7 +473,7 @@ public class AdminForm extends JFrame {
                 break;
         }
         if (role != 3)
-            for (Person p : DataBase.getDb()) {
+            for (Person p : UserDataBase.getDb()) {
                 if (p.getRole() == role) {
                     tableModel.addRow(new Object[]{p.getUsername(), p.getEmail(), p.getFullname(), filter,});
                 }
@@ -485,7 +484,7 @@ public class AdminForm extends JFrame {
     }
     public void refreshTable(){
         tableModel.setRowCount(0);
-        for (Person p : DataBase.getDb()) {
+        for (Person p : UserDataBase.getDb()) {
                 String r = null;
                 switch (p.getRole()){
                     case 0: r = "User";
@@ -504,7 +503,7 @@ public class AdminForm extends JFrame {
         emailField.setText(email);
         fullNameField.setText(fullName);
         roleComboBox.setSelectedItem(role);
-        index = DataBase.getIndex(email);
+        index = UserDataBase.getIndex(email);
     }
 
     public void showUserTappedPane(int index) {
