@@ -1,6 +1,7 @@
 package org.example.Account;
 
 import org.example.Database.UserDataBase;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -9,30 +10,23 @@ public class User implements Person {
     private String email, password, confirmPassword, userName, fullName, address, currentState;
     private String originalUsername;
     private int role = 0;
-    private List<String> posts;
-    private List<String> availableOptions;
+    private List<String> posts = new ArrayList<>();
+    private List<String> messages = new ArrayList<>();
+    private List<String> availableOptions = new ArrayList<>();
     private String initialPostLoginState;
 
-    public List<String> getPosts() {
-        return posts;
-    }
+    // Constructors
+    public User() {}
 
-    public void addPost(String post) {
-        if (posts == null) {
-            posts = new ArrayList<>();
-        }
-        posts.add(post);
-    }
-
-    public User() {
-        this.availableOptions = new ArrayList<>();
+    public User(String email, String password) {
+        this.email = email;
+        this.password = password;
     }
 
     public User(String userName, String email, String password) {
         this.userName = userName;
         this.email = email;
         this.password = password;
-        this.availableOptions = new ArrayList<>();
     }
 
     public User(String userName, String email, String password, int role) {
@@ -41,7 +35,6 @@ public class User implements Person {
         this.userName = userName;
         this.role = role;
         this.fullName = null;
-        this.availableOptions = new ArrayList<>();
     }
 
     public User(Person a) {
@@ -50,9 +43,9 @@ public class User implements Person {
         this.userName = a.getUsername();
         this.fullName = a.getFullname();
         UserDataBase.removePerson(a);
-        this.availableOptions = new ArrayList<>();
     }
 
+    // Getters and Setters
     @Override
     public void setUsername(String username) {
         if (this.originalUsername == null) {
@@ -157,6 +150,24 @@ public class User implements Person {
         return originalUsername;
     }
 
+    public List<String> getPosts() {
+        return posts;
+    }
+
+    public void addPost(String post) {
+        posts.add(post);
+    }
+
+    public void recieveMessage(String message) {
+        messages.add(message);
+    }
+
+    @Override
+    public List<String> getMessages() {
+        return messages;
+    }
+
+    // Methods
     public boolean login() {
         User storedUser = UserDataBase.findByUsername(this.userName);
         if (storedUser != null && storedUser.getPassword().equals(this.password)) {

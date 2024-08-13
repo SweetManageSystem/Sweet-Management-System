@@ -4,15 +4,17 @@ import org.example.Account.Admin;
 import org.example.Account.Person;
 import org.example.Account.StoreOwner;
 import org.example.Account.User;
-import java.util.HashMap;
-import java.util.Map;
+
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class UserDataBase {
     private static List<Person> db = new ArrayList<>();
     private static Map<String, User> users = new HashMap<>();
     private static UserDataBase instance;
+    private static Person loggedInUser;
 
     static {
         users.put("admin@gmail.com", new User("admin", "Admin", "admin@gmail.com", 2));
@@ -38,10 +40,38 @@ public class UserDataBase {
 
     public static Person getPerson(String email) {
         for (Person person : db) {
-            if (person.getEmail().equals(email))
+            if (person.getEmail().equals(email)) {
                 return person;
+            }
         }
         System.err.println("Email not found: " + email);
+        return null;
+    }
+
+    public static Person getPerson(int index) {
+        if (index >= 0 && index < db.size()) {
+            return db.get(index);
+        }
+        System.err.println("Index out of bounds: " + index);
+        return null;
+    }
+
+    public static int getIndex(String email) {
+        for (int i = 0; i < db.size(); i++) {
+            if (db.get(i).getEmail().equals(email)) {
+                return i;
+            }
+        }
+        System.err.println("Email not found: " + email);
+        return -1;
+    }
+
+    public static Person getPersonByUsername(String username) {
+        for (Person person : db) {
+            if (person.getUsername().equals(username)) {
+                return person;
+            }
+        }
         return null;
     }
 
@@ -58,10 +88,6 @@ public class UserDataBase {
             }
         }
         return instance;
-    }
-
-    public User getUser(String userName) {
-        return users.get(userName);
     }
 
     public void addUser(User user) {
@@ -99,22 +125,6 @@ public class UserDataBase {
         users.remove(username);
     }
 
-    public static Person getPerson(int index) {
-        if (index >= 0 && index < db.size()) {
-            return db.get(index);
-        }
-        System.err.println("Index out of bounds: " + index);
-        return null;
-    }
-    public static int getIndex(String email) {
-        for (int i = 0; i < db.size(); i++) {
-            if (db.get(i).getEmail().equals(email))
-                return i;
-        }
-        System.err.println("Email not found: " + email);
-        return -1;
-    }
-
     public static String deleteUser(String email) {
         if (users.containsKey(email)) {
             users.remove(email);
@@ -138,9 +148,18 @@ public class UserDataBase {
         return false;
     }
 
+    public static void setLoggedIn(Person user) {
+        loggedInUser = user;
+    }
+
+    public static Person getLoggedIn() {
+        return loggedInUser;
+    }
+
     public static void initialUsers() {
         getInstance();
         System.out.println("Initializing users...");
+
         Person p1 = new Admin();
         p1.setEmail("admin@gmail.com");
         p1.setPassword("admin");
@@ -190,6 +209,7 @@ public class UserDataBase {
         p7.setUsername("Janna");
         addPerson(p7);
 
+        // Add initial users to the map
         users.put("admin@gmail.com", new User("admin", "Admin", "admin@gmail.com", 2));
         users.put("storeowner1@example.com", new User("storeowner1", "StoreOwner", "storeowner1@example.com", 1));
 
@@ -201,7 +221,6 @@ public class UserDataBase {
         user1.setRole(0);
         users.put(user1.getUsername(), user1);
 
-        // Add the new user
         User newUser = new User();
         newUser.setUsername("newuser");
         newUser.setEmail("newuser@example.com");

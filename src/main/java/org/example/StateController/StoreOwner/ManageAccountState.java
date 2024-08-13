@@ -30,7 +30,7 @@ public class ManageAccountState implements State {
                 command = in.nextLine();
                 filterState(command);
                 if (!alreadyExists(command)) {
-                    UserDataBase.getLogedIn().setUsername(command);
+                    UserDataBase.getLoggedIn().setUsername(command);
                 }
                 break;
             case "2":
@@ -38,20 +38,20 @@ public class ManageAccountState implements State {
                 command = in.nextLine();
                 filterState(command);
                 if (!alreadyExists(command)) {
-                    UserDataBase.getLogedIn().setEmail(command);
+                    UserDataBase.getLoggedIn().setEmail(command);
                 }
                 break;
             case "3":
                 System.out.println("Enter the new Password : ");
                 command = in.nextLine();
                 filterState(command);
-                UserDataBase.getLogedIn().setPassword(command);
+                UserDataBase.getLoggedIn().setPassword(command);
                 break;
             case "4":
                 System.out.println("Enter the new Full Name : ");
                 command = in.nextLine();
                 filterState(command);
-                UserDataBase.getLogedIn().setFullname(command);
+                UserDataBase.getLoggedIn().setFullname(command);
                 break;
             default:
                 System.out.println("Invalid choice");

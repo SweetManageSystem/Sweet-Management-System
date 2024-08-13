@@ -3,7 +3,6 @@ package org.example.Account;
 import java.util.List;
 
 public interface Person {
-
      public void setUsername(String username);
      public void setPassword(String password);
      public void setFullname(String fullname);
@@ -16,5 +15,6 @@ public interface Person {
      public int getRole();
      public List<String> getPosts();
      public void addPost(String post);
-
+     public void recieveMessage(String message);
+     public List<String> getMessages();
 }

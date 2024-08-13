@@ -54,7 +54,7 @@ public class MessageState implements State {
         if (user != null) {
             System.out.println("Enter your message:");
             String message = input.nextLine();
-            UserDataBase.getPerson(user).recieveMessage(message);
+            UserDataBase.getPerson(user.getEmail()).recieveMessage(message);
             System.out.println("Message sent to " + user.getUsername());
         } else {
             System.out.println("User not found");
@@ -64,7 +64,7 @@ public class MessageState implements State {
     }
 
     private void readMessageFromUser() {
-        for(String message : UserDataBase.getLogedIn().getMessages()){
+        for(String message : UserDataBase.getLoggedIn().getMessages()){
             System.out.println(message);
         }
     }

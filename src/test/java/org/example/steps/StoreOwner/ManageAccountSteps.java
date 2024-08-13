@@ -32,7 +32,7 @@ public class ManageAccountSteps {
         UserDataBase.setLoggedIn(storeOwner);
 
         // Debug statement to check if the user is set correctly
-        System.out.println("Logged in user: " + UserDataBase.getLogedIn().getUsername());
+        System.out.println("Logged in user: " + UserDataBase.getLoggedIn().getUsername());
 
         StoreOwnerState storeOwnerState = new StoreOwnerState(context);
         context.setCurrentState(storeOwnerState);
@@ -75,7 +75,7 @@ public class ManageAccountSteps {
 
     @Then("the username should be updated to {string}")
     public void the_username_should_be_updated_to(String expectedUsername) {
-        assert UserDataBase.getLogedIn().getUsername().equals(expectedUsername);
+        assert UserDataBase.getLoggedIn().getUsername().equals(expectedUsername);
     }
 
     @When("I choose to edit the email")
@@ -101,7 +101,7 @@ public class ManageAccountSteps {
 
     @Then("the email should be updated to {string}")
     public void the_email_should_be_updated_to(String expectedEmail) {
-        assert UserDataBase.getLogedIn().getEmail().equals(expectedEmail);
+        assert UserDataBase.getLoggedIn().getEmail().equals(expectedEmail);
     }
 
     @When("I choose to edit the password")
@@ -127,7 +127,7 @@ public class ManageAccountSteps {
 
     @Then("the password should be updated to {string}")
     public void the_password_should_be_updated_to(String expectedPassword) {
-        assert UserDataBase.getLogedIn().getPassword().equals(expectedPassword);
+        assert UserDataBase.getLoggedIn().getPassword().equals(expectedPassword);
     }
 
     @When("I choose to edit the full name")
@@ -153,7 +153,7 @@ public class ManageAccountSteps {
 
     @Then("the full name should be updated to {string}")
     public void the_full_name_should_be_updated_to(String expectedFullName) {
-        assert UserDataBase.getLogedIn().getFullname().equals(expectedFullName);
+        assert UserDataBase.getLoggedIn().getFullname().equals(expectedFullName);
     }
 
     private void simulateUserInput(String input) {

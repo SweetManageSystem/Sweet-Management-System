@@ -1,6 +1,8 @@
 package org.example.Account;
 
 import org.example.Database.UserDataBase;
+import org.example.Reciepes.Post;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -182,5 +184,15 @@ public class Admin implements Person {
             System.out.println("User not found: " + email);
             return "User not found";
         }
+    }
+
+    @Override
+    public void recieveMessage(String message) {
+        // Implementation for receiving a message
+    }
+
+    @Override
+    public List<String> getMessages() {
+        return List.of(); // Return an empty list or actual messages if implemented
     }
 }
