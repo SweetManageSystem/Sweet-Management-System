@@ -1,21 +1,33 @@
 package org.example.Account;
 
 import org.example.Database.UserDataBase;
+import org.example.Reciepes.Post;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Admin implements Person {
     private String email , password , userName , fullName;
     private int role = 3;
-    private List<String> posts;
+    private List<Post> posts = new ArrayList<>();
 
 
-    public List<String> getPosts() {
+    public List<Post> getPosts() {
         return posts;
     }
 
-    public void addPost(String post) {
+    public void addPost(Post post) {
         posts.add(post);
+    }
+
+    @Override
+    public void recieveMessage(String message) {
+
+    }
+
+    @Override
+    public List<String> getMessages() {
+        return List.of();
     }
 
     public Admin(){}

@@ -1,5 +1,7 @@
 package org.example.Account;
 
+import org.example.Reciepes.Post;
+
 import java.util.List;
 
 public interface Person {
@@ -13,7 +15,8 @@ public interface Person {
      public String getEmail();
      public void setRole(int role);
      public int getRole();
-     public List<String> getPosts();
-     public void addPost(String post);
-
+     public List<Post> getPosts();
+     public void addPost(Post post);
+     public void recieveMessage(String message);
+     public List<String> getMessages();
 }

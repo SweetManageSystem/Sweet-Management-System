@@ -4,73 +4,50 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15ef7f86-4278-412d-b698-ac719e455659" name="Changes" comment="admin gui &amp; improvment">
-      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Account/MaterialSuplier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Database/PostDataBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Database/ProductDataBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Reciepes/Post.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Reciepes/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/Admin/AManageUsersState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/Admin/AdminState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/Admin/BestSellingState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/Admin/DiplayStatisticsState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/Admin/ManageContentState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/Admin/ManageFeedbackState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/Admin/MonitorProfitsState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/Context.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/ExitState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/Login/LogInState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/Login/SignUpState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/MaterialSuplierState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/State.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/StoreOwnerState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/User/FilterRecipsState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/User/ManageMyAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/User/MessageStoresState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/User/PostState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/User/ProvideFeedbackState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/User/PurchaseState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/User/SearchState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/User/UserState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/WelcomeState.java" afterDir="false" />
+    <list default="true" id="15ef7f86-4278-412d-b698-ac719e455659" name="Changes" comment="Switch to State Pattern">
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Database/OrderDatabase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Reciepes/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/StoreOwner/AdjustProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/StoreOwner/BestSellingState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/StoreOwner/DiscountState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/StoreOwner/ManageAccountState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/StoreOwner/MessageState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/StoreOwner/MonitorSalesState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/StoreOwner/TrackOrderState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/test/java/org/example/steps/StoreOwner/AdjustProductSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/test/java/org/example/steps/StoreOwner/BestSellingSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/test/java/org/example/steps/StoreOwner/CommonSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/test/java/org/example/steps/StoreOwner/DiscountSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/test/java/org/example/steps/StoreOwner/ManageAccountSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/test/java/org/example/steps/StoreOwner/MessagingSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/test/java/org/example/steps/StoreOwner/MonitorSalesSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/test/java/org/example/steps/StoreOwner/TrackOrderSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/test/resources/features/StoreOwner/Adjust.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/test/resources/features/StoreOwner/BestSelling.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/test/resources/features/StoreOwner/DynamicDiscount.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/test/resources/features/StoreOwner/ManageAccount.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/test/resources/features/StoreOwner/MessageUser.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/test/resources/features/StoreOwner/MonitorSales.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SweetMangementSystem/src/test/resources/features/StoreOwner/TrackOrder.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Account/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Account/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Account/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Database/UserDataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Account/MaterialSuplier.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Account/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Account/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Account/StoreOwner.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Account/StoreOwner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Account/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Account/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/GUI/AdminForm/AdminForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/GUI/AdminForm/AdminForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/GUI/LogIn/LogInForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/GUI/LogIn/LogInForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/GUI/LogIn/SignUpForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/GUI/LogIn/SignUpForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Database/ProductDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Database/ProductDataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Database/UserDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Database/UserDataBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/test/java/org/example/steps/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/test/java/org/example/steps/LoginSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/test/java/org/example/steps/SignupSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/test/java/org/example/steps/SignupSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Reciepes/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/Reciepes/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/Login/LogInState.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/Login/LogInState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/MaterialSuplierState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/StoreOwnerState.java" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/src/main/java/org/example/StateController/StoreOwner/StoreOwnerState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/Account/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/Account/Admin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/Account/DataBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/Account/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/Account/Person.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/Account/StoreOwner.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/Account/StoreOwner.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/Account/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/Account/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$10.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$11.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$12.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$13.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$14.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm$9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/AdminForm/AdminForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/LogIn/LogInForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/LogIn/LogInForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/LogIn/SignUpForm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/LogIn/SignUpForm$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/LogIn/SignUpForm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/LogIn/SignUpForm$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/LogIn/SignUpForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/GUI/LogIn/SignUpForm.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/classes/org/example/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/cucumber-reports.html" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/cucumber-reports.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/test-classes/org/example/steps/LoginSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/test-classes/org/example/steps/LoginSteps.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SweetMangementSystem/target/test-classes/org/example/steps/SignupSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/SweetMangementSystem/target/test-classes/org/example/steps/SignupSteps.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,31 +94,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Feature: login.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Feature: signup.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Runner.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;508&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;RC2&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-22&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Projects/Sweet-Management-System/SweetMangementSystem/src/main/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;D:/Projects/Sweet-Management-System/SweetMangementSystem/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Cucumber Java.Feature: login.executor": "Run",
+    "Cucumber Java.Feature: signup.executor": "Run",
+    "Cucumber Java.Feature: update,add,deleteproduct.executor": "Run",
+    "JUnit.Runner.executor": "Coverage",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "508",
+    "git-widget-placeholder": "RC2",
+    "jdk.selected.JAVA_MODULE": "openjdk-22",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "D:/Projects/Sweet-Management-System/SweetMangementSystem/src/test/java/org/example/steps",
+    "last_opened_file_path": "D:/Projects/Sweet-Management-System/SweetMangementSystem/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "D:/Projects/Sweet-Management-System/SweetMangementSystem/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.example.StateController.Admin" />
@@ -153,6 +132,7 @@
       <recent name="D:\Projects\Sweet-Management-System\SweetMangementSystem\src\main\java\org\example\GUI" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\Sweet-Management-System\SweetMangementSystem\src\test\resources\features\StoreOwner" />
       <recent name="D:\Projects\Sweet-Management-System\SweetMangementSystem\src\test\resources\features" />
       <recent name="D:\Projects\Sweet-Management-System\SweetMangementSystem\src\test\resources\Features" />
       <recent name="D:\Projects\Sweet-Management-System\SweetMangementSystem\src\main\resources" />
@@ -213,6 +193,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Feature: update,add,deleteproduct" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/SweetMangementSystem/src/test/resources/features/update,add,deleteproduct.feature" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="SweetMangementSystem" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: update,add,deleteproduct" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Runner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SweetMangementSystem" />
       <option name="PACKAGE_NAME" value="org.example" />
@@ -239,9 +237,9 @@
       <list>
         <item itemvalue="JUnit.Runner" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Cucumber Java.Feature: update,add,deleteproduct" />
         <item itemvalue="Cucumber Java.Feature: signup" />
         <item itemvalue="Cucumber Java.Feature: login" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -293,7 +291,11 @@
       <workItem from="1723298663736" duration="4502000" />
       <workItem from="1723309897046" duration="94000" />
       <workItem from="1723313477479" duration="159000" />
-      <workItem from="1723402856957" duration="8137000" />
+      <workItem from="1723402856957" duration="8416000" />
+      <workItem from="1723496210734" duration="5966000" />
+      <workItem from="1723502233531" duration="5994000" />
+      <workItem from="1723551774250" duration="2098000" />
+      <workItem from="1723553898224" duration="16793000" />
     </task>
     <task id="LOCAL-00001" summary="login , signup gui">
       <option name="closed" value="true" />
@@ -343,7 +345,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723292325975</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Switch to State Pattern">
+      <option name="closed" value="true" />
+      <created>1723413103020</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1723413103020</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -376,6 +386,13 @@
     <MESSAGE value="login , signup gui" />
     <MESSAGE value="implement some Account classes" />
     <MESSAGE value="admin gui &amp; improvment" />
-    <option name="LAST_COMMIT_MESSAGE" value="admin gui &amp; improvment" />
+    <MESSAGE value="Switch to State Pattern" />
+    <option name="LAST_COMMIT_MESSAGE" value="Switch to State Pattern" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Sweet_Management_System$Main.ic" NAME="Main Coverage Results" MODIFIED="1723567499520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>org.example.Database.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Sweet_Management_System$Runner.ic" NAME="Runner Coverage Results" MODIFIED="1723572963006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>

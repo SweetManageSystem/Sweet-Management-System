@@ -11,6 +11,15 @@ import java.util.List;
 
 public class UserDataBase {
     private static List<Person> db = new ArrayList<>();
+    private static Person loggedInUser;
+
+    public static void setLoggedIn(Person user) {
+        loggedInUser = user;
+    }
+
+    public static Person getLogedIn() {
+        return loggedInUser;
+    }
 
     public static List<Person> getDb() {
         return db;
@@ -24,12 +33,24 @@ public class UserDataBase {
         db.remove(person);
     }
 
+    public static Person getPerson(Person person) {
+        return db.get(db.indexOf(person));
+    }
+
     public static Person getPerson(String email) {
         for(Person person : db) {
             if(person.getEmail().equals(email))
                 return person;
         }
         JOptionPane.showMessageDialog(null, "Email not found");
+        return null;
+    }
+
+    public static Person getPersonByUsername(String username) {
+        for(Person person : db) {
+            if (person.getUsername().equals(username))
+                return person;
+        }
         return null;
     }
 

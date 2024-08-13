@@ -4,6 +4,7 @@ import org.example.Account.Person;
 import org.example.Database.UserDataBase;
 import org.example.StateController.*;
 import org.example.StateController.Admin.AdminState;
+import org.example.StateController.StoreOwner.StoreOwnerState;
 import org.example.StateController.User.UserState;
 
 import java.util.Scanner;
@@ -29,9 +30,6 @@ public class LogInState implements State {
                     case 0:
                         context.setCurrentState(new UserState(context));
                         break;
-                    case 1:
-                        context.setCurrentState(new MaterialSuplierState(context));
-                        break;
                     case 2:
                         context.setCurrentState(new StoreOwnerState(context));
                         break;
@@ -39,6 +37,7 @@ public class LogInState implements State {
                         context.setCurrentState(new AdminState(context));
                         break;
                 }
+                UserDataBase.setLoggedIn(UserDataBase.getPerson(email));
                 context.handleInput();
             }
         }
