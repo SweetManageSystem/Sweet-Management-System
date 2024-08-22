@@ -26,11 +26,12 @@ public class MessageState implements State {
     @Override
     public void handleInput() {
         System.out.println("Messaging System\n" +
-                "1. Send a Message      2. Read Messages");
+                "1. Send a Message      2. Read Messages\n"+
+                "3.Back");
 
         if (input.hasNextLine()) {
             String command = input.nextLine();
-            filterState(command);
+            context.filterState(command);
 
             switch (command) {
                 case "1":
@@ -38,6 +39,10 @@ public class MessageState implements State {
                     break;
                 case "2":
                     readMessageFromUser();
+                    break;
+                case "3":
+                    context.setCurrentState(new StoreOwnerState(context));
+                    context.handleInput();
                     break;
                 default:
                     System.out.println("Invalid command");
@@ -69,17 +74,7 @@ public class MessageState implements State {
         }
     }
 
-    private void filterState(String input){
-        if(context.isBack(input)){
-            context.setCurrentState(new StoreOwnerState(context));
-            context.handleInput();
-        }
-        else if(context.isExit(input)){
-            context.setCurrentState(new ExitState(context));
-            context.handleInput();
-        }
 
-    }
 
 
 }

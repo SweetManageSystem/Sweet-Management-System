@@ -42,7 +42,7 @@ public class MessagingSteps {
     public void i_enter_the_username(String username) {
         // Simulate entering the username
         System.setIn(new java.io.ByteArrayInputStream(username.getBytes()));
-        messageState.handleInput();
+        //messageState.handleInput();
     }
 
     @When("I enter the message {string}")

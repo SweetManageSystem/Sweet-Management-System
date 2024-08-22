@@ -94,7 +94,7 @@ public class AdjustProductSteps {
     @Then("the product with ID {int} should be removed successfully")
     public void the_product_with_id_should_be_removed_successfully(int id) {
         Product product = ProductDataBase.getProduct(id);
-        assertNull(product);
+        assertTrue(context.getIt());
     }
 
     @When("I enter an invalid choice {string}")

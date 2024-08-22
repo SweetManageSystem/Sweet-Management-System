@@ -29,11 +29,11 @@ public class TrackOrderState implements State {
         System.out.println("Track Order System\n" +
                 "1. View All Orders         2. View Order Details\n" +
                 "3. Update Order Status     4. Filter Orders by Status\n" +
-                "5. Search Orders by Customer Name");
+                "5. Search Orders           6.Back");
 
         if (input.hasNextLine()) {
             String command = input.nextLine();
-            filterState(command);
+            context.filterState(command);
             switch (command) {
                 case "1":
                     viewAllOrders();
@@ -49,6 +49,9 @@ public class TrackOrderState implements State {
                     break;
                 case "5":
                     searchOrdersByCustomerName();
+                    break;
+                case "6":
+                    context.setCurrentState(new StoreOwnerState(context));
                     break;
                 default:
                     System.out.println("Invalid command");
@@ -122,15 +125,5 @@ public class TrackOrderState implements State {
         }
     }
 
-    private void filterState(String input){
-        if(context.isBack(input)){
-            context.setCurrentState(new StoreOwnerState(context));
-            context.handleInput();
-        }
-        else if(context.isExit(input)){
-            context.setCurrentState(new ExitState(context));
-            context.handleInput();
-        }
 
-    }
 }

@@ -32,7 +32,7 @@ public class StoreOwnerState implements State {
                 "7. Message Users           8. Log Out");
         if (input.hasNextLine()) {
             String command = input.nextLine();
-            filterState(command);
+            context.filterState(command);
 
             switch (command) {
                 case "1":
@@ -75,13 +75,5 @@ public class StoreOwnerState implements State {
         }
     }
 
-    private void filterState(String input) {
-        if (context.isBack(input)) {
-            context.setCurrentState(new LogInState(context));
-            context.handleInput();
-        } else if (context.isExit(input)) {
-            context.setCurrentState(new ExitState(context));
-            context.handleInput();
-        }
-    }
+
 }

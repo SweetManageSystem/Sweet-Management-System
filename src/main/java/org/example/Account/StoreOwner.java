@@ -1,14 +1,13 @@
 package org.example.Account;
 
 import org.example.Database.UserDataBase;
-import org.example.Reciepes.Post;
 import org.example.Reciepes.Product;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class StoreOwner implements Person {
-    private String email, password, userName, fullName;
+    private String email, password, userName, fullName , address;
     private int role = 2;
     private List<String> posts = new ArrayList<>();
     private List<Product> products = new ArrayList<>();
@@ -53,6 +52,14 @@ public class StoreOwner implements Person {
         return messages;
     }
 
+    @Override
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
     public StoreOwner() {}
 
     public StoreOwner(String userName, String email, String password) {

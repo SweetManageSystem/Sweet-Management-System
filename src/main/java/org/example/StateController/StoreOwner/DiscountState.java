@@ -24,7 +24,7 @@ public class DiscountState implements State {
                     "3. Apply discount to products in a price range\n");
 
             String command = input.nextLine();
-            filterState(command);
+            context.filterState(command);
             switch (command) {
                 case "1":
                     applyDiscountToAllProducts(input);
@@ -70,11 +70,5 @@ public class DiscountState implements State {
         System.out.println("Discount applied to products in the price range.");
     }
 
-    private void filterState(String input) {
-        if (context.isBack(input)) {
-            context.setCurrentState(new StoreOwnerState(context));
-        } else if (context.isExit(input)) {
-            context.setCurrentState(new ExitState(context));
-        }
-    }
+
 }

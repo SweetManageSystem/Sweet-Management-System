@@ -16,11 +16,7 @@ public class UserDataBase {
     private static UserDataBase instance;
     private static Person loggedInUser;
 
-    static {
-        users.put("admin@gmail.com", new User("admin", "Admin", "admin@gmail.com", 2));
-        users.put("storeowner1@example.com", new User("storeowner1", "StoreOwner", "storeowner1@example.com", 1));
-        // Add more initial users as needed
-    }
+
 
     public static List<Person> getDb() {
         return db;
@@ -158,7 +154,7 @@ public class UserDataBase {
 
     public static void initialUsers() {
         getInstance();
-        System.out.println("Initializing users...");
+
 
         Person p1 = new Admin();
         p1.setEmail("admin@gmail.com");
@@ -172,6 +168,7 @@ public class UserDataBase {
         p2.setPassword("store");
         p2.setFullname("store");
         p2.setUsername("Nablus Store");
+        p2.setAddress("Nablus");
         addPerson(p2);
 
         Person p3 = new StoreOwner();
@@ -179,6 +176,7 @@ public class UserDataBase {
         p3.setPassword("store");
         p3.setFullname("store");
         p3.setUsername("Jenin Store");
+        p3.setAddress("Jenin");
         addPerson(p3);
 
         Person p4 = new User();
@@ -186,6 +184,7 @@ public class UserDataBase {
         p4.setPassword("123");
         p4.setFullname("Khalid ahmed");
         p4.setUsername("Khalid");
+        p4.setAddress("Jenin");
         addPerson(p4);
 
         Person p5 = new User();
@@ -193,6 +192,7 @@ public class UserDataBase {
         p5.setPassword("123");
         p5.setFullname("nasser moner");
         p5.setUsername("Nasser");
+        p5.setAddress("Jenin");
         addPerson(p5);
 
         Person p6 = new User();
@@ -200,6 +200,7 @@ public class UserDataBase {
         p6.setPassword("123");
         p6.setFullname("momen wasef");
         p6.setUsername("Momen");
+        p6.setAddress("Nablus");
         addPerson(p6);
 
         Person p7 = new User();
@@ -207,26 +208,9 @@ public class UserDataBase {
         p7.setPassword("123");
         p7.setFullname("Janna Noor");
         p7.setUsername("Janna");
+        p7.setAddress("Nablus");
         addPerson(p7);
 
-        // Add initial users to the map
-        users.put("admin@gmail.com", new User("admin", "Admin", "admin@gmail.com", 2));
-        users.put("storeowner1@example.com", new User("storeowner1", "StoreOwner", "storeowner1@example.com", 1));
 
-        User user1 = new User();
-        user1.setUsername("user1");
-        user1.setEmail("user1@example.com");
-        user1.setFullname("User One");
-        user1.setPassword("password1");
-        user1.setRole(0);
-        users.put(user1.getUsername(), user1);
-
-        User newUser = new User();
-        newUser.setUsername("newuser");
-        newUser.setEmail("newuser@example.com");
-        newUser.setFullname("New User");
-        newUser.setPassword("newpassword");
-        newUser.setRole(0);
-        users.put(newUser.getUsername(), newUser);
     }
 }

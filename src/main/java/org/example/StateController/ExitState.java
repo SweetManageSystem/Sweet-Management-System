@@ -8,6 +8,6 @@ public class ExitState implements State{
     }
     @Override
     public void handleInput() {
-
+        System.out.println("Exiting the application...");
     }
 }

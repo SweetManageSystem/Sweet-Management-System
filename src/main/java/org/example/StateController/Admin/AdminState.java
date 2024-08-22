@@ -23,7 +23,7 @@ public class AdminState implements State {
                 "5.Manage Content               6.Manage Feedback\n" +
                 "7.Log Out");
         String command = input.nextLine();
-        filterState(command);
+        context.filterState(command);
         switch (command) {
             case "1":
                 context.setCurrentState(new AManageUsersState(context));
@@ -53,14 +53,5 @@ public class AdminState implements State {
 
     }
 
-    private void filterState(String input){
-        if(context.isBack(input)){
-            context.setCurrentState(new LogInState(context));
-            context.handleInput();
-        }
-        else if(context.isExit(input)){
-            context.setCurrentState(new ExitState(context));
-            context.handleInput();
-        }
-    }
+
 }

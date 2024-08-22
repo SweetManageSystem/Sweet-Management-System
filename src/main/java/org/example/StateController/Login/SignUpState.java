@@ -23,23 +23,23 @@ public class SignUpState implements State{
         Scanner scanner = new Scanner(System.in);
         System.out.println("Email :");
         String input = scanner.nextLine();
-        filterState(input);
+        context.filterState(input);
         person.setEmail(input);
         System.out.println("UserName :");
         input = scanner.nextLine();
-        filterState(input);
+        context.filterState(input);
         person.setUsername(input);
         System.out.println("Full Name :");
         input = scanner.nextLine();
-        filterState(input);
+        context.filterState(input);
         person.setFullname(input);
         System.out.println("Password :");
         input = scanner.nextLine();
-        filterState(input);
+        context.filterState(input);
         person.setPassword(input);
         System.out.println("Confirm Password :");
         input = scanner.nextLine();
-        filterState(input);
+        context.filterState(input);
         if(!person.getPassword().equals(input))
             context.handleInput();
         UserDataBase.addPerson(person);
@@ -50,14 +50,5 @@ public class SignUpState implements State{
     }
 
 
-    private void filterState(String input){
-        if(context.isBack(input)){
-            context.setCurrentState(new WelcomeState(context));
-            context.handleInput();
-        }
-        else if(context.isExit(input)){
-            context.setCurrentState(new ExitState(context));
-            context.handleInput();
-        }
-    }
+
 }

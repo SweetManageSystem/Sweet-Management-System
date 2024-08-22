@@ -15,6 +15,7 @@ public class User implements Person {
     private List<String> availableOptions = new ArrayList<>();
     private String initialPostLoginState;
 
+
     // Constructors
     public User() {}
 
@@ -29,12 +30,11 @@ public class User implements Person {
         this.password = password;
     }
 
-    public User(String userName, String email, String password, int role) {
+    public User(String userName, String email, String password, String fullName) {
         this.email = email;
         this.password = password;
         this.userName = userName;
-        this.role = role;
-        this.fullName = null;
+        this.fullName = fullName;
     }
 
     public User(Person a) {

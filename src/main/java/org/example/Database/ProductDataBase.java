@@ -1,10 +1,13 @@
 package org.example.Database;
 
 import org.example.Reciepes.Product;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ProductDataBase {
+
     private static List<Product> products = new ArrayList<>();
 
     public static List<Product> getProducts() {
@@ -65,6 +68,11 @@ public class ProductDataBase {
         Product p3 = new Product(3, "test3", 14.5, 25);
         Product p4 = new Product(4, "test4", 19.9, 23);
         Product p5 = new Product(5, "test5", 9.9, 18);
+        p1.setTags(new String[]{"peanuts", "peppers", "pineapples"});
+        p2.setTags(new String[]{"shellfish","milk"});
+        p3.setTags(new String[]{"wheat","soy","tree nuts"});
+        p4.setTags(new String[]{"fish", "sesame"});
+        p5.setTags(new String[]{"peanuts", "peppers", "pineapples"});
         products.add(p1);
         products.add(p2);
         products.add(p3);
@@ -91,5 +99,12 @@ public class ProductDataBase {
                 product.applyDiscount(discountPercentage);
             }
         }
+    }
+
+    // New method to filter products based on dietary needs or food allergies
+    public static List<Product> filterProductsByTags(List<String> tags) {
+        return products.stream()
+                .filter(product -> product.getTags().containsAll(tags))
+                .collect(Collectors.toList());
     }
 }

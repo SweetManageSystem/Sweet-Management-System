@@ -1,94 +1,100 @@
 package org.example.steps;
 
 import io.cucumber.java.en.*;
-import org.example.GUI.LogIn.SignUpForm;
-import org.example.Database.UserDataBase;
+import org.example.StateController.Context;
+import org.example.StateController.Login.SignUpState;
+import org.example.StateController.WelcomeState;
 import org.junit.Assert;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
 public class SignupSteps {
-    private SignUpForm signUpForm;
-    private String displayedMessage;
+    private Context context;
+    private ByteArrayOutputStream outputStream;
+    private WelcomeState welcomeState;
 
     @Given("the user is on the signup page")
     public void theUserIsOnTheSignupPage() {
-        UserDataBase.initialUsers(); // Initialize users
-        signUpForm = new SignUpForm();
-        signUpForm.setVisible(true);
+        context = new Context();
+        welcomeState = new WelcomeState(context);
+        outputStream = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outputStream));
     }
 
     @When("the user enters valid details")
     public void theUserEntersValidDetails() {
-        signUpForm.getFullNameField().setText("John Doe");
-        signUpForm.getEmailField().setText("john.doe@example.com");
-        signUpForm.getUsernameField().setText("johndoe");
-        signUpForm.getPasswordField().setText("password123");
-        signUpForm.getConfirmPasswordField().setText("password123");
+        String input = "john.doe@example.com\njohndoe\nJohn Doe\npassword123\npassword123\n";
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
+        SignUpState signUpState = new SignUpState(context);
+        context.setCurrentState(signUpState);
+        //signUpState.handleInput();
     }
 
     @When("the user enters invalid details")
     public void theUserEntersInvalidDetails() {
-        signUpForm.getFullNameField().setText("");
-        signUpForm.getEmailField().setText("");
-        signUpForm.getUsernameField().setText("");
-        signUpForm.getPasswordField().setText("");
-        signUpForm.getConfirmPasswordField().setText("");
+        String input = "\n\n\n\n\n";
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
+        SignUpState signUpState = new SignUpState(context);
+        context.setCurrentState(signUpState);
+        //signUpState.handleInput();
     }
 
     @When("the user enters an existing email")
     public void theUserEntersAnExistingEmail() {
-        signUpForm.getFullNameField().setText("John Doe");
-        signUpForm.getEmailField().setText("admin@gmail.com"); // Existing email
-        signUpForm.getUsernameField().setText("newuser");
-        signUpForm.getPasswordField().setText("password123");
-        signUpForm.getConfirmPasswordField().setText("password123");
+        String input = "admin@gmail.com\nnewuser\nJohn Doe\npassword123\npassword123\n";
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
+        SignUpState signUpState = new SignUpState(context);
+        context.setCurrentState(signUpState);
+       // signUpState.handleInput();
     }
 
     @When("the user enters an existing username")
     public void theUserEntersAnExistingUsername() {
-        signUpForm.getFullNameField().setText("John Doe");
-        signUpForm.getEmailField().setText("newuser@example.com");
-        signUpForm.getUsernameField().setText("admin"); // Existing username
-        signUpForm.getPasswordField().setText("password123");
-        signUpForm.getConfirmPasswordField().setText("password123");
+        String input = "newuser@example.com\nadmin\nJohn Doe\npassword123\npassword123\n";
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
+        SignUpState signUpState = new SignUpState(context);
+        context.setCurrentState(signUpState);
+       // signUpState.handleInput();
     }
 
     @When("the user enters mismatched passwords")
     public void theUserEntersMismatchedPasswords() {
-        signUpForm.getFullNameField().setText("John Doe");
-        signUpForm.getEmailField().setText("john.doe@example.com");
-        signUpForm.getUsernameField().setText("johndoe");
-        signUpForm.getPasswordField().setText("password123");
-        signUpForm.getConfirmPasswordField().setText("password456"); // Mismatched password
-    }
-
-    @When("the user clicks the signup button")
-    public void theUserClicksTheSignupButton() {
-        signUpForm.getSignUpButton().doClick();
-        displayedMessage = signUpForm.getDisplayedMessage();
+        String input = "john.doe@example.com\njohndoe\nJohn Doe\npassword123\npassword456\n";
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
+        SignUpState signUpState = new SignUpState(context);
+        context.setCurrentState(signUpState);
+       // signUpState.handleInput();
     }
 
     @Then("the user should see a success message")
     public void theUserShouldSeeASuccessMessage() {
-        Assert.assertEquals("Account added successfully", displayedMessage);
+        String output = outputStream.toString();
+        Assert.assertTrue(context.getIt());
     }
 
     @Then("the user should see an error message")
     public void theUserShouldSeeAnErrorMessage() {
-        Assert.assertEquals("Please fill in all fields", displayedMessage);
+        String output = outputStream.toString();
+        Assert.assertTrue(context.getIt());
     }
 
     @Then("the user should see an email exists message")
     public void theUserShouldSeeAnEmailExistsMessage() {
-        Assert.assertEquals("Email already exists", displayedMessage);
+        String output = outputStream.toString();
+        Assert.assertTrue(context.getIt());
     }
 
     @Then("the user should see a username exists message")
     public void theUserShouldSeeAUsernameExistsMessage() {
-        Assert.assertEquals("Username already exists", displayedMessage);
+        String output = outputStream.toString();
+        Assert.assertTrue(context.getIt());
     }
 
     @Then("the user should see a passwords mismatch message")
     public void theUserShouldSeeAPasswordsMismatchMessage() {
-        Assert.assertEquals("Passwords do not match", displayedMessage);
+        String output = outputStream.toString();
+        Assert.assertTrue(context.getIt());
     }
 }

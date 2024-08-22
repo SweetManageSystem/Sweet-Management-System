@@ -17,4 +17,6 @@ public interface Person {
      public void addPost(String post);
      public void recieveMessage(String message);
      public List<String> getMessages();
+     public String getAddress();
+     public void setAddress(String address);
 }

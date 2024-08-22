@@ -23,12 +23,12 @@ public class ManageAccountState implements State {
                 "3.Edit Password          4.Edit Full Name\n");
 
         String command = in.nextLine();
-        filterState(command);
+        context.filterState(command);
         switch (command) {
             case "1":
                 System.out.println("Enter the new UserName : ");
                 command = in.nextLine();
-                filterState(command);
+                context.filterState(command);
                 if (!alreadyExists(command)) {
                     UserDataBase.getLoggedIn().setUsername(command);
                 }
@@ -36,7 +36,7 @@ public class ManageAccountState implements State {
             case "2":
                 System.out.println("Enter the new Email : ");
                 command = in.nextLine();
-                filterState(command);
+                context.filterState(command);
                 if (!alreadyExists(command)) {
                     UserDataBase.getLoggedIn().setEmail(command);
                 }
@@ -44,13 +44,13 @@ public class ManageAccountState implements State {
             case "3":
                 System.out.println("Enter the new Password : ");
                 command = in.nextLine();
-                filterState(command);
+                context.filterState(command);
                 UserDataBase.getLoggedIn().setPassword(command);
                 break;
             case "4":
                 System.out.println("Enter the new Full Name : ");
                 command = in.nextLine();
-                filterState(command);
+                context.filterState(command);
                 UserDataBase.getLoggedIn().setFullname(command);
                 break;
             default:
@@ -61,15 +61,6 @@ public class ManageAccountState implements State {
         context.handleInput();
     }
 
-    private void filterState(String input) {
-        if (context.isBack(input)) {
-            context.setCurrentState(new StoreOwnerState(context));
-            context.handleInput();
-        } else if (context.isExit(input)) {
-            context.setCurrentState(new ExitState(context));
-            context.handleInput();
-        }
-    }
 
     private boolean alreadyExists(String input) {
         boolean isEmail = input.matches("[\\w._%+-]+@[\\w.-]+\\.[a-zA-Z]{2,6}");

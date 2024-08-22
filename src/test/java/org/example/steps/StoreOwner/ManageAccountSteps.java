@@ -38,7 +38,7 @@ public class ManageAccountSteps {
         context.setCurrentState(storeOwnerState);
     }
 
-    @When("I select {string}")
+    @When("Store Owner select {string}")
     public void i_select(String option) {
         // Ensure context is not null before using it
         if (context == null) {
@@ -52,7 +52,7 @@ public class ManageAccountSteps {
         }
     }
 
-    @When("I choose to edit the username")
+    @When("Store Owner choose to edit the username")
     public void i_choose_to_edit_the_username() {
         // Simulate choosing to edit the username
         if (manageAccountState != null) {
@@ -63,7 +63,7 @@ public class ManageAccountSteps {
         }
     }
 
-    @When("I enter the new username {string}")
+    @When("Store Owner enter the new username {string}")
     public void i_enter_the_new_username(String newUsername) {
         if (manageAccountState != null) {
             simulateUserInput(newUsername + "\n");
@@ -73,12 +73,12 @@ public class ManageAccountSteps {
         }
     }
 
-    @Then("the username should be updated to {string}")
+    @Then("username should be updated to {string}")
     public void the_username_should_be_updated_to(String expectedUsername) {
         assert UserDataBase.getLoggedIn().getUsername().equals(expectedUsername);
     }
 
-    @When("I choose to edit the email")
+    @When("Store Owner choose to edit the email")
     public void i_choose_to_edit_the_email() {
         // Simulate choosing to edit the email
         if (manageAccountState != null) {
@@ -89,7 +89,7 @@ public class ManageAccountSteps {
         }
     }
 
-    @When("I enter the new email {string}")
+    @When("Store Owner enter the new email {string}")
     public void i_enter_the_new_email(String newEmail) {
         if (manageAccountState != null) {
             simulateUserInput(newEmail + "\n");
@@ -99,12 +99,12 @@ public class ManageAccountSteps {
         }
     }
 
-    @Then("the email should be updated to {string}")
+    @Then("email should be updated to {string}")
     public void the_email_should_be_updated_to(String expectedEmail) {
         assert UserDataBase.getLoggedIn().getEmail().equals(expectedEmail);
     }
 
-    @When("I choose to edit the password")
+    @When("Store Owner choose to edit the password")
     public void i_choose_to_edit_the_password() {
         // Simulate choosing to edit the password
         if (manageAccountState != null) {
@@ -115,7 +115,7 @@ public class ManageAccountSteps {
         }
     }
 
-    @When("I enter the new password {string}")
+    @When("Store Owner enter the new password {string}")
     public void i_enter_the_new_password(String newPassword) {
         if (manageAccountState != null) {
             simulateUserInput(newPassword + "\n");
@@ -125,12 +125,12 @@ public class ManageAccountSteps {
         }
     }
 
-    @Then("the password should be updated to {string}")
+    @Then("password should be updated to {string}")
     public void the_password_should_be_updated_to(String expectedPassword) {
         assert UserDataBase.getLoggedIn().getPassword().equals(expectedPassword);
     }
 
-    @When("I choose to edit the full name")
+    @When("Store Owner choose to edit the full name")
     public void i_choose_to_edit_the_full_name() {
         // Simulate choosing to edit the full name
         if (manageAccountState != null) {
@@ -141,7 +141,7 @@ public class ManageAccountSteps {
         }
     }
 
-    @When("I enter the new full name {string}")
+    @When("Store Owner enter the new full name {string}")
     public void i_enter_the_new_full_name(String newFullName) {
         if (manageAccountState != null) {
             simulateUserInput(newFullName + "\n");
@@ -151,7 +151,7 @@ public class ManageAccountSteps {
         }
     }
 
-    @Then("the full name should be updated to {string}")
+    @Then("full name should be updated to {string}")
     public void the_full_name_should_be_updated_to(String expectedFullName) {
         assert UserDataBase.getLoggedIn().getFullname().equals(expectedFullName);
     }

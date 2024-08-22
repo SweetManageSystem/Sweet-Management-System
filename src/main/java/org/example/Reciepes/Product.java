@@ -1,11 +1,16 @@
 package org.example.Reciepes;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Product {
+
     private int id;
     private String name;
     private double price;
     private double originalPrice;
     private int sellCounter;
+    private List<String> tags = new ArrayList<>();
 
     public Product(int id, String name, double price, int sellCounter) {
         this.id = id;
@@ -13,6 +18,12 @@ public class Product {
         this.price = price;
         this.originalPrice = price;
         this.sellCounter = sellCounter;
+    }
+
+    public void setTags(String[] tags){
+        for(String tag : tags){
+            this.tags.add(tag);
+        }
     }
 
     public int getId() {
@@ -42,8 +53,19 @@ public class Product {
     public void setPrice(double price) {
         this.price = price;
     }
+    public void setSellCounter(int sellCounter) {
+        this.sellCounter = sellCounter;
+    }
 
     public void applyDiscount(double discountPercentage) {
         this.price = this.originalPrice - (this.originalPrice * discountPercentage / 100);
+    }
+
+    public List<String> getTags() {
+        return tags;
+    }
+
+    public void setTags(List<String> tags) {
+        this.tags = tags;
     }
 }

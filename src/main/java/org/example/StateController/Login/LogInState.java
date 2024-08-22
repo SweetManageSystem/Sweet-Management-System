@@ -20,10 +20,10 @@ public class LogInState implements State {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Email :");
         String email = scanner.nextLine();
-        filterState(email);
+        context.filterState(email);
         System.out.println("Password :");
         String password = scanner.nextLine();
-        filterState(password);
+        context.filterState(password);
         for (Person p : UserDataBase.getDb()) {
             if (p.getEmail().equals(email) && p.getPassword().equals(password)) {
                 switch (p.getRole()) {
@@ -45,17 +45,6 @@ public class LogInState implements State {
         context.handleInput();
     }
 
-    private boolean filterState(String input) {
-        if (context.isBack(input)) {
-            context.setCurrentState(new WelcomeState(context));
-            context.handleInput();
-            return true;
-        } else if (context.isExit(input)) {
-            context.setCurrentState(new ExitState(context));
-            context.handleInput();
-            return true;
-        }
-        return false;
-    }
+
 
 }

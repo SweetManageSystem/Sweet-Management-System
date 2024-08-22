@@ -1,5 +1,7 @@
 package org.example.StateController.Admin;
 
+import org.example.Database.ProductDataBase;
+import org.example.Reciepes.Product;
 import org.example.StateController.Context;
 import org.example.StateController.ExitState;
 import org.example.StateController.State;
@@ -12,17 +14,12 @@ public class BestSellingState implements State {
 
     @Override
     public void handleInput() {
-
+        Product product = ProductDataBase.getBestSelling();
+        System.out.println("The best selling product in this store is : " + product.getName());
+        System.out.println("Sold : " + product.getSellCounter());
+        context.setCurrentState(new AdminState(context));
+        context.handleInput();
     }
 
-    private void filterState(String input){
-        if(context.isBack(input)){
-            context.setCurrentState(new AdminState(context));
-            context.handleInput();
-        }
-        else if(context.isExit(input)){
-            context.setCurrentState(new ExitState(context));
-            context.handleInput();
-        }
-    }
+
 }
