@@ -44,7 +44,6 @@ public class SearchState implements State {
                 break;
         }
     }
-
     private void browseAllRecipes() {
         List<Product> products = ProductDataBase.getProducts();
         if (products.isEmpty()) {
@@ -57,7 +56,6 @@ public class SearchState implements State {
         }
         context.handleInput();
     }
-
     private void searchForRecipe() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the name of the recipe to search for:");
@@ -76,6 +74,4 @@ public class SearchState implements State {
         }
         context.handleInput();
     }
-
-
 }

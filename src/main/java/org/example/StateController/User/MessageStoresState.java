@@ -12,12 +12,9 @@ import java.util.Scanner;
 
 public class MessageStoresState implements State {
     private Context context;
-
     public MessageStoresState(Context context) {
         this.context = context;
     }
-
-
     @Override
     public void handleInput() {
         Scanner scanner = new Scanner(System.in);
@@ -41,7 +38,6 @@ public class MessageStoresState implements State {
             context.handleInput();
             return;
         }
-
         Person selectedStoreOwner =  storeOwners.get(Integer.valueOf(choice) - 1);
         System.out.println("Enter your message:");
         String message = scanner.nextLine();
@@ -52,6 +48,4 @@ public class MessageStoresState implements State {
         context.handleInput();
 
     }
-
-
 }

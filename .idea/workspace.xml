@@ -5,216 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15ef7f86-4278-412d-b698-ac719e455659" name="Changes" comment="Switch to State Pattern">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Database/Feedback/Feedback.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Database/Feedback/FeedbackDataBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/steps/Admin/BestSellingStateSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/steps/Admin/DisplayStatisticsSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/steps/Admin/ManageContentSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/steps/Admin/ManageFeedbackStateSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/steps/Admin/ManageUsersSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/steps/Admin/MonitorProfitsStateSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/steps/LogInStateSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/steps/User/FilterRecipsStateSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/steps/User/ManageMyAccountSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/steps/User/MessageStoresStateSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/steps/User/PostStateSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/steps/User/ProvideFeedbackSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/steps/User/PurchaseStateSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/steps/User/SearchStateSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_10_2024_12_59_AM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_10_2024_12_59_AM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Account/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Account/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Account/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Account/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Account/StoreOwner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Account/StoreOwner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Account/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Account/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Database/PostDataBase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Database/ProductDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Database/ProductDataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Database/UserDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Database/UserDataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GUI/AdminForm/AdminForm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GUI/AdminForm/Combobox.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GUI/AdminForm/ModernScrollBarUI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GUI/AdminForm/Scrollbar.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GUI/AdminForm/Table.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GUI/AdminForm/TableAction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GUI/AdminForm/TableHeader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GUI/AdminForm/TextField.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GUI/LogIn/LogInForm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GUI/LogIn/SignUpForm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Reciepes/Post.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Reciepes/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Reciepes/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StateController/Admin/AManageUsersState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StateController/Admin/AManageUsersState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StateController/Admin/AdminState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StateController/Admin/AdminState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StateController/Admin/BestSellingState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StateController/Admin/BestSellingState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StateController/Admin/DiplayStatisticsState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StateController/Admin/DiplayStatisticsState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StateController/Admin/ManageContentState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StateController/Admin/ManageContentState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StateController/Admin/ManageFeedbackState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StateController/Admin/ManageFeedbackState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StateController/Admin/MonitorProfitsState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StateController/Admin/MonitorProfitsState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StateController/Context.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StateController/Context.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StateController/ExitState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StateController/ExitState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StateController/Login/LogInState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StateController/Login/LogInState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StateController/Login/SignUpState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StateController/Login/SignUpState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StateController/StoreOwner/AdjustProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StateController/StoreOwner/AdjustProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StateController/StoreOwner/DiscountState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StateController/StoreOwner/DiscountState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StateController/StoreOwner/ManageAccountState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StateController/StoreOwner/ManageAccountState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StateController/StoreOwner/MessageState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StateController/StoreOwner/MessageState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StateController/StoreOwner/StoreOwnerState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StateController/StoreOwner/StoreOwnerState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StateController/StoreOwner/TrackOrderState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StateController/StoreOwner/TrackOrderState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StateController/User/FilterRecipsState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StateController/User/FilterRecipsState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StateController/User/ManageMyAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StateController/User/ManageMyAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StateController/User/MessageStoresState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StateController/User/MessageStoresState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StateController/User/PostState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StateController/User/PostState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StateController/User/ProvideFeedbackState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StateController/User/ProvideFeedbackState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StateController/User/PurchaseState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StateController/User/PurchaseState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StateController/User/SearchState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StateController/User/SearchState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StateController/User/UserState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StateController/User/UserState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/steps/AdminUserManagementSteps.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/steps/BrowseAndSearch.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/steps/CommunicationsAndFeedbackSteps.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/steps/ContentManagementSteps.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/steps/FilterRecipesSteps.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/steps/IdentifyBestSellingProductsSteps.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/steps/LoginSteps.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/steps/ManagePersonalAccountSteps.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/steps/ManageUserFeedbackSteps.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/steps/MonitoringAndReportingSteps.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/steps/PostAndShareDessertCreationsSteps.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/steps/ProvideFeedbackSteps.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/steps/PurchaseDessertsDirectlyFromStoreOwnersSteps.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/steps/SignupSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/steps/SignupSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/steps/StoreOwner/AdjustProductSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/steps/StoreOwner/AdjustProductSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/steps/StoreOwner/ManageAccountSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/steps/StoreOwner/ManageAccountSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/steps/StoreOwner/MessagingSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/steps/StoreOwner/MessagingSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/steps/UserStatisticsByCitySteps.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Admin  User Management.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Admin/Admin  User Management.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Admin manages recipes.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Admin/Admin manages recipes.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Browse and search for dessert recipes.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/User/Browse and search for dessert recipes.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Communications and Feedback.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/User/Communications and Feedback.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Filter based on dietary needs or food allergies.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/User/Filter based on dietary needs or food allergies.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Gather and display statistics on registered users by City.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Admin/Gather and display statistics on registered users by City.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Identify best-selling products in each store.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Admin/Identify best-selling products in each store.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Manage Personal Accounts.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/User/Manage Personal Accounts.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Manage user feedback.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Admin/Manage user feedback.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Post and Share Personal Dessert Creations.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/User/Post and Share Personal Dessert Creations.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Provide feedback on purchased products and shared recipes.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/User/Provide feedback on purchased products and shared recipes.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Purchase desserts directly from store owners.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/User/Purchase desserts directly from store owners.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/StoreOwner/ManageAccount.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/StoreOwner/ManageAccount.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/profits and generate financial reports.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Admin/profits and generate financial reports.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/signup.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/signup.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Account/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Account/Admin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Account/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Account/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Account/StoreOwner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Account/StoreOwner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Account/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Account/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Database/PostDataBase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Database/ProductDataBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Database/ProductDataBase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Database/UserDataBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Database/UserDataBase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/AdminForm/AdminForm$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/AdminForm/AdminForm$10.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/AdminForm/AdminForm$11.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/AdminForm/AdminForm$12.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/AdminForm/AdminForm$13.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/AdminForm/AdminForm$14.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/AdminForm/AdminForm$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/AdminForm/AdminForm$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/AdminForm/AdminForm$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/AdminForm/AdminForm$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/AdminForm/AdminForm$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/AdminForm/AdminForm$7.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/AdminForm/AdminForm$8.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/AdminForm/AdminForm$9.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/AdminForm/AdminForm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/AdminForm/Combobox$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/AdminForm/Combobox$ComboUI$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/AdminForm/Combobox$ComboUI$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/AdminForm/Combobox$ComboUI$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/AdminForm/Combobox$ComboUI$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/AdminForm/Combobox$ComboUI$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/AdminForm/Combobox$ComboUI$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/AdminForm/Combobox$ComboUI$ArrowButton.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/AdminForm/Combobox$ComboUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/AdminForm/Combobox.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/AdminForm/ModernScrollBarUI$ScrollBarButton.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/AdminForm/ModernScrollBarUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/AdminForm/Scrollbar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/AdminForm/Table$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/AdminForm/Table$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/AdminForm/Table$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/AdminForm/Table.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/AdminForm/TableAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/AdminForm/TableHeader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/AdminForm/TextField$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/AdminForm/TextField$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/AdminForm/TextField$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/AdminForm/TextField.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/LogIn/LogInForm$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/LogIn/LogInForm$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/LogIn/LogInForm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/LogIn/SignUpForm$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/LogIn/SignUpForm$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/LogIn/SignUpForm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Reciepes/Post.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Reciepes/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Reciepes/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/StateController/Admin/AManageUsersState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/StateController/Admin/AManageUsersState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/StateController/Admin/AdminState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/StateController/Admin/AdminState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/StateController/Admin/BestSellingState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/StateController/Admin/BestSellingState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/StateController/Admin/DiplayStatisticsState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/StateController/Admin/DiplayStatisticsState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/StateController/Admin/ManageContentState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/StateController/Admin/ManageContentState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/StateController/Admin/ManageFeedbackState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/StateController/Admin/ManageFeedbackState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/StateController/Admin/MonitorProfitsState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/StateController/Admin/MonitorProfitsState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/StateController/Context.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/StateController/Context.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/StateController/ExitState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/StateController/ExitState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/StateController/Login/LogInState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/StateController/Login/LogInState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/StateController/Login/SignUpState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/StateController/Login/SignUpState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/StateController/StoreOwner/AdjustProduct.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/StateController/StoreOwner/AdjustProduct.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/StateController/StoreOwner/DiscountState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/StateController/StoreOwner/DiscountState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/StateController/StoreOwner/ManageAccountState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/StateController/StoreOwner/ManageAccountState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/StateController/StoreOwner/MessageState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/StateController/StoreOwner/MessageState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/StateController/StoreOwner/StoreOwnerState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/StateController/StoreOwner/StoreOwnerState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/StateController/StoreOwner/TrackOrderState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/StateController/StoreOwner/TrackOrderState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/StateController/User/FilterRecipsState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/StateController/User/FilterRecipsState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/StateController/User/ManageMyAccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/StateController/User/ManageMyAccount.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/StateController/User/MessageStoresState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/StateController/User/MessageStoresState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/StateController/User/PostState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/StateController/User/PostState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/StateController/User/ProvideFeedbackState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/StateController/User/ProvideFeedbackState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/StateController/User/PurchaseState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/StateController/User/PurchaseState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/StateController/User/SearchState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/StateController/User/SearchState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/StateController/User/UserState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/StateController/User/UserState.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/cucumber-reports.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber-reports.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/features/Admin  User Management.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/features/Admin manages recipes.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/features/Browse and search for dessert recipes.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/features/Communications and Feedback.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/features/Filter based on dietary needs or food allergies.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/features/Gather and display statistics on registered users by City.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/features/Identify best-selling products in each store.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/features/Manage Personal Accounts.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/features/Manage user feedback.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/features/Post and Share Personal Dessert Creations.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/features/Provide feedback on purchased products and shared recipes.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/features/Purchase desserts directly from store owners.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/features/StoreOwner/ManageAccount.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/StoreOwner/ManageAccount.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/features/profits and generate financial reports.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/features/signup.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/signup.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/steps/AdminUserManagementSteps.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/steps/BrowseAndSearch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/steps/CommunicationsAndFeedbackSteps.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/steps/ContentManagementSteps.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/steps/FilterRecipesSteps.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/steps/IdentifyBestSellingProductsSteps.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/steps/LoginSteps.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/steps/ManagePersonalAccountSteps.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/steps/ManageUserFeedbackSteps.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/steps/MonitoringAndReportingSteps.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/steps/PostAndShareDessertCreationsSteps.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/steps/ProvideFeedbackSteps.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/steps/PurchaseDessertsDirectlyFromStoreOwnersSteps.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/steps/SignupSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/example/steps/SignupSteps.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/steps/StoreOwner/AdjustProductSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/example/steps/StoreOwner/AdjustProductSteps.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/steps/StoreOwner/ManageAccountSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/example/steps/StoreOwner/ManageAccountSteps.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/steps/StoreOwner/MessagingSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/example/steps/StoreOwner/MessagingSteps.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/steps/UserStatisticsByCitySteps.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,33 +56,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Cucumber Java.Feature: login.executor": "Run",
-    "Cucumber Java.Feature: signup.executor": "Run",
-    "Cucumber Java.Feature: update,add,deleteproduct.executor": "Run",
-    "JUnit.Runner.executor": "Coverage",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "508",
-    "git-widget-placeholder": "RC2",
-    "jdk.selected.JAVA_MODULE": "openjdk-22",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "D:/Projects/Sweet-Management-System/SweetMangementSystem/src/test/java/org/example/steps",
-    "last_opened_file_path": "C:/Users/JADDOU3/Desktop/p2pChat",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "D:/Projects/Sweet-Management-System/SweetMangementSystem/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: login.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: signup.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: update,add,deleteproduct.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Runner.executor&quot;: &quot;Coverage&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;508&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;RC2&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-22&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;D:/Projects/Sweet-Management-System/SweetMangementSystem/src/test/java/org/example/steps&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Projects/demo&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;D:/Projects/Sweet-Management-System/SweetMangementSystem/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.example.StateController.Admin" />
@@ -476,7 +271,9 @@
       <workItem from="1724257295124" duration="162000" />
       <workItem from="1724261262616" duration="1943000" />
       <workItem from="1724263226261" duration="4882000" />
-      <workItem from="1724341493111" duration="7027000" />
+      <workItem from="1724341493111" duration="7226000" />
+      <workItem from="1724355736748" duration="28000" />
+      <workItem from="1724433893428" duration="2094000" />
     </task>
     <task id="LOCAL-00001" summary="login , signup gui">
       <option name="closed" value="true" />
@@ -582,7 +379,7 @@
     <SUITE FILE_PATH="coverage/Sweet_Management_System$Main.ic" NAME="Main Coverage Results" MODIFIED="1723567499520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>org.example.Database.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Person_java$Runner.ic" NAME="Runner Coverage Results" MODIFIED="1724348501943" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/Person_java$Runner.ic" NAME="Runner Coverage Results" MODIFIED="1724433989840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/Sweet_Management_System$Runner.ic" NAME="Runner Coverage Results" MODIFIED="1723572963006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>
