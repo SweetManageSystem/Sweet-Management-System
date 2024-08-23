@@ -1,1 +1,1 @@
-# Sweet-Management-System
+# Sweet Management System
