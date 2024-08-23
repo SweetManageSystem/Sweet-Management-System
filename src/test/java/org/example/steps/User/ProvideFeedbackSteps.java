@@ -1,13 +1,13 @@
 package org.example.steps.User;
 
 import io.cucumber.java.en.*;
-import org.example.StateController.Context;
-import org.example.StateController.User.ProvideFeedbackState;
-import org.example.StateController.User.UserState;
-import org.example.StateController.ExitState;
-import org.example.Database.Feedback.FeedbackDataBase;
-import org.example.Database.UserDataBase;
-import org.example.Account.User;
+import org.example.statecontroller.Context;
+import org.example.statecontroller.user.ProvideFeedbackState;
+import org.example.statecontroller.user.UserState;
+import org.example.statecontroller.ExitState;
+import org.example.database.feedback.FeedbackDataBase;
+import org.example.database.UserDataBase;
+import org.example.account.User;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;

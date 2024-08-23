@@ -2,18 +2,13 @@ package org.example.steps.StoreOwner;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.example.Database.ProductDataBase;
-import org.example.Reciepes.Product;
-import org.example.StateController.Context;
-import org.example.StateController.StoreOwner.BestSellingState;
-import org.example.StateController.StoreOwner.StoreOwnerState;
+import org.example.database.ProductDataBase;
+import org.example.reciepes.Product;
+import org.example.statecontroller.Context;
+import org.example.statecontroller.storeowner.BestSellingState;
 
 import static org.junit.Assert.assertEquals;
 
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
-import java.util.Scanner;
 public class BestSellingSteps {
 
     private Context context;

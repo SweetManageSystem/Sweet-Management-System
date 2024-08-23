@@ -3,10 +3,10 @@ package org.example.steps.StoreOwner;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
-import org.example.Database.UserDataBase;
-import org.example.Account.StoreOwner;
-import org.example.StateController.Context;
-import org.example.StateController.StoreOwner.MessageState;
+import org.example.database.UserDataBase;
+import org.example.account.StoreOwner;
+import org.example.statecontroller.Context;
+import org.example.statecontroller.storeowner.MessageState;
 
 import static org.junit.Assert.*;
 

@@ -2,8 +2,8 @@ package org.example.steps.StoreOwner;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.example.StateController.Context;
-import org.example.StateController.StoreOwner.MonitorSalesState;
+import org.example.statecontroller.Context;
+import org.example.statecontroller.storeowner.MonitorSalesState;
 
 import static org.junit.Assert.assertEquals;
 

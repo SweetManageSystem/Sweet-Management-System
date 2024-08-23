@@ -2,11 +2,11 @@ package org.example.steps.User;
 
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
-import org.example.Database.ProductDataBase;
-import org.example.Reciepes.Product;
-import org.example.StateController.Context;
-import org.example.StateController.User.PurchaseState;
-import org.example.StateController.User.UserState;
+import org.example.database.ProductDataBase;
+import org.example.reciepes.Product;
+import org.example.statecontroller.Context;
+import org.example.statecontroller.user.PurchaseState;
+import org.example.statecontroller.user.UserState;
 
 import java.util.List;
 

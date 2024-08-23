@@ -1,13 +1,8 @@
 package org.example.steps.StoreOwner;
 
 import io.cucumber.java.en.Given;
-import org.example.Account.Person;
-import org.example.Account.StoreOwner;
-import org.example.Database.ProductDataBase;
-import org.example.Database.UserDataBase;
-import org.example.Reciepes.Product;
-import org.example.StateController.*;
-import org.example.StateController.StoreOwner.StoreOwnerState;
+import org.example.database.ProductDataBase;
+import org.example.reciepes.Product;
 
 
 public class CommonSteps {

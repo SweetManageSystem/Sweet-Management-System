@@ -3,10 +3,10 @@ package org.example.steps.User;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
-import org.example.Database.ProductDataBase;
-import org.example.Reciepes.Product;
-import org.example.StateController.Context;
-import org.example.StateController.User.FilterRecipsState;
+import org.example.database.ProductDataBase;
+import org.example.reciepes.Product;
+import org.example.statecontroller.Context;
+import org.example.statecontroller.user.FilterRecipsState;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

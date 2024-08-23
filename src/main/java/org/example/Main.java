@@ -1,12 +1,12 @@
 package org.example;
 
 
-import org.example.Database.Feedback.FeedbackDataBase;
-import org.example.Database.ProductDataBase;
-import org.example.Database.UserDataBase;
+import org.example.database.feedback.FeedbackDataBase;
+import org.example.database.ProductDataBase;
+import org.example.database.UserDataBase;
 
-import org.example.StateController.Context;
-import org.example.StateController.WelcomeState;
+import org.example.statecontroller.Context;
+import org.example.statecontroller.WelcomeState;
 
 public class Main {
     public static void main(String[] args) {

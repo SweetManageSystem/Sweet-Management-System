@@ -3,10 +3,9 @@ package org.example.steps.Admin;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
-import org.example.StateController.Admin.MonitorProfitsState;
-import org.example.StateController.Context;
-import org.example.StateController.State;
-import org.example.StateController.Admin.AdminState;
+import org.example.statecontroller.admin.MonitorProfitsState;
+import org.example.statecontroller.Context;
+import org.example.statecontroller.State;
 
 import static org.junit.Assert.*;
 
@@ -39,26 +38,26 @@ public class MonitorProfitsStateSteps {
 
     @Then("the total profits should be calculated correctly")
     public void the_total_profits_should_be_calculated_correctly() {
-        double expectedTotalProfits = monitorProfitsState.calculateTotalProfits();
-        assertEquals(expectedTotalProfits, monitorProfitsState.calculateTotalProfits(), 0.01);
+        double expectedTotalProfits = monitorProfitsState.getTotalProfits();
+        assertEquals(expectedTotalProfits, monitorProfitsState.getTotalProfits(), 0.01);
     }
 
     @Then("the monthly profits should be calculated correctly")
     public void the_monthly_profits_should_be_calculated_correctly() {
-        double expectedMonthlyProfits = monitorProfitsState.calculateTotalProfits() / 12;
-        assertEquals(expectedMonthlyProfits, monitorProfitsState.calculateMonthlyProfits(), 0.01);
+        double expectedMonthlyProfits = monitorProfitsState.getTotalProfits() / 12;
+        assertEquals(expectedMonthlyProfits, monitorProfitsState.getMonthlyProfits(), 0.01);
     }
 
     @Then("the expenses should be calculated correctly")
     public void the_expenses_should_be_calculated_correctly() {
         double expectedExpenses = 1500;
-        assertEquals(expectedExpenses, monitorProfitsState.calculateExpenses(), 0.01);
+        assertEquals(expectedExpenses, monitorProfitsState.getExpenses(), 0.01);
     }
 
     @Then("the net profit should be calculated correctly")
     public void the_net_profit_should_be_calculated_correctly() {
-        double expectedNetProfit = monitorProfitsState.calculateTotalProfits() - monitorProfitsState.calculateExpenses();
-        assertEquals(expectedNetProfit, monitorProfitsState.calculateNetProfit(), 0.01);
+        double expectedNetProfit = monitorProfitsState.getTotalProfits() - monitorProfitsState.getExpenses();
+        assertEquals(expectedNetProfit, monitorProfitsState.getNetProfit(), 0.01);
     }
 
 

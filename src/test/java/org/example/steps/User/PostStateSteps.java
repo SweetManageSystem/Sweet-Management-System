@@ -4,12 +4,11 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 import static org.junit.Assert.*;
-import org.example.StateController.Context;
-import org.example.StateController.ExitState;
-import org.example.StateController.User.PostState;
-import org.example.StateController.User.UserState;
-import org.example.Account.User;
-import org.example.Database.UserDataBase;
+import org.example.statecontroller.Context;
+import org.example.statecontroller.user.PostState;
+import org.example.statecontroller.user.UserState;
+import org.example.account.User;
+import org.example.database.UserDataBase;
 
 public class PostStateSteps {
 

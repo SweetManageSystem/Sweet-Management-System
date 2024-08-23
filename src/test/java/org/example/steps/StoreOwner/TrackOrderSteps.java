@@ -1,10 +1,10 @@
 package org.example.steps.StoreOwner;
 
 import io.cucumber.java.en.*;
-import org.example.StateController.Context;
-import org.example.StateController.StoreOwner.TrackOrderState;
-import org.example.Database.OrderDatabase;
-import org.example.Reciepes.Order;
+import org.example.statecontroller.Context;
+import org.example.statecontroller.storeowner.TrackOrderState;
+import org.example.database.OrderDatabase;
+import org.example.reciepes.Order;
 
 import java.util.List;
 

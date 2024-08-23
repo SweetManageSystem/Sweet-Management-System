@@ -3,11 +3,10 @@ package org.example.steps.User;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
-import org.example.StateController.Context;
-import org.example.StateController.ExitState;
-import org.example.StateController.Login.LogInState;
-import org.example.StateController.*;
-import org.example.StateController.User.*;
+import org.example.statecontroller.Context;
+import org.example.statecontroller.ExitState;
+import org.example.statecontroller.*;
+import org.example.statecontroller.user.*;
 
 import static org.junit.Assert.*;
 

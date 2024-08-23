@@ -1,13 +1,13 @@
 package org.example.steps.Admin;
 
 import io.cucumber.java.en.*;
-import org.example.StateController.Admin.ManageContentState;
-import org.example.StateController.Context;
-import org.example.Database.ProductDataBase;
-import org.example.Database.UserDataBase;
-import org.example.Reciepes.Product;
-import org.example.Account.Person;
-import org.example.Account.User;
+import org.example.statecontroller.admin.ManageContentState;
+import org.example.statecontroller.Context;
+import org.example.database.ProductDataBase;
+import org.example.database.UserDataBase;
+import org.example.reciepes.Product;
+import org.example.account.Person;
+import org.example.account.User;
 
 import java.util.Scanner;
 

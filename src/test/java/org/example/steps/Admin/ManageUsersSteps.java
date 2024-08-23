@@ -1,16 +1,11 @@
 package org.example.steps.Admin;
 
 import io.cucumber.java.en.*;
-import org.example.StateController.Context;
-import org.example.StateController.Admin.AManageUsersState;
-import org.example.Database.UserDataBase;
-import org.example.Account.User;
-import org.example.Account.Person;
+import org.example.statecontroller.Context;
+import org.example.statecontroller.admin.AManageUsersState;
+import org.example.database.UserDataBase;
+import org.example.account.Person;
 import org.junit.Assert;
-
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
-import java.util.Scanner;
 
 public class ManageUsersSteps {
 

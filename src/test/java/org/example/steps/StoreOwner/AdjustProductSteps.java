@@ -1,10 +1,10 @@
 package org.example.steps.StoreOwner;
 import io.cucumber.java.en.*;
-import org.example.Database.ProductDataBase;
-import org.example.Reciepes.Product;
-import org.example.StateController.Context;
-import org.example.StateController.StoreOwner.AdjustProduct;
-import org.example.StateController.StoreOwner.StoreOwnerState;
+import org.example.database.ProductDataBase;
+import org.example.reciepes.Product;
+import org.example.statecontroller.Context;
+import org.example.statecontroller.storeowner.AdjustProduct;
+import org.example.statecontroller.storeowner.StoreOwnerState;
 
 import static org.junit.Assert.*;
 

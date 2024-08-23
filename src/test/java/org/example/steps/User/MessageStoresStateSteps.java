@@ -1,22 +1,19 @@
 package org.example.steps.User;
 
 import io.cucumber.java.en.*;
-import org.example.Account.Person;
-import org.example.StateController.Context;
-import org.example.StateController.User.MessageStoresState;
-import org.example.StateController.User.UserState;
-import org.example.StateController.ExitState;
-import org.example.Account.StoreOwner;
-import org.example.Database.UserDataBase;
+import org.example.account.Person;
+import org.example.statecontroller.Context;
+import org.example.statecontroller.user.MessageStoresState;
+import org.example.statecontroller.user.UserState;
+import org.example.statecontroller.ExitState;
+import org.example.database.UserDataBase;
 import org.junit.After;
 import org.junit.Before;
 
 import static org.junit.Assert.*;
 
-import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.util.List;
 
 public class MessageStoresStateSteps {
 

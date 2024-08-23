@@ -1,9 +1,9 @@
 package org.example.steps;
 
 import io.cucumber.java.en.*;
-import org.example.StateController.Context;
-import org.example.StateController.Login.SignUpState;
-import org.example.StateController.WelcomeState;
+import org.example.statecontroller.Context;
+import org.example.statecontroller.login.SignUpState;
+import org.example.statecontroller.WelcomeState;
 import org.junit.Assert;
 
 import java.io.ByteArrayInputStream;

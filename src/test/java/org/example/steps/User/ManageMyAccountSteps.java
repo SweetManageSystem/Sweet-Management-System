@@ -1,14 +1,13 @@
 package org.example.steps.User;
 
 import io.cucumber.java.en.Given;
-import org.example.Account.StoreOwner;
-import org.example.Database.UserDataBase;
-import org.example.StateController.Context;
-import org.example.StateController.User.ManageMyAccount;
+import org.example.database.UserDataBase;
+import org.example.statecontroller.Context;
+import org.example.statecontroller.user.ManageMyAccount;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
-import org.example.StateController.StoreOwner.StoreOwnerState;
-import org.example.Account.Person;
+import org.example.statecontroller.storeowner.StoreOwnerState;
+import org.example.account.Person;
 import org.junit.Assert;
 
 import java.io.ByteArrayInputStream;

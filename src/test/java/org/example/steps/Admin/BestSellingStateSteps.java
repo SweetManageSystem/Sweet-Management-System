@@ -3,10 +3,10 @@ package org.example.steps.Admin;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
-import org.example.Database.ProductDataBase;
-import org.example.Reciepes.Product;
-import org.example.StateController.Context;
-import org.example.StateController.Admin.BestSellingState;
+import org.example.database.ProductDataBase;
+import org.example.reciepes.Product;
+import org.example.statecontroller.Context;
+import org.example.statecontroller.admin.BestSellingState;
 
 import static org.junit.Assert.assertEquals;
 

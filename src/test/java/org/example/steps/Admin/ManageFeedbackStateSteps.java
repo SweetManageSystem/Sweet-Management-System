@@ -1,11 +1,11 @@
 package org.example.steps.Admin;
 
 import io.cucumber.java.en.*;
-import org.example.Database.Feedback.Feedback;
-import org.example.Database.Feedback.FeedbackDataBase;
-import org.example.StateController.Admin.ManageFeedbackState;
-import org.example.StateController.Context;
-import org.example.StateController.Admin.AdminState;
+import org.example.database.feedback.Feedback;
+import org.example.database.feedback.FeedbackDataBase;
+import org.example.statecontroller.admin.ManageFeedbackState;
+import org.example.statecontroller.Context;
+import org.example.statecontroller.admin.AdminState;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.util.List;

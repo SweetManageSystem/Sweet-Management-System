@@ -3,11 +3,11 @@ package org.example.steps.Admin;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.example.Account.Person;
-import org.example.Account.User;
-import org.example.Database.UserDataBase;
-import org.example.StateController.Context;
-import org.example.StateController.Admin.DiplayStatisticsState;
+import org.example.account.Person;
+import org.example.account.User;
+import org.example.database.UserDataBase;
+import org.example.statecontroller.Context;
+import org.example.statecontroller.admin.DiplayStatisticsState;
 
 import java.util.HashMap;
 import java.util.List;

@@ -3,17 +3,13 @@ package org.example.steps;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
-import org.example.Account.Person;
-import org.example.Account.Admin;
-import org.example.Account.StoreOwner;
-import org.example.Account.User;
-import org.example.Database.UserDataBase;
-import org.example.StateController.Context;
-import org.example.StateController.Login.LogInState;
-import org.example.StateController.State;
-import org.example.StateController.Admin.AdminState;
-import org.example.StateController.StoreOwner.StoreOwnerState;
-import org.example.StateController.User.UserState;
+import org.example.database.UserDataBase;
+import org.example.statecontroller.Context;
+import org.example.statecontroller.login.LogInState;
+import org.example.statecontroller.State;
+import org.example.statecontroller.admin.AdminState;
+import org.example.statecontroller.storeowner.StoreOwnerState;
+import org.example.statecontroller.user.UserState;
 
 import static org.junit.Assert.*;
 
