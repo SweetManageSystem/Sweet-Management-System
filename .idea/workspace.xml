@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15ef7f86-4278-412d-b698-ac719e455659" name="Changes" comment="Switch to State Pattern">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StateController/User/MessageStoresState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StateController/User/MessageStoresState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StateController/User/SearchState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StateController/User/SearchState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber-reports.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber-reports.html" afterDir="false" />
-    </list>
+    <list default="true" id="15ef7f86-4278-412d-b698-ac719e455659" name="Changes" comment="Switch to State Pattern" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,12 +32,12 @@
     &quot;assignee&quot;: &quot;JADDOU3&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/JADDOU3/Sweet-Management-System.git&quot;,
-    &quot;accountId&quot;: &quot;8c120ce2-6ccd-4f61-80f1-7767460c7d06&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/SweetManageSystem/Sweet-Management-System.git",
+    "accountId": "8c120ce2-6ccd-4f61-80f1-7767460c7d06"
   }
-}</component>
+}]]></component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -273,7 +267,7 @@
       <workItem from="1724263226261" duration="4882000" />
       <workItem from="1724341493111" duration="7226000" />
       <workItem from="1724355736748" duration="28000" />
-      <workItem from="1724433893428" duration="2094000" />
+      <workItem from="1724433893428" duration="2539000" />
     </task>
     <task id="LOCAL-00001" summary="login , signup gui">
       <option name="closed" value="true" />
