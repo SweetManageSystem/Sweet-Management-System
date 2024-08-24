@@ -65,8 +65,10 @@ public class SignUpState implements State{
         if(!context.isTest()) {
             String input = scanner.nextLine();
             context.filterState(input);
-            if (!person.getPassword().equals(input))
+            if (!person.getPassword().equals(input)) {
+                logger.info("Passwords missmatch");
                 context.handleInput();
+            }
         }
         UserDataBase.addPerson(person);
         logger.info("Account created successfully");

@@ -106,6 +106,11 @@ public class ManageUsersSteps {
         manageUsersState.handleInput();
     }
 
+    @Then("the username should be updated to {string}")
+    public void the_username_should_be_updated_to(String string) {
+        Assert.assertTrue(context.getIt());
+    }
+
     @When("admin enter the new username {string}")
     public void admin_enter_the_new_username(String newUsername) {
         appendInput(newUsername);

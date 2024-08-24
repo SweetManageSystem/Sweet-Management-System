@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15ef7f86-4278-412d-b698-ac719e455659" name="Changes" comment="Switch to State Pattern">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/statecontroller/login/SignUpState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/statecontroller/login/SignUpState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/steps/Admin/ManageUsersSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/steps/Admin/ManageUsersSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/StateController/Login/SignUpState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/StateController/Login/SignUpState.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/cucumber-reports.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber-reports.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/steps/Admin/ManageUsersSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/example/steps/Admin/ManageUsersSteps.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -275,6 +278,7 @@
       <workItem from="1724438705420" duration="10528000" />
       <workItem from="1724451586719" duration="10179000" />
       <workItem from="1724501008571" duration="15641000" />
+      <workItem from="1724518349307" duration="185000" />
     </task>
     <task id="LOCAL-00001" summary="login , signup gui">
       <option name="closed" value="true" />
@@ -415,7 +419,7 @@
     <SUITE FILE_PATH="coverage/Sweet_Management_System$Main.ic" NAME="Main Coverage Results" MODIFIED="1723567499520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>org.example.Database.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Person_java$Runner.ic" NAME="Runner Coverage Results" MODIFIED="1724517323535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/Person_java$Runner.ic" NAME="Runner Coverage Results" MODIFIED="1724518525052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/Sweet_Management_System$Runner.ic" NAME="Runner Coverage Results" MODIFIED="1723572963006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/Person_java$Main.ic" NAME="Main Coverage Results" MODIFIED="1724447811046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>org.example.database.feedback.*</FILTER>
