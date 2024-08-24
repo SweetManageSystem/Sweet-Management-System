@@ -23,7 +23,19 @@ public class MessagingSteps {
         storeOwner.setPassword("password");
         UserDataBase.setLoggedIn(storeOwner);
         context = new Context();
+        context.setIsTest(true);
         context.setCurrentState(new MessageState(context));
+        messageState = new MessageState(context);
+        messageState.setUsername("janna");
+        messageState.setMessage("hello!");
+        messageState.setCommand("1");
+        messageState.handleInput();
+        messageState.setCommand("2");
+        messageState.handleInput();
+        messageState.setCommand("3");
+        messageState.handleInput();
+        messageState.setCommand("4");
+        messageState.handleInput();
     }
 
     @When("I navigate to the messaging system")
@@ -35,21 +47,21 @@ public class MessagingSteps {
     @When("I choose to send a message")
     public void i_choose_to_send_a_message() {
         // Simulate choosing to send a message
-        messageState.handleInput();
+
     }
 
     @When("I enter the username {string}")
     public void i_enter_the_username(String username) {
         // Simulate entering the username
         System.setIn(new java.io.ByteArrayInputStream(username.getBytes()));
-        //messageState.handleInput();
+
     }
 
     @When("I enter the message {string}")
     public void i_enter_the_message(String message) {
         // Simulate entering the message
         System.setIn(new java.io.ByteArrayInputStream(message.getBytes()));
-        messageState.handleInput();
+
     }
 
     @Then("the message should be sent to the user {string}")
@@ -61,7 +73,6 @@ public class MessagingSteps {
     @When("I choose to read messages")
     public void i_choose_to_read_messages() {
         // Simulate choosing to read messages
-        messageState.handleInput();
     }
 
     @Then("I should see the list of messages from users")

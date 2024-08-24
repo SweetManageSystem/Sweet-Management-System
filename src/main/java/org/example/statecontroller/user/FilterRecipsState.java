@@ -3,6 +3,7 @@ package org.example.statecontroller.user;
 import org.example.database.ProductDataBase;
 import org.example.reciepes.Product;
 import org.example.statecontroller.Context;
+import org.example.statecontroller.ExitState;
 import org.example.statecontroller.State;
 
 import java.util.List;
@@ -12,7 +13,11 @@ import java.util.logging.Logger;
 public class FilterRecipsState implements State {
     private Logger logger = Logger.getLogger(FilterRecipsState.class.getName());
     private Context context;
+    private String input;
 
+    public void setInput(String input) {
+        this.input = input;
+    }
     public FilterRecipsState(Context context) {
         this.context = context;
     }
@@ -21,7 +26,8 @@ public class FilterRecipsState implements State {
     public void handleInput() {
         Scanner scanner = new Scanner(System.in);
         logger.info("Enter dietary needs or food allergies (comma-separated):");
-        String input = scanner.nextLine().toLowerCase().trim();
+        if(!context.isTest())
+            input = scanner.nextLine().toLowerCase().trim();
         context.filterState(input);
         List<String> tags = List.of(input.split(","));
 
@@ -37,6 +43,8 @@ public class FilterRecipsState implements State {
         }
 
         context.setCurrentState(new UserState(context));
+        if (context.isTest())
+            context.setCurrentState(new ExitState());
         context.handleInput();
     }
 

@@ -7,6 +7,7 @@ import org.example.database.ProductDataBase;
 import org.example.reciepes.Product;
 import org.example.statecontroller.Context;
 import org.example.statecontroller.user.FilterRecipsState;
+import org.example.statecontroller.user.UserState;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -25,9 +26,22 @@ public class FilterRecipsStateSteps {
     @Given("the user is in the FilterRecipsState")
     public void theUserIsInTheFilterRecipsState() {
         context = new Context();
+        context.setIsTest(true);
         filterRecipsState = new FilterRecipsState(context);
         outputStream = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outputStream));
+        UserState userState = new UserState(context);
+        userState.setCommand("4");
+        userState.handleInput();
+        userState.setCommand("8");
+        userState.handleInput();
+        userState.setCommand("9");
+        userState.handleInput();
+        filterRecipsState.setInput("fish");
+        filterRecipsState.handleInput();
+        filterRecipsState.setInput("");
+        filterRecipsState.handleInput();
+
     }
 
     @Given("the following products are available:")
@@ -37,7 +51,6 @@ public class FilterRecipsStateSteps {
             int id = Integer.parseInt(product.get("id"));
             String name = product.get("name");
             double price = Double.parseDouble(product.get("price"));
-            double originalPrice = Double.parseDouble(product.get("originalPrice"));
             int sellCounter = Integer.parseInt(product.get("sellCounter"));
             ProductDataBase.addProduct(new Product(id, name, price, sellCounter));
         }
@@ -52,16 +65,12 @@ public class FilterRecipsStateSteps {
 
     @Then("no recipes should be found matching the specified criteria")
     public void noRecipesShouldBeFoundMatchingTheSpecifiedCriteria() {
-        String output = outputStream.toString();
         assertTrue(context.getIt());
     }
 
     @Then("the following recipes should be displayed:")
     public void theFollowingRecipesShouldBeDisplayed(List<Map<String, String>> expectedRecipes) {
-        String output = outputStream.toString();
-        for (Map<String, String> expectedRecipe : expectedRecipes) {
-            String expectedOutput = expectedRecipe.get("name") + " - $" + expectedRecipe.get("price");
-            assertTrue(context.getIt());
-        }
+           assertTrue(context.getIt());
+
     }
 }

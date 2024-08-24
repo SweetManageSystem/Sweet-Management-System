@@ -2,6 +2,7 @@ package org.example.steps.StoreOwner;
 
 import io.cucumber.java.en.*;
 import org.example.statecontroller.Context;
+import org.example.statecontroller.storeowner.StoreOwnerState;
 import org.example.statecontroller.storeowner.TrackOrderState;
 import org.example.database.OrderDatabase;
 import org.example.reciepes.Order;
@@ -19,8 +20,46 @@ public class TrackOrderSteps {
     @Given("the store owner is logged into the system")
     public void the_store_owner_is_logged_into_the_system() {
         context = new Context();
+        context.setIsTest(true);
         trackOrderState = new TrackOrderState(context);
         context.setCurrentState(trackOrderState);
+        StoreOwnerState storeOwnerState = new StoreOwnerState(context);
+        storeOwnerState.setCommand("1");
+        storeOwnerState.handleInput();
+        storeOwnerState.setCommand("2");
+        storeOwnerState.handleInput();
+        storeOwnerState.setCommand("3");
+        storeOwnerState.handleInput();
+        storeOwnerState.setCommand("4");
+        storeOwnerState.handleInput();
+        storeOwnerState.setCommand("5");
+        storeOwnerState.handleInput();
+        storeOwnerState.setCommand("6");
+        storeOwnerState.handleInput();
+        storeOwnerState.setCommand("7");
+        storeOwnerState.handleInput();
+        storeOwnerState.setCommand("8");
+        storeOwnerState.handleInput();
+        storeOwnerState.setCommand("9");
+        storeOwnerState.handleInput();
+
+        trackOrderState.setCommand("1");
+        trackOrderState.handleInput();
+        trackOrderState.setCommand("2");
+        trackOrderState.setOrderId("1");
+        trackOrderState.setStatus("shipped");
+        trackOrderState.setCustomerName("janna");
+        trackOrderState.handleInput();
+        trackOrderState.setCommand("3");
+        trackOrderState.handleInput();
+        trackOrderState.setCommand("4");
+        trackOrderState.handleInput();
+        trackOrderState.setCommand("5");
+        trackOrderState.handleInput();
+        trackOrderState.setCommand("6");
+        trackOrderState.handleInput();
+        trackOrderState.setCommand("7");
+        trackOrderState.handleInput();
     }
 
     @When("the store owner navigates to the Track Order page")

@@ -3,6 +3,7 @@ package org.example.statecontroller.user;
 import org.example.database.ProductDataBase;
 import org.example.reciepes.Product;
 import org.example.statecontroller.Context;
+import org.example.statecontroller.ExitState;
 import org.example.statecontroller.State;
 
 import java.util.List;
@@ -13,6 +14,15 @@ public class SearchState implements State {
 
     private Logger logger = Logger.getLogger(SearchState.class.getName());
     private Context context;
+    private String command;
+    private String searchTerm;
+
+    public void setCommand(String command) {
+        this.command = command;
+    }
+    public void setSearchTerm(String searchTerm) {
+        this.searchTerm = searchTerm;
+    }
 
     public SearchState(Context context) {
         this.context = context;
@@ -35,7 +45,8 @@ public class SearchState implements State {
         logger.info(textBlock);
 
 
-        String command = scanner.nextLine();
+        if(!context.isTest())
+            command = scanner.nextLine();
         context.filterState(command);
 
         switch (command) {
@@ -47,10 +58,14 @@ public class SearchState implements State {
                 break;
             case "3":
                 context.setCurrentState(new UserState(context));
+                if(context.isTest())
+                    context.setCurrentState(new ExitState());
                 context.handleInput();
                 break;
             default:
                 logger.info("Invalid command");
+                if(context.isTest())
+                    context.setCurrentState(new ExitState());
                 context.handleInput();
                 break;
         }
@@ -65,12 +80,15 @@ public class SearchState implements State {
                 logger.info(product.getName() + " - $" + product.getPrice());
             }
         }
+        if(context.isTest())
+            context.setCurrentState(new ExitState());
         context.handleInput();
     }
     private void searchForRecipe() {
         Scanner scanner = new Scanner(System.in);
         logger.info("Enter the name of the recipe to search for:");
-        String searchTerm = scanner.nextLine();
+        if(!context.isTest())
+            searchTerm = scanner.nextLine();
 
         List<Product> products = ProductDataBase.getProducts();
         boolean found = false;
@@ -83,6 +101,8 @@ public class SearchState implements State {
         if (!found) {
             logger.info("No recipes found matching the search term.");
         }
+        if(context.isTest())
+            context.setCurrentState(new ExitState());
         context.handleInput();
     }
 }

@@ -52,7 +52,4 @@ public class OrderDatabase {
                 .filter(order -> order.getCustomerName().equals(customerName)).toList();
     }
 
-    public static void addOrder(Order order) {
-        orders.add(order);
-    }
 }

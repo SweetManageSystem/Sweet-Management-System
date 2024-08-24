@@ -3,6 +3,7 @@ package org.example.statecontroller.storeowner;
 import org.example.database.UserDataBase;
 import org.example.account.Person;
 import org.example.statecontroller.Context;
+import org.example.statecontroller.ExitState;
 import org.example.statecontroller.State;
 
 import java.util.Scanner;
@@ -12,6 +13,23 @@ public class MessageState implements State {
     private Context context;
     private Scanner input;
     private Logger logger = Logger.getLogger(MessageState.class.getName());
+    private String command;
+    private String username;
+    private String message;
+
+
+
+    public void setCommand(String command) {
+        this.command = command;
+
+    }
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
 
     public MessageState(Context context) {
         this.context = context;
@@ -37,8 +55,8 @@ public class MessageState implements State {
                           </body>
                     </html>""";
         logger.info(textBlock);
-        if (input.hasNextLine()) {
-            String command = input.nextLine();
+            if(!context.isTest())
+                command = input.nextLine();
             context.filterState(command);
 
             switch (command) {
@@ -50,30 +68,37 @@ public class MessageState implements State {
                     break;
                 case "3":
                     context.setCurrentState(new StoreOwnerState(context));
+                    if (context.isTest())
+                        context.setCurrentState(new ExitState());
                     context.handleInput();
                     break;
                 default:
                     logger.info("Invalid command");
+                    if (context.isTest())
+                        context.setCurrentState(new ExitState());
                     context.handleInput();
                     break;
             }
-        }
+
+
     }
 
     private void sendMessageToUser() {
         logger.info("Enter the username of the user:");
-        String username = input.nextLine();
+        if (!context.isTest())
+            username = input.nextLine();
         Person user = UserDataBase.getPersonByUsername(username);
         if (user != null) {
             logger.info("Enter your message:");
-            String message = input.nextLine();
+            if (!context.isTest())
+                message = input.nextLine();
             UserDataBase.getPerson(user.getEmail()).recieveMessage(message);
             logger.info("Message sent to " + user.getUsername());
         } else {
             logger.info("User not found");
         }
-
-        handleInput();
+        if(!context.isTest())
+            handleInput();
     }
 
     private void readMessageFromUser() {
@@ -81,8 +106,6 @@ public class MessageState implements State {
             logger.info(message);
         }
     }
-
-
 
 
 }

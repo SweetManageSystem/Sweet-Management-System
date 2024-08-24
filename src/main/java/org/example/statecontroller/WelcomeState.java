@@ -30,11 +30,15 @@ public class WelcomeState implements State{
         }
         else if(input.equals("1")) {
             context.setCurrentState(new LogInState(context));
+            if(context.isTest())
+                context.setCurrentState(new ExitState());
             context.handleInput();
 
         }
         else if(input.equals("2")) {
             context.setCurrentState(new SignUpState(context));
+            if(context.isTest())
+                context.setCurrentState(new ExitState());
             context.handleInput();
         }
 

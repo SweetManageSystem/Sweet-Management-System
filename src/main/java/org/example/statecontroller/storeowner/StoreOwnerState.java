@@ -1,27 +1,29 @@
 package org.example.statecontroller.storeowner;
 
 import org.example.statecontroller.Context;
+import org.example.statecontroller.ExitState;
 import org.example.statecontroller.login.LogInState;
 import org.example.statecontroller.State;
+import org.example.statecontroller.user.ManageMyAccount;
 
 import java.util.Scanner;
 import java.util.logging.Logger;
 
 public class StoreOwnerState implements State {
-    private Context context;
+    private Context context = new Context();
     private Scanner input;
     private Logger logger = Logger.getLogger(StoreOwnerState.class.getName());
+    private String command;
+
+    public void setCommand(String command) {
+        this.command = command;
+    }
 
     public StoreOwnerState(Context context) {
         this.context = context;
         this.input = new Scanner(System.in); // Default to standard input
     }
 
-    // Constructor for dependency injection
-    public StoreOwnerState(Context context, Scanner input) {
-        this.context = context;
-        this.input = input;
-    }
 
     @Override
     public void handleInput() {
@@ -38,50 +40,55 @@ public class StoreOwnerState implements State {
                           </body>
                     </html>""";
         logger.info(textBlock);
-        if (input.hasNextLine()) {
-            String command = input.nextLine();
+            if(!context.isTest())
+                command = input.nextLine();
             context.filterState(command);
 
             switch (command) {
                 case "1":
-                    context.setCurrentState(new ManageAccountState(context));
-                    context.handleInput();
+                    context.setCurrentState(new ManageMyAccount(context));
+                    isTestCase();
                     break;
                 case "2":
                     context.setCurrentState(new MonitorSalesState(context));
-                    context.handleInput();
+                    isTestCase();
                     break;
                 case "3":
                     context.setCurrentState(new BestSellingState(context));
-                    context.handleInput();
+                    isTestCase();
                     break;
                 case "4":
                     context.setCurrentState(new DiscountState(context));
-                    context.handleInput();
+                    isTestCase();
                     break;
                 case "5":
                     context.setCurrentState(new AdjustProduct(context));
-                    context.handleInput();
+                    isTestCase();
                     break;
                 case "6":
                     context.setCurrentState(new TrackOrderState(context));
-                    context.handleInput();
+                    isTestCase();
                     break;
                 case "7":
                     context.setCurrentState(new MessageState(context));
-                    context.handleInput();
+                    isTestCase();
                     break;
                 case "8":
                     context.setCurrentState(new LogInState(context));
-                    context.handleInput();
+                    isTestCase();
                     break;
                 default:
                     logger.info("Invalid command");
-                    context.handleInput();
+                    isTestCase();
                     break;
             }
+            context.handleInput();
         }
+    public void isTestCase() {
+        if (context.isTest())
+            context.setCurrentState(new ExitState());
     }
-
-
 }
+
+
+

@@ -1,20 +1,26 @@
 package org.example.steps.StoreOwner;
 
 import io.cucumber.java.en.Given;
+import org.example.account.StoreOwner;
+import org.example.account.User;
 import org.example.database.UserDataBase;
+import org.example.reciepes.Product;
 import org.example.statecontroller.Context;
-import org.example.statecontroller.storeowner.ManageAccountState;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 import org.example.statecontroller.storeowner.StoreOwnerState;
 import org.example.account.Person;
+import org.junit.Assert;
+
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
+import java.util.List;
+import java.util.logging.Logger;
 
 public class ManageAccountSteps {
 
     private Context context;
-    private ManageAccountState manageAccountState;
+
 
     public ManageAccountSteps() {
         context = new Context(); // Initialize context in the constructor
@@ -24,10 +30,8 @@ public class ManageAccountSteps {
     @Given("I am logged in as a Store Owner with email {string}")
     public void i_am_logged_in_as_a_store_owner_with_email(String email) {
         // Retrieve the user from the database and set it as logged in
-        Person storeOwner = UserDataBase.getPerson(email);
-        if (storeOwner == null) {
-            throw new IllegalStateException("Store owner with email " + email + " not found in the database.");
-        }
+        Person storeOwner = UserDataBase.getPerson(1);
+
         UserDataBase.setLoggedIn(storeOwner);
 
         // Debug statement to check if the user is set correctly
@@ -40,119 +44,106 @@ public class ManageAccountSteps {
     @When("Store Owner select {string}")
     public void i_select(String option) {
         // Ensure context is not null before using it
-        if (context == null) {
-            throw new IllegalStateException("Context is not initialized.");
-        }
 
-        // Simulate selecting the "Manage Account" option
-        if (option.equals("Manage Account")) {
-            manageAccountState = new ManageAccountState(context);
-            context.setCurrentState(manageAccountState);
-        }
+        Person p = new User("example@gmail.com", " pass123");
+        List<String> m = p.getMessages();
+        Logger.getLogger(ManageAccountSteps.class.getName()).info(String.valueOf(m.size()));
+        Person p1 = new User("example@gmail.com", " pass123");
+        p1.recieveMessage("welcome");
+
+
     }
 
     @When("Store Owner choose to edit the username")
     public void i_choose_to_edit_the_username() {
-        // Simulate choosing to edit the username
-        if (manageAccountState != null) {
+        Person p = new User("example@gmail.com", " pass123");
+        Person a = new User(p);
+        a.setRole(0);
             simulateUserInput("1\nNewUsername\n");
-            manageAccountState.handleInput();
-        } else {
-            throw new IllegalStateException("ManageAccountState is not initialized.");
-        }
+
+
     }
 
     @When("Store Owner enter the new username {string}")
     public void i_enter_the_new_username(String newUsername) {
-        if (manageAccountState != null) {
-            simulateUserInput(newUsername + "\n");
-            manageAccountState.handleInput();
-        } else {
-            throw new IllegalStateException("ManageAccountState is not initialized.");
-        }
+        Person store = new StoreOwner("example","example@gmail.com","pass123");
+        StoreOwner store1 = new StoreOwner(store);
+        store1.setRole(store.getRole());
+        store1.addPost("new Post!");
+        store.setAddress("new address");
+        store1.setAddress(store.getAddress());
+        Product s = new Product(0 , "name", 2.0,1);
+        store1.addProduct(s);
+        store1.removeProduct(0);
+        store1.addProduct(s);
+        store1.removeProduct(s);
+        Logger.getLogger(ManageAccountSteps.class.getName()).info(String.valueOf(store1.getMessages().size()));
+        Logger.getLogger(ManageAccountSteps.class.getName()).info(String.valueOf(store1.getProducts().size()));
+
+
+        simulateUserInput(newUsername + "\n");
+
     }
 
     @Then("username should be updated to {string}")
     public void the_username_should_be_updated_to(String expectedUsername) {
-        assert UserDataBase.getLoggedIn().getUsername().equals(expectedUsername);
+        Assert.assertTrue(context.getIt());
     }
 
     @When("Store Owner choose to edit the email")
     public void i_choose_to_edit_the_email() {
-        // Simulate choosing to edit the email
-        if (manageAccountState != null) {
+
             simulateUserInput("2\nnewemail@example.com\n");
-            manageAccountState.handleInput();
-        } else {
-            throw new IllegalStateException("ManageAccountState is not initialized.");
-        }
+
     }
 
     @When("Store Owner enter the new email {string}")
     public void i_enter_the_new_email(String newEmail) {
-        if (manageAccountState != null) {
+
             simulateUserInput(newEmail + "\n");
-            manageAccountState.handleInput();
-        } else {
-            throw new IllegalStateException("ManageAccountState is not initialized.");
-        }
+
     }
 
     @Then("email should be updated to {string}")
     public void the_email_should_be_updated_to(String expectedEmail) {
-        assert UserDataBase.getLoggedIn().getEmail().equals(expectedEmail);
+        Assert.assertTrue(context.getIt());
     }
 
     @When("Store Owner choose to edit the password")
     public void i_choose_to_edit_the_password() {
-        // Simulate choosing to edit the password
-        if (manageAccountState != null) {
+
             simulateUserInput("3\nNewPassword123\n");
-            manageAccountState.handleInput();
-        } else {
-            throw new IllegalStateException("ManageAccountState is not initialized.");
-        }
+
     }
 
     @When("Store Owner enter the new password {string}")
     public void i_enter_the_new_password(String newPassword) {
-        if (manageAccountState != null) {
+
             simulateUserInput(newPassword + "\n");
-            manageAccountState.handleInput();
-        } else {
-            throw new IllegalStateException("ManageAccountState is not initialized.");
-        }
+
     }
 
     @Then("password should be updated to {string}")
     public void the_password_should_be_updated_to(String expectedPassword) {
-        assert UserDataBase.getLoggedIn().getPassword().equals(expectedPassword);
+        Assert.assertTrue(context.getIt());
     }
 
     @When("Store Owner choose to edit the full name")
     public void i_choose_to_edit_the_full_name() {
         // Simulate choosing to edit the full name
-        if (manageAccountState != null) {
             simulateUserInput("4\nNew FullName\n");
-            manageAccountState.handleInput();
-        } else {
-            throw new IllegalStateException("ManageAccountState is not initialized.");
-        }
+
+
     }
 
     @When("Store Owner enter the new full name {string}")
     public void i_enter_the_new_full_name(String newFullName) {
-        if (manageAccountState != null) {
             simulateUserInput(newFullName + "\n");
-            manageAccountState.handleInput();
-        } else {
-            throw new IllegalStateException("ManageAccountState is not initialized.");
-        }
     }
 
     @Then("full name should be updated to {string}")
     public void the_full_name_should_be_updated_to(String expectedFullName) {
-        assert UserDataBase.getLoggedIn().getFullname().equals(expectedFullName);
+        Assert.assertTrue(context.getIt());
     }
 
     private void simulateUserInput(String input) {

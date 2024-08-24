@@ -3,6 +3,7 @@ package org.example.statecontroller.storeowner;
 import org.example.database.ProductDataBase;
 import org.example.reciepes.Product;
 import org.example.statecontroller.Context;
+import org.example.statecontroller.ExitState;
 import org.example.statecontroller.State;
 
 import java.util.Scanner;
@@ -11,7 +12,32 @@ import java.util.logging.Logger;
 public class AdjustProduct implements State {
     private Context context;
     private Logger logger = Logger.getLogger(AdjustProduct.class.getName());
+    private String choice;
+    private String name;
+    private double price;
+    private String id;
+    private String newName;
+    private double newPrice;
 
+    public void setChoice(String choice) {
+        this.choice = choice;
+    }
+    public void setName(String newName) {
+        this.newName = newName;
+
+    }
+    public void setPrice(double newPrice) {
+        this.newPrice = newPrice;
+    }
+    public void setId(String id) {
+        this.id = id;
+    }
+    public void setNewName(String newName) {
+        this.newName = newName;
+    }
+    public void setNewPrice(double newPrice) {
+        this.newPrice = newPrice;
+    }
 
     public AdjustProduct(Context context) {
         this.context = context;
@@ -21,54 +47,62 @@ public class AdjustProduct implements State {
     public void handleInput() {
         Scanner input = new Scanner(System.in);
         logger.info("1.Add   2.Adjust    3.Remove");
-        String choice = input.nextLine();
+        if(!context.isTest())
+            choice = input.nextLine();
         context.filterState(choice);
         switch (choice){
             case "1":
                 logger.info("Enter product Name:");
-                String name = input.nextLine();
-                context.filterState(name);
+                if(!context.isTest())
+                    name = input.nextLine();
                 logger.info("Enter product Price:");
-                double price = input.nextDouble();
+                if(!context.isTest())
+                    price = input.nextDouble();
                 context.filterState(String.valueOf(price));
                 Product product = new Product(ProductDataBase.getProducts().size() + 1, name,price,0);
                 ProductDataBase.addProduct(product);
                 logger.info("Product Added Successfully");
                 context.setCurrentState(new StoreOwnerState(context));
-                context.handleInput();
+                if(context.isTest())
+                    context.setCurrentState(new ExitState());
                 break;
             case "2":
                 logger.info("Enter Product ID :");
-                String id = input.nextLine();
+                if(!context.isTest())
+                    id = input.nextLine();
                 context.filterState(id);
                 logger.info("Product Name : " + ProductDataBase.getProduct(Integer.valueOf(id)).getName() + "Product Price: " + ProductDataBase.getProduct(Integer.valueOf(id)).getPrice());
                 logger.info("Enter Product Name :");
-                String newName = input.nextLine();
+                if(!context.isTest())
+                    newName = input.nextLine();
                 context.filterState(newName);
                 logger.info("Enter Product Price :");
-                double newPrice = input.nextDouble();
+                if(!context.isTest())
+                    newPrice = input.nextDouble();
                 context.filterState(String.valueOf(newPrice));
                 ProductDataBase.editProduct(Integer.valueOf(id), newName, newPrice);
                 logger.info("Product Updated Successfully");
                 context.setCurrentState(new StoreOwnerState(context));
-                context.handleInput();
+                if(context.isTest())
+                    context.setCurrentState(new ExitState());
                 break;
             case "3":
                 logger.info("Enter Product ID :");
-                String id1 = input.nextLine();
-                context.filterState(id1);
-                ProductDataBase.removeProduct(Integer.valueOf(id1));
+                if(!context.isTest())
+                    id = input.nextLine();
+                context.filterState(id);
+                ProductDataBase.removeProduct(Integer.valueOf(id));
                 logger.info("Product Removed Successfully");
                 context.setCurrentState(new StoreOwnerState(context));
-                context.handleInput();
+                if(context.isTest())
+                    context.setCurrentState(new ExitState());
                 break;
             default:
                 logger.info("Invalid choice");
-                context.handleInput();
+                if(context.isTest())
+                    context.setCurrentState(new ExitState());
                 break;
         }
-
+        context.handleInput();
     }
-
-
 }

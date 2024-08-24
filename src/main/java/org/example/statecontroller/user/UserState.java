@@ -1,6 +1,7 @@
 package org.example.statecontroller.user;
 
 import org.example.statecontroller.Context;
+import org.example.statecontroller.ExitState;
 import org.example.statecontroller.login.LogInState;
 import org.example.statecontroller.State;
 
@@ -9,9 +10,12 @@ import java.util.logging.Logger;
 
 public class UserState implements State {
     private Logger logger = Logger.getLogger(UserState.class.getName());
-
+    private String command;
     private Context context;
 
+    public void setCommand(String command) {
+        this.command = command;
+    }
     public UserState(Context context) {
         this.context = context;
     }
@@ -32,40 +36,55 @@ public class UserState implements State {
                           </body>
                     </html>""";
         logger.info(textBlock);
-            String command = scanner.nextLine();
+            if(!context.isTest())
+                command = scanner.nextLine();
             context.filterState(command);
 
             switch (command) {
                 case "1":
                     context.setCurrentState(new ManageMyAccount(context));
+                    isTestCase();
                     break;
                 case "2":
                     context.setCurrentState(new PostState(context));
+                    isTestCase();
                     break;
                 case "3":
                     context.setCurrentState(new SearchState(context));
+                    isTestCase();
                     break;
                 case "4":
                     context.setCurrentState(new FilterRecipsState(context));
+                    isTestCase();
                     break;
                 case "5":
                     context.setCurrentState(new PurchaseState(context));
+                    isTestCase();
                     break;
                 case "6":
                     context.setCurrentState(new MessageStoresState(context));
+                    isTestCase();
                     break;
                 case "7":
                     context.setCurrentState(new ProvideFeedbackState(context));
+                    isTestCase();
                     break;
                 case "8":
                     context.setCurrentState(new LogInState(context));
+                    isTestCase();
                     break;
                 default:
                     logger.info("Invalid command");
+                    isTestCase();
                     break;
             }
 
             context.handleInput();
+        }
+
+        public void isTestCase(){
+            if(context.isTest())
+                context.setCurrentState(new ExitState());
         }
 
 

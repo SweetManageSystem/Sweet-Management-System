@@ -4,23 +4,19 @@ import io.cucumber.java.en.*;
 import org.example.statecontroller.Context;
 import org.example.statecontroller.user.ProvideFeedbackState;
 import org.example.statecontroller.user.UserState;
-import org.example.statecontroller.ExitState;
 import org.example.database.feedback.FeedbackDataBase;
 import org.example.database.UserDataBase;
 import org.example.account.User;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
+import java.util.logging.Logger;
 
 import static org.junit.Assert.*;
 
 public class ProvideFeedbackSteps {
 
     private Context context;
-    private ProvideFeedbackState currentState;
-    private UserState userState;
-    private ExitState exitState;
-    private String feedbackMessage;
 
     @Given("the user is logged in")
     public void theUserIsLoggedIn() {
@@ -32,8 +28,15 @@ public class ProvideFeedbackSteps {
     public void theUserIsInTheProvideFeedbackState() {
         context = new Context();
         FeedbackDataBase.initializeFeedbacks();
-        currentState = new ProvideFeedbackState(context);
-        context.setCurrentState(currentState);
+        context.setIsTest(true);
+        UserState userState = new UserState(context);
+        userState.setCommand("7");
+        userState.handleInput();
+        ProvideFeedbackState feedbackState = new ProvideFeedbackState(context);
+        feedbackState.setFeedbackMessage("Good Job!");
+        feedbackState.setFeedbackId("1");
+        feedbackState.handleInput();
+
     }
 
     @When("the user provides feedback {string}")
@@ -41,7 +44,6 @@ public class ProvideFeedbackSteps {
         // Simulate user input by setting the feedback message directly
         InputStream sysInBackup = System.in; // Backup System.in to restore it later
         System.setIn(new ByteArrayInputStream(feedback.getBytes()));
-      ;
         System.setIn(sysInBackup); // Restore System.in
     }
 
@@ -70,7 +72,9 @@ public class ProvideFeedbackSteps {
 
     @When("the user enters an invalid command {string}")
     public void theUserEntersAnInvalidCommand(String command) {
-        // Simulate user input by setting the command directly
+        ProvideFeedbackState provideFeedbackState = new ProvideFeedbackState(context);
+        String test = provideFeedbackState.generateFeedbackId();
+        Logger.getLogger(ProvideFeedbackSteps.class.getName()).info(test);
         InputStream sysInBackup = System.in; // Backup System.in to restore it later
         System.setIn(new ByteArrayInputStream(command.getBytes()));
         System.setIn(sysInBackup); // Restore System.in

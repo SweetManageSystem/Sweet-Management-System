@@ -19,10 +19,18 @@ public class PostStateSteps {
     @Given("the user is logged in for posting")
     public void the_user_is_logged_in_for_posting() {
         context = new Context();
+        context.setIsTest(true);
         loggedInUser = new User("testuser", "testuser@example.com", "password");
         UserDataBase.setLoggedIn(loggedInUser);
         context.setCurrentState(new UserState(context));
         postState = new PostState(context); // Initialize postState here
+        UserState userState = new UserState(context);
+        userState.setCommand("2");
+        userState.handleInput();
+        postState.setPostDetails("hello guys!");
+        if(context.isBack("back"))
+            postState.handleInput();
+
     }
 
     @Given("the user is in the PostState")
@@ -31,7 +39,8 @@ public class PostStateSteps {
         loggedInUser = new User("testuser", "testuser@example.com", "password");
         UserDataBase.setLoggedIn(loggedInUser);
         postState = new PostState(context);
-        context.setCurrentState(postState);
+
+         context.setCurrentState(postState);
     }
 
     @When("the user enters post details {string}")

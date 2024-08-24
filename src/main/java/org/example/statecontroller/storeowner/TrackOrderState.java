@@ -3,6 +3,7 @@ package org.example.statecontroller.storeowner;
 import org.example.database.OrderDatabase;
 import org.example.reciepes.Order;
 import org.example.statecontroller.Context;
+import org.example.statecontroller.ExitState;
 import org.example.statecontroller.State;
 
 import java.util.List;
@@ -13,16 +14,34 @@ public class TrackOrderState implements State {
     private Context context;
     private Scanner input;
     private Logger logger = Logger.getLogger(TrackOrderState.class.getName());
+    private String command;
+    private String orderId;
+    private String customerName;
+    private String status;
+
+    public void setCommand(String command) {
+        this.command = command;
+    }
+    public void setOrderId(String orderId) {
+        this.orderId = orderId;
+
+    }
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+
+
     public TrackOrderState(Context context) {
         this.context = context;
         this.input = new Scanner(System.in); // Default to standard input
     }
 
     // Constructor for dependency injection
-    public TrackOrderState(Context context, Scanner input) {
-        this.context = context;
-        this.input = input;
-    }
+
 
     @Override
     public void handleInput() {
@@ -39,10 +58,9 @@ public class TrackOrderState implements State {
                           </body>
                     </html>""";
         logger.info(textBlock);
-
-        if (input.hasNextLine()) {
-            String command = input.nextLine();
-            context.filterState(command);
+        if(!context.isTest())
+           command = input.nextLine();
+        context.filterState(command);
             switch (command) {
                 case "1":
                     viewAllOrders();
@@ -61,14 +79,18 @@ public class TrackOrderState implements State {
                     break;
                 case "6":
                     context.setCurrentState(new StoreOwnerState(context));
+                    if(context.isTest())
+                        context.setCurrentState(new ExitState());
                     break;
                 default:
                     logger.info("Invalid command");
+                    if(context.isTest())
+                        context.setCurrentState(new ExitState());
                     break;
             }
 
             context.handleInput();
-        }
+
     }
 
     private void viewAllOrders() {
@@ -85,7 +107,8 @@ public class TrackOrderState implements State {
 
     private void viewOrderDetails() {
         logger.info("Enter Order ID: ");
-        String orderId = input.nextLine();
+        if(!context.isTest())
+            orderId = input.nextLine();
         Order order = OrderDatabase.getOrderById(orderId);
         if (order == null) {
             logger.info("Order not found.");
@@ -97,14 +120,16 @@ public class TrackOrderState implements State {
 
     private void updateOrderStatus() {
         logger.info("Enter Order ID: ");
-        String orderId = input.nextLine();
+        if(!context.isTest())
+            orderId = input.nextLine();
         Order order = OrderDatabase.getOrderById(orderId);
         if (order == null) {
             logger.info("Order not found.");
             return;
         }
         logger.info("Enter new status: ");
-        String status = input.nextLine();
+        if(!context.isTest())
+            status = input.nextLine();
         order.setStatus(status);
         OrderDatabase.updateOrder(order);
         logger.info("Order status updated.");
@@ -112,7 +137,8 @@ public class TrackOrderState implements State {
 
     private void filterOrdersByStatus() {
         logger.info("Enter status to filter by: ");
-        String status = input.nextLine();
+        if(!context.isTest())
+            status = input.nextLine();
         List<Order> orders = OrderDatabase.getOrdersByStatus(status);
         if (orders.isEmpty()) {
             logger.info("No orders found with this status");
@@ -126,7 +152,8 @@ public class TrackOrderState implements State {
 
     private void searchOrdersByCustomerName() {
         logger.info("Enter customer name: ");
-        String customerName = input.nextLine();
+        if(!context.isTest())
+            customerName = input.nextLine();
         List<Order> orders = OrderDatabase.getOrdersByCustomerName(customerName);
         if (orders.isEmpty()) {
             logger.info("No orders found for this customer");

@@ -2,6 +2,7 @@ package org.example.statecontroller.storeowner;
 
 import org.example.database.ProductDataBase;
 import org.example.statecontroller.Context;
+import org.example.statecontroller.ExitState;
 import org.example.statecontroller.State;
 
 import java.util.Scanner;
@@ -11,6 +12,25 @@ public class DiscountState implements State {
     private Context context;
     private Logger logger = Logger.getLogger(DiscountState.class.getName());
     private static final String ENTER_DISCOUNT_PERCENTAGE = "Enter Discount Percentage";
+    private String command;
+    private double discount;
+    private double minPrice;
+    private double maxPrice;
+
+    public void setCommand(String command) {
+        this.command = command;
+    }
+
+    public void setDiscount(double discount) {
+        this.discount = discount;
+
+    }
+    public void setMinPrice(double minPrice) {
+        this.minPrice = minPrice;
+    }
+    public void setMaxPrice(double maxPrice) {
+        this.maxPrice = maxPrice;
+    }
 
     public DiscountState(Context context) {
         this.context = context;
@@ -32,7 +52,8 @@ public class DiscountState implements State {
                           </body>
                     </html>""";
             logger.info(textBlock);
-            String command = input.nextLine();
+            if(!context.isTest())
+                command = input.nextLine();
             context.filterState(command);
             switch (command) {
                 case "1":
@@ -46,35 +67,45 @@ public class DiscountState implements State {
                     break;
                 default:
                     logger.info("Invalid command");
-                    handleInput();
+                    if(context.isTest())
+                        context.setCurrentState(new ExitState());
+                    context.handleInput();
                     return;
             }
                 context.setCurrentState(new StoreOwnerState(context));
-                context.handleInput();
+            if(context.isTest())
+                context.setCurrentState(new ExitState());
+
+            context.handleInput();
         }
     }
 
     private void applyDiscountToAllProducts(Scanner input) {
         logger.info(ENTER_DISCOUNT_PERCENTAGE);
-        double discount = input.nextDouble();
+        if(!context.isTest())
+            discount = input.nextDouble();
         ProductDataBase.applyDiscountToAllProducts(discount);
         logger.info("Discount applied to all products.");
     }
 
     private void applyDiscountToBestSellingProduct(Scanner input) {
         logger.info(ENTER_DISCOUNT_PERCENTAGE);
-        double discount = input.nextDouble();
+        if(!context.isTest())
+            discount = input.nextDouble();
         ProductDataBase.applyDiscountToBestSellingProduct(discount);
         logger.info("Discount applied to best-selling product.");
     }
 
     private void applyDiscountToPriceRange(Scanner input) {
         logger.info("Enter minimum price:");
-        double minPrice = input.nextDouble();
+        if(!context.isTest())
+            minPrice = input.nextDouble();
         logger.info("Enter maximum price:");
-        double maxPrice = input.nextDouble();
+        if(!context.isTest())
+            maxPrice = input.nextDouble();
         logger.info("Enter discount percentage:");
-        double discount = input.nextDouble();
+        if(!context.isTest())
+            discount = input.nextDouble();
         ProductDataBase.applyDiscountToPriceRange(minPrice, maxPrice, discount);
         logger.info("Discount applied to products in the price range.");
     }

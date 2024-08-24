@@ -19,8 +19,14 @@ public class SignupSteps {
         context = new Context();
         welcomeState = new WelcomeState(context);
         context.setIsTest(true);
+        welcomeState.setInput("exit");
+        welcomeState.handleInput();
+        welcomeState.setInput("1");
+        welcomeState.handleInput();
         welcomeState.setInput("2");
         welcomeState.handleInput();
+
+
 
 
     }
@@ -40,6 +46,10 @@ public class SignupSteps {
         SignUpState signUpState = new SignUpState(context);
         context.setIsTest(true);
         context.setCurrentState(signUpState);
+        signUpState.setEmail("brabra@gmail.com");
+        signUpState.setPassword("password123");
+        signUpState.setUserName("hehe");
+        signUpState.setFullName("hoho");
         signUpState.handleInput();
 
     }

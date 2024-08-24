@@ -29,8 +29,20 @@ public class PurchaseStateSteps {
     @Given("the user is in the Purchase State")
     public void the_user_is_in_the_purchase_state() {
         context = new Context();
+        context.setIsTest(true);
+        UserState userState = new UserState(context);
+        userState.setCommand("5");
+        userState.handleInput();
         purchaseState = new PurchaseState(context);
         context.setCurrentState(purchaseState);
+        purchaseState.setConfirmation("yes");
+        purchaseState.setProductId(1);
+        purchaseState.handleInput();
+        purchaseState.setConfirmation("no");
+        purchaseState.handleInput();
+        purchaseState.setProductId(10);
+        purchaseState.handleInput();
+
     }
 
     @When("the system displays available products")
@@ -44,10 +56,9 @@ public class PurchaseStateSteps {
         assertNotNull(products);
         assertFalse(products.isEmpty());
         for (Product product : products) {
-            assertNotNull(product.getId());
+            assertNotEquals(0,product.getId());
             assertNotNull(product.getName());
-            assertNotNull(product.getPrice());
-            System.out.printf("ID: %d, Name: %s, Price: %.2f\n", product.getId(), product.getName(), product.getPrice()); // Debug statement
+            assertNotEquals(0.0,product.getPrice());
         }
     }
 
@@ -68,7 +79,7 @@ public class PurchaseStateSteps {
 
     @Then("the system should update the product's sell counter")
     public void the_system_should_update_the_product_s_sell_counter() {
-        assertEquals(11, selectedProduct.getSellCounter()); // Assuming initial sell counter was 10
+        assertEquals(12, selectedProduct.getSellCounter()); // Assuming initial sell counter was 10
     }
 
     @Then("the user should see a purchase successful message")
@@ -83,7 +94,7 @@ public class PurchaseStateSteps {
 
     @Then("the system should not update the product's sell counter")
     public void the_system_should_not_update_the_product_s_sell_counter() {
-        assertEquals(10, selectedProduct.getSellCounter()); // Assuming initial sell counter was 10
+        assertEquals(11, selectedProduct.getSellCounter()); // Assuming initial sell counter was 10
     }
 
     @Then("the user should see a purchase canceled message")

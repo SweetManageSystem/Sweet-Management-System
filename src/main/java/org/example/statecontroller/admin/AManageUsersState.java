@@ -164,28 +164,28 @@ public class AManageUsersState implements State {
                 logger.info("Enter new UserName :");
                 if(!context.isTest())
                     userName = scanner.nextLine();
-                context.filterState(command);
+                context.filterState(userName);
                 for (Person n : UserDataBase.getDb()) {
-                    if(n.getUsername().equals(command)){
+                    if(n.getUsername().equals(userName)){
                         logger.info("Username already exists");
                         editUser(email);
                     }
                 }
-                p.setUsername(command);
+                p.setUsername(userName);
                 break;
             case "2":
                 logger.info("Enter new Password :");
                 if(!context.isTest())
                     password = scanner.nextLine();
-                context.filterState(command);
-                p.setPassword(command);
+                context.filterState(password);
+                p.setPassword(password);
                 break;
             case "3":
                 logger.info("Enter new Full Name :");
                 if(!context.isTest())
-                    command = scanner.nextLine();
-                context.filterState(command);
-                p.setFullname(command);
+                    fullName = scanner.nextLine();
+                context.filterState(fullName);
+                p.setFullname(fullName);
                 break;
             default:
                 logger.info("Invalid command");

@@ -51,7 +51,7 @@ public class ManageFeedbackStateSteps {
         context = new Context();
         context.setIsTest(true);
         manageFeedbackState = new ManageFeedbackState(context);
-
+        manageFeedbackState.setId("1");
         manageFeedbackState.setCommand("1");
 
         manageFeedbackState.handleInput();

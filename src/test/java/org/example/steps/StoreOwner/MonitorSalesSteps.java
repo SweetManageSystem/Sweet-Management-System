@@ -16,10 +16,13 @@ public class MonitorSalesSteps {
     @When("the store owner checks the sales and profits")
     public void the_store_owner_checks_the_sales_and_profits() {
         context = new Context();
+        context.setIsTest(true);
         MonitorSalesState monitorSalesState = new MonitorSalesState(context);
         monitorSalesState.calculateSalesAndProfits();
         totalSales = monitorSalesState.getTotalSales();
         totalProfit = monitorSalesState.getTotalProfit();
+        monitorSalesState.handleInput();
+
     }
 
     @Then("the total sales should be {int}")

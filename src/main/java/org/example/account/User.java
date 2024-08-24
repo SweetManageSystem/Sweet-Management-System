@@ -15,7 +15,7 @@ public class User implements Person {
     private int role = 0;
     private List<String> posts = new ArrayList<>();
     private List<String> messages = new ArrayList<>();
-    private String initialPostLoginState;
+
 
 
     // Constructors
@@ -111,21 +111,8 @@ public class User implements Person {
         this.address = address;
     }
 
-    public String getInitialPostLoginState() {
-        return this.initialPostLoginState;
-    }
 
-    public void setInitialPostLoginState(String state) {
-        this.initialPostLoginState = state;
-    }
 
-    public void setOriginalUsername(String originalUsername) {
-        this.originalUsername = originalUsername;
-    }
-
-    public String getOriginalUsername() {
-        return originalUsername;
-    }
 
     public List<String> getPosts() {
         return posts;

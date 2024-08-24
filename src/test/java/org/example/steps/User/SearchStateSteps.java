@@ -18,8 +18,24 @@ public class SearchStateSteps {
     @Given("the user is in the User State")
     public void the_user_is_in_the_User_State() {
         context = new Context();
-        currentState = new UserState(context);
-        context.setCurrentState(currentState);
+        UserState userState = new UserState(context);
+        context.setCurrentState(userState);
+        context.setIsTest(true);
+        userState.setCommand("3");
+        userState.handleInput();
+        userState.isTestCase();
+        context.handleInput();
+        SearchState searchState = new SearchState(context);
+        context.setCurrentState(searchState);
+        searchState.setSearchTerm("test1");
+        searchState.setCommand("1");
+        searchState.handleInput();
+        searchState.setCommand("2");
+        searchState.handleInput();
+        searchState.setCommand("3");
+        searchState.handleInput();
+        searchState.setCommand("0");
+        searchState.handleInput();
     }
 
     @When("the user selects the {string} option")
@@ -27,6 +43,7 @@ public class SearchStateSteps {
         if (option.equals("Search for recipes")) {
             currentState = new SearchState(context);
             context.setCurrentState(currentState);
+
         }
     }
 

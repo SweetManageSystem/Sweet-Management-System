@@ -16,19 +16,7 @@ public class Feedback {
     public String getId() {
         return id;
     }
-
-    public String getUserId() {
-        return userName;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public boolean isResponded() {
-        return responded;
-    }
-
+    
     public void setResponded(boolean responded) {
         this.responded = responded;
     }

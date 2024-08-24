@@ -32,12 +32,6 @@ public class FeedbackDataBase {
         return null;
     }
 
-    public static void markAsResponded(String id) {
-        Feedback feedback = getFeedbackById(id);
-        if (feedback != null) {
-            feedback.setResponded(true);
-        }
-    }
 
     public static void initializeFeedbacks() {
         addFeedback(new Feedback("1", "Janna", "Great product!"));

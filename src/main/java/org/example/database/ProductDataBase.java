@@ -24,9 +24,7 @@ public class ProductDataBase {
         products.add(product);
     }
 
-    public static void removeProduct(Product product) {
-        products.remove(product);
-    }
+
 
     public static void editProduct(int id, String name, double price) {
         Product product = getProduct(id);
