@@ -16,5 +16,6 @@ public class Main {
         FeedbackDataBase.initializeFeedbacks();
         context.setCurrentState(new WelcomeState(context));
         context.handleInput();
+
     }
 }

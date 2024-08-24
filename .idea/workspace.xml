@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15ef7f86-4278-412d-b698-ac719e455659" name="Changes" comment="Switch to State Pattern">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/statecontroller/storeowner/AdjustProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/statecontroller/storeowner/AdjustProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/steps/LogInStateSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/steps/LogInStateSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/steps/StoreOwner/AdjustProductSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/steps/StoreOwner/AdjustProductSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/steps/StoreOwner/DiscountSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/steps/StoreOwner/DiscountSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cucumber-reports.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber-reports.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,33 +54,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Coverage",
-    "Cucumber Java.Feature: login.executor": "Run",
-    "Cucumber Java.Feature: signup.executor": "Run",
-    "Cucumber Java.Feature: update,add,deleteproduct.executor": "Run",
-    "JUnit.Runner.executor": "Coverage",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "508",
-    "git-widget-placeholder": "RC2",
-    "jdk.selected.JAVA_MODULE": "openjdk-22",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "D:/Projects/Sweet-Management-System/SweetMangementSystem/src/test/java/org/example/steps",
-    "last_opened_file_path": "D:/Projects/demo",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "D:/Projects/Sweet-Management-System/SweetMangementSystem/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Coverage&quot;,
+    &quot;Cucumber Java.Feature: login.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: signup.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: update,add,deleteproduct.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Runner.executor&quot;: &quot;Coverage&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;508&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;RC2&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-22&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;D:/Projects/Sweet-Management-System/SweetMangementSystem/src/test/java/org/example/steps&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Projects/demo&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;D:/Projects/Sweet-Management-System/SweetMangementSystem/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.example.StateController.Admin" />
@@ -275,7 +274,7 @@
       <workItem from="1724433893428" duration="4297000" />
       <workItem from="1724438705420" duration="10528000" />
       <workItem from="1724451586719" duration="10179000" />
-      <workItem from="1724501008571" duration="14870000" />
+      <workItem from="1724501008571" duration="15641000" />
     </task>
     <task id="LOCAL-00001" summary="login , signup gui">
       <option name="closed" value="true" />
@@ -416,7 +415,7 @@
     <SUITE FILE_PATH="coverage/Sweet_Management_System$Main.ic" NAME="Main Coverage Results" MODIFIED="1723567499520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>org.example.Database.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Person_java$Runner.ic" NAME="Runner Coverage Results" MODIFIED="1724516258883" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/Person_java$Runner.ic" NAME="Runner Coverage Results" MODIFIED="1724517323535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/Sweet_Management_System$Runner.ic" NAME="Runner Coverage Results" MODIFIED="1723572963006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/Person_java$Main.ic" NAME="Main Coverage Results" MODIFIED="1724447811046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>org.example.database.feedback.*</FILTER>
