@@ -3,10 +3,9 @@ package org.example.statecontroller;
 import java.util.logging.Logger;
 
 public class ExitState implements State{
-    private Context context;
-    private Logger logger = Logger.getLogger(ExitState.class.getName());
-    public ExitState(Context context){
-        this.context = context;
+    private Logger logger ;
+    public ExitState(){
+        logger = Logger.getLogger(ExitState.class.getName());
     }
     @Override
     public void handleInput() {

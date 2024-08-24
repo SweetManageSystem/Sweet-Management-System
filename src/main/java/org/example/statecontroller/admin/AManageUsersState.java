@@ -12,10 +12,28 @@ import java.util.logging.Logger;
 public class AManageUsersState implements State {
     private Context context;
     private Logger logger = Logger.getLogger(AManageUsersState.class.getName());
+    private String command;
+    private String email;
+    private String userName;
+    private String password;
+    private String fullName;
     public AManageUsersState(Context context) {
         this.context = context;
     }
 
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
 
     @Override
     public void handleInput() {
@@ -31,15 +49,21 @@ public class AManageUsersState implements State {
                           </body>
                     </html>""";
         logger.info(textBlock);
-        String command = scanner.nextLine();
+        if(!context.isTest())
+         command = scanner.nextLine();
         context.filterState(command);
+        AdminState adminState = new AdminState(context);
+        if(context.isTest())
+            adminState.setCommand("exit");
         switch (command) {
             case "1":
                 logger.info("Enter the Email :");
-                String email = scanner.nextLine();
+                if(!context.isTest())
+                    email = scanner.nextLine();
                 context.filterState(email);
                 logger.info("Enter UserName :");
-                String userName = scanner.nextLine();
+                if(!context.isTest())
+                     userName = scanner.nextLine();
                 context.filterState(userName);
                 for(Person p : UserDataBase.getDb()){
                     if(p.getEmail().equals(email) || p.getUsername().equals(userName)){
@@ -48,22 +72,25 @@ public class AManageUsersState implements State {
                     }
                 }
                 logger.info("Enter Password :");
-                String password = scanner.nextLine();
+                if(!context.isTest())
+                     password = scanner.nextLine();
                 context.filterState(password);
                 logger.info("Enter Full Name :");
-                String fullName = scanner.nextLine();
+                if(!context.isTest())
+                    fullName = scanner.nextLine();
                 context.filterState(fullName);
                 Person p = new User(userName,email,password,fullName);
                 logger.info(p.getUsername());
                 UserDataBase.addPerson(p);
                 logger.info("User created successfully");
-                context.setCurrentState(new AdminState(context));
+                context.setCurrentState(adminState);
                 break;
             case "2":
                 logger.info("Enter the User Email :");
-                String userEmail = scanner.nextLine();
-                context.filterState(userEmail);
-                Person person = UserDataBase.getPerson(userEmail);
+                if(!context.isTest())
+                     email = scanner.nextLine();
+                context.filterState(email);
+                Person person = UserDataBase.getPerson(email);
                 if (person != null) {
                     logger.info( "Username: " + person.getUsername() + "\n Role: " + person.getRole() + "\n Full Name : " + person.getFullname() + "\n Password: " + person.getPassword());
                 }
@@ -71,23 +98,25 @@ public class AManageUsersState implements State {
                     logger.info("User not found");
                     context.handleInput();
                 }
-                context.setCurrentState(new AdminState(context));
+                context.setCurrentState(adminState);
                 break;
             case "3":
                 logger.info("Enter the Email :");
-                String s = scanner.nextLine();
-                context.filterState(s);
-                editUser(s);
+                if(!context.isTest())
+                    email = scanner.nextLine();
+                context.filterState(email);
+                editUser(email);
                 logger.info("User Edited successfully");
-                context.setCurrentState(new AdminState(context));
+                context.setCurrentState(adminState);
                 break;
             case "4":
                 logger.info("Enter the User Email :");
-                command = scanner.nextLine();
+                if(!context.isTest())
+                    command = scanner.nextLine();
                 context.filterState(command);
                 UserDataBase.removePersonByEmail(command);
                 logger.info("User removed successfully");
-                context.setCurrentState(new AdminState(context));
+                context.setCurrentState(adminState);
                 break;
             default:
                 logger.info("Invalid command");
@@ -97,9 +126,13 @@ public class AManageUsersState implements State {
 
     }
 
+    public void setCommand(String command) {
+        this.command = command;
+    }
 
 
-    private void editUser(String email){
+
+    public void editUser(String email){
         if(email == null){
             logger.info("invalid email");
             context.handleInput();
@@ -123,12 +156,14 @@ public class AManageUsersState implements State {
                           </body>
                     </html>""";
         logger.info(textBlock);
-        String command = scanner.nextLine();
+        if(!context.isTest())
+            command = scanner.nextLine();
         context.filterState(command);
         switch (command){
             case "1":
                 logger.info("Enter new UserName :");
-                command = scanner.nextLine();
+                if(!context.isTest())
+                    userName = scanner.nextLine();
                 context.filterState(command);
                 for (Person n : UserDataBase.getDb()) {
                     if(n.getUsername().equals(command)){
@@ -140,13 +175,15 @@ public class AManageUsersState implements State {
                 break;
             case "2":
                 logger.info("Enter new Password :");
-                command = scanner.nextLine();
+                if(!context.isTest())
+                    password = scanner.nextLine();
                 context.filterState(command);
                 p.setPassword(command);
                 break;
             case "3":
                 logger.info("Enter new Full Name :");
-                command = scanner.nextLine();
+                if(!context.isTest())
+                    command = scanner.nextLine();
                 context.filterState(command);
                 p.setFullname(command);
                 break;

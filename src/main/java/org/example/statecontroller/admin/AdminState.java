@@ -1,6 +1,7 @@
 package org.example.statecontroller.admin;
 
 import org.example.statecontroller.Context;
+import org.example.statecontroller.ExitState;
 import org.example.statecontroller.login.LogInState;
 import org.example.statecontroller.State;
 
@@ -10,7 +11,7 @@ import java.util.logging.Logger;
 public class AdminState implements State {
     private Context context;
     private  Logger logger = Logger.getLogger(AdminState.class.getName());
-
+    private String command;
 
     public AdminState(Context context) {
       this.context = context;
@@ -32,11 +33,15 @@ public class AdminState implements State {
                           </body>
                     </html>""";
         logger.info(textBlock);
-        String command = input.nextLine();
+        if(!context.isTest())
+         command = input.nextLine();
         context.filterState(command);
         switch (command) {
             case "1":
-                context.setCurrentState(new AManageUsersState(context));
+                AManageUsersState amanageUsersState = new AManageUsersState(context);
+                if(context.isTest())
+                    amanageUsersState.setCommand("exit");
+                context.setCurrentState(amanageUsersState);
                 break;
             case "2":
                 context.setCurrentState(new MonitorProfitsState(context));
@@ -48,13 +53,22 @@ public class AdminState implements State {
                 context.setCurrentState(new DiplayStatisticsState(context));
                 break;
             case "5":
-                context.setCurrentState(new ManageContentState(context));
+                ManageContentState manageContentState = new ManageContentState(context);
+                if(context.isTest())
+                    manageContentState.setCommand("exit");
+                context.setCurrentState(manageContentState);
                 break;
             case "6":
-                context.setCurrentState(new ManageFeedbackState(context));
+                ManageFeedbackState manageFeedbackState = new ManageFeedbackState(context);
+                if(context.isTest())
+                    context.setCurrentState(new ExitState());
+                context.setCurrentState(manageFeedbackState);
                 break;
             case "7":
-                context.setCurrentState(new LogInState(context));
+                LogInState logInState = new LogInState(context);
+                if(context.isTest())
+                    context.setCurrentState(new ExitState());
+                context.setCurrentState(logInState);
                 break;
             default:
                 logger.info("Invalid command");
@@ -64,5 +78,8 @@ public class AdminState implements State {
 
     }
 
+    public void setCommand(String command) {
+        this.command = command;
+    }
 
 }

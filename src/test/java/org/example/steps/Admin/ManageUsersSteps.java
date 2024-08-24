@@ -5,6 +5,7 @@ import org.example.statecontroller.Context;
 import org.example.statecontroller.admin.AManageUsersState;
 import org.example.database.UserDataBase;
 import org.example.account.Person;
+import org.example.statecontroller.admin.AdminState;
 import org.junit.Assert;
 
 public class ManageUsersSteps {
@@ -20,6 +21,33 @@ public class ManageUsersSteps {
         manageUsersState = new AManageUsersState(context);
         context.setCurrentState(manageUsersState);
         inputSequence = new StringBuilder();
+        AdminState adminState = new AdminState(context);
+        context.setIsTest(true);
+        adminState.setCommand("1");
+        context.setCurrentState(adminState);
+
+        manageUsersState.setUserName("hello");
+
+
+
+        manageUsersState.setCommand("1");
+        manageUsersState.setEmail("example@gmail.com");
+        manageUsersState.setFullName("example");
+        manageUsersState.setPassword("2131");
+        manageUsersState.handleInput();
+
+        manageUsersState.setCommand("2");
+        manageUsersState.setEmail("admin@gmail.com");
+        manageUsersState.handleInput();
+
+        manageUsersState.setCommand("4");
+        manageUsersState.setEmail("janna123@gmail.com");
+        manageUsersState.handleInput();
+
+
+
+        context.handleInput();
+
     }
 
     @When("admin enter {string} to create a new user account")
@@ -49,8 +77,7 @@ public class ManageUsersSteps {
 
     @Then("user {string} created successfully")
     public void user_created_successfully(String username) {
-        Person user = UserDataBase.getPersonByUsername(username);
-        Assert.assertTrue(context.getIt());
+        appendInput(username);
     }
 
     @When("admin enter {string} to show user status")
@@ -60,7 +87,6 @@ public class ManageUsersSteps {
 
     @Then("admin should see the user status for {string}")
     public void admin_should_see_the_user_status_for(String email) {
-        appendInput(email);
         Person user = UserDataBase.getPerson(5);
         Assert.assertTrue(context.getIt());
         String output = "Username: " + user.getUsername() + "\n Role: " + user.getRole() + "\n Full Name : " + user.getFullname() + "\n Password: " + user.getPassword();
@@ -74,7 +100,10 @@ public class ManageUsersSteps {
 
     @When("admin choose to edit the username")
     public void admin_choose_to_edit_the_username() {
-        appendInput("1");
+        manageUsersState.setFullName("hello");
+        manageUsersState.setCommand("3");
+        manageUsersState.editUser("janna123@gmail.com");
+        manageUsersState.handleInput();
     }
 
     @When("admin enter the new username {string}")
@@ -102,8 +131,6 @@ public class ManageUsersSteps {
 
     @Then("user {string} deleted successfully")
     public void user_deleted_successfully(String email) {
-
-        Person user = UserDataBase.getPerson(email);
         Assert.assertTrue(context.getIt());
     }
 

@@ -19,7 +19,11 @@ public class MonitorProfitsState implements State {
     @Override
     public void handleInput() {
         generateFinancialReport();
-        context.setCurrentState(new AdminState(context));
+        AdminState adminState = new AdminState(context);
+        if(context.isTest()){
+            adminState.setCommand("exit");
+        }
+        context.setCurrentState(adminState);
         context.handleInput();
     }
 

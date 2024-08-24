@@ -1,15 +1,15 @@
 package org.example.steps.Admin;
 
 import io.cucumber.java.en.*;
+import org.example.statecontroller.admin.AdminState;
 import org.example.statecontroller.admin.ManageContentState;
 import org.example.statecontroller.Context;
 import org.example.database.ProductDataBase;
 import org.example.database.UserDataBase;
 import org.example.reciepes.Product;
-import org.example.account.Person;
+
 import org.example.account.User;
 
-import java.util.Scanner;
 
 import static org.junit.Assert.*;
 
@@ -17,14 +17,50 @@ public class ManageContentSteps {
 
     private Context context;
     private ManageContentState manageContentState;
-    private Scanner input;
 
     @Given("the context is set to ManageContentState")
     public void setContextToManageContentState() {
         context = new Context();
         manageContentState = new ManageContentState(context);
         context.setCurrentState(manageContentState);
-        input = new Scanner(System.in);
+
+        context.setIsTest(true);
+        AdminState adminState = new AdminState(context);
+        adminState.setCommand("5");
+        manageContentState.setUsername("janna");
+        manageContentState.setPost("hehe");
+        manageContentState.setName("hh");
+        manageContentState.setPrice(20.2);
+        manageContentState.setSellCounter(10);
+        manageContentState.setCommand("1");
+        manageContentState.handleInput();
+
+        adminState.handleInput();
+
+        manageContentState.setCommand("2");
+        manageContentState.handleInput();
+
+        manageContentState.setCommand("3");
+
+        manageContentState.handleInput();
+
+        manageContentState.setCommand("4");
+        manageContentState.setId(1);
+        manageContentState.handleInput();
+
+        manageContentState.setCommand("5");
+        manageContentState.handleInput();
+
+        manageContentState.setCommand("6");
+        manageContentState.handleInput();
+
+        manageContentState.setCommand("7");
+
+        manageContentState.handleInput();
+
+        manageContentState.setCommand("8");
+        manageContentState.handleInput();
+
     }
 
     @When("I choose to view products")
@@ -78,7 +114,7 @@ public class ManageContentSteps {
 
     @Then("the product with ID {int} should be updated successfully")
     public void productWithIdShouldBeUpdatedSuccessfully(int id) {
-        Product product = ProductDataBase.getProduct(id);
+
         assertTrue(context.getIt());
     }
 
@@ -108,7 +144,6 @@ public class ManageContentSteps {
 
     @Then("I should see the posts of user {string}")
     public void shouldSeePostsOfUser(String username) {
-        Person user = UserDataBase.getPersonByUsername(username);
         assertTrue(context.getIt());
     }
 
@@ -126,7 +161,6 @@ public class ManageContentSteps {
 
     @Then("the post {string} should be added to user {string} successfully")
     public void postShouldBeAddedToUserSuccessfully(String content, String username) {
-        Person user = UserDataBase.getPersonByUsername("store");
         assertTrue(context.getIt());
     }
 
@@ -138,7 +172,7 @@ public class ManageContentSteps {
 
     @Then("the post {string} should be deleted from user {string} successfully")
     public void postShouldBeDeletedFromUserSuccessfully(String content, String username) {
-        Person user = UserDataBase.getPersonByUsername(username);
+
         assertTrue(context.getIt());
     }
 }

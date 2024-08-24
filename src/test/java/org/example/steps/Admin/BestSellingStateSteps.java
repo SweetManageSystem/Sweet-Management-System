@@ -6,6 +6,7 @@ import io.cucumber.java.en.Then;
 import org.example.database.ProductDataBase;
 import org.example.reciepes.Product;
 import org.example.statecontroller.Context;
+import org.example.statecontroller.admin.AdminState;
 import org.example.statecontroller.admin.BestSellingState;
 
 import static org.junit.Assert.assertEquals;
@@ -26,6 +27,12 @@ public class BestSellingStateSteps {
     public void i_enter_the_best_selling_state() {
         context = new Context();
         bestSellingState = new BestSellingState(context);
+        context.setIsTest(true);
+        AdminState adminState = new AdminState(context);
+        adminState.setCommand("3");
+        adminState.handleInput();
+
+        bestSellingState.handleInput();
         bestSellingProduct = ProductDataBase.getBestSelling();
         output = "The best selling product in this store is : " + bestSellingProduct.getName() + "\n" +
                 "Sold : " + bestSellingProduct.getSellCounter();

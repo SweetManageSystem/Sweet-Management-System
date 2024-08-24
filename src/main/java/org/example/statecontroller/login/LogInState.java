@@ -13,6 +13,9 @@ import java.util.logging.Logger;
 public class LogInState implements State {
     private Context context;
     private Logger logger = Logger.getLogger(LogInState.class.getName());
+    private String email;
+    private String password;
+
 
     public LogInState(Context context) {
         this.context = context;
@@ -22,10 +25,12 @@ public class LogInState implements State {
     public void handleInput() {
         Scanner scanner = new Scanner(System.in);
         logger.info("Email :");
-        String email = scanner.nextLine();
-        context.filterState(email);
         logger.info("Password :");
-        String password = scanner.nextLine();
+        if(!context.isTest()) {
+            email = scanner.nextLine();
+            password = scanner.nextLine();
+        }
+        context.filterState(email);
         context.filterState(password);
         for (Person p : UserDataBase.getDb()) {
             if (p.getEmail().equals(email) && p.getPassword().equals(password)) {
@@ -37,7 +42,10 @@ public class LogInState implements State {
                         context.setCurrentState(new StoreOwnerState(context));
                         break;
                     case 3:
-                        context.setCurrentState(new AdminState(context));
+                        AdminState adminState = new AdminState(context);
+                        if(context.isTest())
+                            adminState.setCommand("exit");
+                        context.setCurrentState(adminState);
                         break;
                     default:
                         context.handleInput();
@@ -51,6 +59,12 @@ public class LogInState implements State {
         context.handleInput();
     }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
 
 }

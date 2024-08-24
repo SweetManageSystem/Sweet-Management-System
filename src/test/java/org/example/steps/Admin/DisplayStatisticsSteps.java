@@ -7,7 +7,7 @@ import org.example.account.Person;
 import org.example.account.User;
 import org.example.database.UserDataBase;
 import org.example.statecontroller.Context;
-import org.example.statecontroller.admin.DiplayStatisticsState;
+import org.example.statecontroller.admin.AdminState;
 
 import java.util.HashMap;
 import java.util.List;
@@ -39,8 +39,10 @@ public class DisplayStatisticsSteps {
     @When("I display the user statistics by city")
     public void i_display_the_user_statistics_by_city() {
         context = new Context();
-        DiplayStatisticsState displayStatisticsState = new DiplayStatisticsState(context);
-        //displayStatisticsState.handleInput();
+        context.setIsTest(true);
+        AdminState adminState = new AdminState(context);
+        adminState.setCommand("4");
+        adminState.handleInput();
         actualStatistics = new HashMap<>();
         List<Person> users = UserDataBase.getDb();
         for (Person user : users) {

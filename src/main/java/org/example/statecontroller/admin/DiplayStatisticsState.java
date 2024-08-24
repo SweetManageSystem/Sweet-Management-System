@@ -3,6 +3,7 @@ package org.example.statecontroller.admin;
 import org.example.account.Person;
 import org.example.database.UserDataBase;
 import org.example.statecontroller.Context;
+import org.example.statecontroller.ExitState;
 import org.example.statecontroller.State;
 
 import java.util.HashMap;
@@ -34,9 +35,14 @@ public class DiplayStatisticsState implements State {
             logger.info("City: " + entry.getKey() + ", Number of Users: " + entry.getValue());
         }
 
-        // Return to the AdminState after displaying the statistics
-        context.setCurrentState(new AdminState(context));
-        context.handleInput();
+        if(context.isTest()){
+            context.setCurrentState(new ExitState());
+            context.handleInput();
+        }
+        else {
+            context.setCurrentState(new AdminState(context));
+            context.handleInput();
+        }
     }
 
 

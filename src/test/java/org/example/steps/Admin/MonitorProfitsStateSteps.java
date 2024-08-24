@@ -3,9 +3,10 @@ package org.example.steps.Admin;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
+import org.example.statecontroller.ExitState;
+import org.example.statecontroller.admin.AdminState;
 import org.example.statecontroller.admin.MonitorProfitsState;
 import org.example.statecontroller.Context;
-import org.example.statecontroller.State;
 
 import static org.junit.Assert.*;
 
@@ -13,26 +14,28 @@ public class MonitorProfitsStateSteps {
 
     private Context context;
     private MonitorProfitsState monitorProfitsState;
-    private State nextState;
+
 
     @Given("the context is set to MonitorProfitsState")
     public void the_context_is_set_to_MonitorProfitsState() {
         context = new Context();
         monitorProfitsState = new MonitorProfitsState(context);
         context.setCurrentState(monitorProfitsState);
+        AdminState adminState = new AdminState(context);
+        context.setIsTest(true);
+        context.setCurrentState(adminState);
+        adminState.setCommand("2");
+        context.handleInput();
     }
 
     @When("the handleInput method is called")
     public void the_handleInput_method_is_called() {
-        //monitorProfitsState.handleInput();
-        nextState = context.getCurrentState();
+        context.setCurrentState(new ExitState());
+        context.handleInput();
     }
 
     @Then("the financial report should be generated")
     public void the_financial_report_should_be_generated() {
-        // Assuming the financial report is printed to the console,
-        // you might need to capture the console output to verify this step.
-        // For simplicity, we assume the report is generated correctly.
         assertNotNull(monitorProfitsState);
     }
 

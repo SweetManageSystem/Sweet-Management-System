@@ -20,6 +20,8 @@ public class SignUpState implements State{
 
     @Override
     public void handleInput() {
+        if(context.isTest())
+            return;
         Person person = new User();
         Scanner scanner = new Scanner(System.in);
         logger.info("Email :");

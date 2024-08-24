@@ -48,7 +48,7 @@ public class SearchStateSteps {
             currentState = new UserState(context);
             context.setCurrentState(currentState);
         } else if (input.equals("exit")) {
-            currentState = new ExitState(context);
+            currentState = new ExitState();
             context.setCurrentState(currentState);
         }
     }

@@ -5,6 +5,7 @@ import org.example.database.UserDataBase;
 import org.example.reciepes.Product;
 import org.example.account.Person;
 import org.example.statecontroller.Context;
+import org.example.statecontroller.ExitState;
 import org.example.statecontroller.State;
 
 import java.util.List;
@@ -15,9 +16,37 @@ public class ManageContentState implements State {
 
     private Context context;
     private  Logger logger = Logger.getLogger(ManageContentState.class.getName());
-
+    private  String command;
+    private String name;
+    private double price;
+    private int sellCounter;
+    private int id;
+    private String username;
+    private String post;
     public ManageContentState(Context context) {
         this.context = context;
+    }
+
+    public void setCommand(String command) {
+        this.command = command;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public void setPrice(double price) {
+      this.price = price;
+    }
+    public void setSellCounter(int sellCounter) {
+        this.sellCounter = sellCounter;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    public void setUsername(String username) {
+        this.username = username;
+    }
+    public void setPost(String post) {
+        this.post = post;
     }
 
     @Override
@@ -36,7 +65,8 @@ public class ManageContentState implements State {
                           </body>
                     </html>""";
         logger.info(textBlock);
-        String command = input.nextLine();
+        if(!context.isTest())
+         command = input.nextLine();
         context.filterState(command);
 
         switch (command) {
@@ -63,6 +93,8 @@ public class ManageContentState implements State {
                 break;
             case "8":
                 context.setCurrentState(new AdminState(context));
+                if(context.isTest())
+                    context.setCurrentState(new ExitState());
                 context.handleInput();
                 break;
             default:
@@ -79,47 +111,62 @@ public class ManageContentState implements State {
         for (Product product : products) {
             logger.info(product.getId() + ": " + product.getName() + " - $" + product.getPrice());
         }
+        if(context.isTest())
+            setCommand("exit");
         context.handleInput();
     }
 
     private void addProduct(Scanner input) {
         logger.info("Enter product name:");
-        String name = input.nextLine();
+        if(!context.isTest())
+            name = input.nextLine();
         logger.info("Enter product price:");
-        double price = Double.parseDouble(input.nextLine());
+        if(!context.isTest())
+            price = Double.parseDouble(input.nextLine());
         logger.info("Enter product sell counter:");
-        int sellCounter = Integer.parseInt(input.nextLine());
+        if(!context.isTest())
+            sellCounter = Integer.parseInt(input.nextLine());
 
         Product product = new Product(ProductDataBase.getProducts().size() + 1, name, price, sellCounter);
         ProductDataBase.addProduct(product);
         logger.info("Product added successfully.");
+        if(context.isTest())
+            setCommand("exit");
         context.handleInput();
     }
 
     private void editProduct(Scanner input) {
         logger.info("Enter product ID to edit:");
-        int id = Integer.parseInt(input.nextLine());
+        if(!context.isTest())
+            id  = Integer.parseInt(input.nextLine());
         Product product = ProductDataBase.getProduct(id);
 
         if (product != null) {
             logger.info("Enter new product name:");
-            String name = input.nextLine();
+            if(!context.isTest())
+                name = input.nextLine();
             logger.info("Enter new product price:");
-            double price = Double.parseDouble(input.nextLine());
+            if(!context.isTest())
+              price = Double.parseDouble(input.nextLine());
 
             ProductDataBase.editProduct(id, name, price);
             logger.info("Product updated successfully.");
         } else {
             logger.info("Product not found.");
         }
+        if(context.isTest())
+            setCommand("exit");
         context.handleInput();
     }
 
     private void deleteProduct(Scanner input) {
         logger.info("Enter product ID to delete:");
-        int id = Integer.parseInt(input.nextLine());
+        if(!context.isTest())
+            id = Integer.parseInt(input.nextLine());
         ProductDataBase.removeProduct(id);
         logger.info("Product deleted successfully.");
+        if(context.isTest())
+            setCommand("exit");
         context.handleInput();
     }
 
@@ -127,37 +174,45 @@ public class ManageContentState implements State {
         List<Person> users = UserDataBase.getDb();
         for (Person user : users) {
             logger.info(user.getUsername() + "'s posts:");
-            for (String post : user.getPosts()) {
-                logger.info(post);
+            for (String p : user.getPosts()) {
+                logger.info(p);
             }
         }
+        if(context.isTest())
+            setCommand("exit");
         context.handleInput();
     }
 
     private void addPost(Scanner input) {
         logger.info("Enter username to add post:");
-        String username = input.nextLine();
+        if(!context.isTest())
+           username = input.nextLine();
         Person user = UserDataBase.getPersonByUsername(username);
 
         if (user != null) {
             logger.info("Enter post content:");
-            String post = input.nextLine();
+            if(!context.isTest())
+              post = input.nextLine();
             user.addPost(post);
             logger.info("Post added successfully.");
         } else {
             logger.info("User not found.");
         }
+        if (context.isTest())
+            setCommand("exit");
         context.handleInput();
     }
 
     private void deletePost(Scanner input) {
         logger.info("Enter username to delete post:");
-        String username = input.nextLine();
+        if(!context.isTest())
+            username = input.nextLine();
         Person user = UserDataBase.getPersonByUsername(username);
 
         if (user != null) {
             logger.info("Enter post content to delete:");
-            String post = input.nextLine();
+            if(!context.isTest())
+              post = input.nextLine();
             if (user.getPosts().remove(post)) {
                 logger.info("Post deleted successfully.");
             } else {
@@ -166,6 +221,8 @@ public class ManageContentState implements State {
         } else {
             logger.info("User not found.");
         }
+        if (context.isTest())
+            setCommand("exit");
         context.handleInput();
     }
 }

@@ -2,11 +2,17 @@ package org.example.statecontroller;
 
 public class Context {
     private State currentState;
-
+    private boolean isTest ;
     public void setCurrentState(State state) {
         this.currentState = state;
     }
 
+    public void setIsTest(boolean test) {
+        this.isTest = test;
+    }
+    public boolean isTest() {
+        return isTest;
+    }
 
 
     public State getCurrentState() {
@@ -30,7 +36,7 @@ public class Context {
 
     public void filterState(String input) {
         if(isExit(input)) {
-            this.setCurrentState(new ExitState(this));
+            this.setCurrentState(new ExitState());
             this.handleInput();
         }
     }
