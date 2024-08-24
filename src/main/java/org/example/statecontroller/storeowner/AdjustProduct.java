@@ -22,12 +22,12 @@ public class AdjustProduct implements State {
     public void setChoice(String choice) {
         this.choice = choice;
     }
-    public void setName(String newName) {
-        this.newName = newName;
+    public void setName(String name) {
+        this.name = name;
 
     }
-    public void setPrice(double newPrice) {
-        this.newPrice = newPrice;
+    public void setPrice(double price) {
+        this.price = price;
     }
     public void setId(String id) {
         this.id = id;

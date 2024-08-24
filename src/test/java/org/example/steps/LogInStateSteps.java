@@ -3,7 +3,6 @@ package org.example.steps;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
-import org.example.account.Person;
 import org.example.database.UserDataBase;
 import org.example.statecontroller.Context;
 import org.example.statecontroller.login.LogInState;
@@ -12,7 +11,6 @@ import org.example.statecontroller.admin.AdminState;
 import org.example.statecontroller.storeowner.StoreOwnerState;
 import org.example.statecontroller.user.UserState;
 
-import java.util.Scanner;
 import java.util.logging.Logger;
 
 import static org.junit.Assert.*;

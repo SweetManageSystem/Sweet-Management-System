@@ -48,12 +48,7 @@ public class DiscountSteps {
 
     @Then("all products should have their prices reduced by {double}%")
     public void all_products_should_have_their_prices_reduced_by(double discountPercentage) {
-        List<Product> products = ProductDataBase.getProducts();
-        for (Product product : products) {
-            double originalPrice = product.getOriginalPrice();
-            double expectedPrice = originalPrice - (originalPrice * discountPercentage / 100);
             assertTrue(context.getIt());
-        }
     }
 
     @When("the store owner applies a {double}% discount to the best-selling product")
@@ -66,9 +61,6 @@ public class DiscountSteps {
 
     @Then("the best-selling product should have its price reduced by {double}%")
     public void the_best_selling_product_should_have_its_price_reduced_by(double discountPercentage) {
-        Product bestSelling = ProductDataBase.getBestSelling();
-        double originalPrice = bestSelling.getOriginalPrice();
-        double expectedPrice = originalPrice - (originalPrice * discountPercentage / 100);
         assertTrue(context.getIt());
     }
 
@@ -84,8 +76,6 @@ public class DiscountSteps {
         List<Product> products = ProductDataBase.getProducts();
         for (Product product : products) {
             if (product.getOriginalPrice() >= minPrice && product.getOriginalPrice() <= maxPrice) {
-                double originalPrice = product.getOriginalPrice();
-                double expectedPrice = originalPrice - (originalPrice * discountPercentage / 100);
                 assertTrue(context.getIt());
             }
         }
