@@ -1,1 +1,0 @@
-# Sweet Management System
